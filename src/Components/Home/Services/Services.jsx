@@ -5,6 +5,8 @@ import { FaCartFlatbedSuitcase } from "react-icons/fa6";
 import { TfiHeadphoneAlt } from "react-icons/tfi";
 import { RiShieldCheckLine } from "react-icons/ri";
 
+import { Link } from "react-router-dom";
+
 const Services = () => {
   return (
     <div>
@@ -24,6 +26,8 @@ const Services = () => {
           <h3>Money Back Guarantee</h3>
           <p>We return money within 30 days</p>
         </div>
+        <Link to= "/about">About</Link>
+        <Link to= "/contact">Contact</Link>
       </div>
     </div>
   );
