@@ -1,0 +1,39 @@
+.services {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  padding: 0px 160px;
+  grid-gap: 40px;
+  margin: 80px 0px;
+}
+
+.serviceBox {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: center;
+}
+
+.services h3 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.services p {
+  text-align: center;
+  color: #767676;
+}
+
+@media screen and (max-width: 1210px) {
+  .services {
+    padding: 0 60px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .services {
+    padding: 0px 15px;
+    grid-template-columns: 1fr;
+  }
+}

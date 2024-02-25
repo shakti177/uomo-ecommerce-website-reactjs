@@ -1,0 +1,109 @@
+.contactSection h2 {
+  font-size: 35px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 30px;
+  padding-left: 250px;
+}
+
+.contactMap iframe {
+  width: 100%;
+  border: none;
+}
+
+.contactInfo {
+  padding: 0 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.contactAddress {
+  display: flex;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 50px;
+  width: 50%;
+}
+
+.address h3 {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.address p {
+  font-size: 14px;
+}
+
+.contactForm h3 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.contactForm form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contactForm form input {
+  padding: 15px;
+  border: 2px solid #e4e4e4;
+  color: #272727;
+}
+
+.contactForm form textarea {
+  font-size: 14px;
+  padding: 15px;
+  border: 2px solid #e4e4e4;
+  color: #272727;
+}
+
+.contactForm form button {
+  width: 20%;
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 20px 5px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1210px) {
+  .contactSection h2 {
+    padding: 30px 60px;
+  }
+
+  .contactInfo {
+    padding: 0 60px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .contactSection h2 {
+    padding: 30px 15px;
+  }
+
+  .contactInfo {
+    padding: 0 15px;
+  }
+
+  .contactAddress {
+    flex-direction: column;
+  }
+
+  .address {
+    width: 100%;
+  }
+
+  .contactForm form button {
+    width: 50%;
+  }
+}

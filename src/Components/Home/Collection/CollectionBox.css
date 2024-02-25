@@ -1,0 +1,118 @@
+.collection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  height: 30rem;
+  padding: 0 160px;
+}
+
+.collectionLeft {
+  background-image: url("../../../Assets/Collection/collection1.jpg");
+  background-size: cover;
+  background-position: center center;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.collectionRight {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 30px;
+}
+
+.collectionTop {
+  background-image: url("../../../Assets/Collection/collection2.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px;
+}
+
+.collectionBottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+}
+
+.box1 {
+  background-image: url("../../../Assets/Collection/collection3.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px;
+}
+
+.box2 {
+  background-color: #f4e5e0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px;
+}
+
+/* text in box style */
+
+.col-p {
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+.col-h3 {
+  text-transform: uppercase;
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.col-h3 span {
+  font-weight: bolder;
+}
+
+@media screen and (max-width: 1210px) {
+  .collection {
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+    padding: 0 60px;
+    height: auto;
+  }
+
+  .collectionLeft {
+    background-position: top center;
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .collection {
+    padding: 0 15px;
+    grid-gap: 10px;
+  }
+
+  .collectionRight {
+    grid-gap: 10px;
+    grid-template-rows: 1fr;
+  }
+
+  .collectionTop {
+    height: 150px;
+  }
+
+  .collectionBottom {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+  .box1 {
+    background-position: center top;
+    background-size: cover;
+    height: 150px;
+  }
+
+  .box2 {
+    height: 150px;
+  }
+}
