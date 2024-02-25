@@ -17,7 +17,9 @@ const Navbar = () => {
       <nav className="navBar">
         <div className="logoLinkContainer">
           <div className="logoContainer">
-            <img src={logo} alt="" />
+            <Link to="/">
+              <img src={logo} alt="" />
+            </Link>
           </div>
           <div className="linkContainer">
             <ul>
@@ -61,9 +63,11 @@ const Navbar = () => {
 
       <nav>
         <div className="mobile-nav">
-          <RiMenu2Line size={22}/>
+          <RiMenu2Line size={22} />
           <div className="logoContainer">
-            <img src={logo} alt="" />
+            <Link to="/">
+              <img src={logo} alt="" />
+            </Link>
           </div>
           <Badge
             badgeContent={3}
