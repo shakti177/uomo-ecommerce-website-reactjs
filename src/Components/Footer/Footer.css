@@ -1,0 +1,117 @@
+.footer {
+  background-color: #e4e4e4;
+  padding: 120px 160px;
+  margin-top: 100px;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footerContent {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 0 10px;
+  width: 40%;
+}
+
+.footerAddress {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footerAddress h6 {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.footerContact {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.footerContact h4 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.socialLink {
+  display: flex;
+  gap: 35px;
+}
+
+.footerContent h5 {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.footerContent ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footerContent ul li {
+  list-style-type: none;
+  font-size: 15px;
+}
+
+.footerContent ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 400;
+}
+
+.footerContent p {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.subscribe {
+  display: flex;
+  margin-top: -20px;
+  flex-wrap: nowrap;
+}
+
+.subscribe input {
+  padding: 15px;
+  border: none;
+  outline: none;
+}
+
+.subscribe button {
+  background-color: #ffffff;
+  color: black;
+  padding: 15px 9px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.footerPayments {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footerPayments h6 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.paymentIcon {
+  height: 25px;
+  width: 240px;
+}
+
+.paymentIcon img {
+  width: 100%;
+  height: 100%;
+}
