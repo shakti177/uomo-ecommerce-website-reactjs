@@ -146,7 +146,7 @@
 
 @media screen and (max-width: 450px) {
   .footer {
-    padding: 120px 15px;
+    padding: 50px 15px;
   }
   .footer__container {
     grid-template-columns: 1fr;
@@ -163,5 +163,10 @@
   }
   .paymentIconContainer {
     width: 150px;
+  }
+
+  .paymentIconContainer {
+    height: 40px;
+    width: 320px;
   }
 }
