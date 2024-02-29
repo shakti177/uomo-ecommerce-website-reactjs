@@ -46,19 +46,19 @@ const Footer = () => {
             <div className="links_container">
               <ul>
                 <li>
-                  <Link>About Us</Link>
+                  <Link to="/about">About Us</Link>
                 </li>
                 <li>
-                  <Link>Career</Link>
+                  <Link to="/about">Career</Link>
                 </li>
                 <li>
-                  <Link>Affilates</Link>
+                  <Link to="/about">Affilates</Link>
                 </li>
                 <li>
-                  <Link>Blog</Link>
+                  <Link to="/blog">Blog</Link>
                 </li>
                 <li>
-                  <Link>Contact Us</Link>
+                  <Link to="/contact">Contact Us</Link>
                 </li>
               </ul>
             </div>
@@ -68,19 +68,19 @@ const Footer = () => {
             <div className="links_container">
               <ul>
                 <li>
-                  <Link>New Arrivals</Link>
+                  <Link to="/">New Arrivals</Link>
                 </li>
                 <li>
-                  <Link>Accessories</Link>
+                  <Link to="/">Accessories</Link>
                 </li>
                 <li>
-                  <Link>Men</Link>
+                  <Link to="/">Men</Link>
                 </li>
                 <li>
-                  <Link>Women</Link>
+                  <Link to="/">Women</Link>
                 </li>
                 <li>
-                  <Link>Shop All</Link>
+                  <Link to="/">Shop All</Link>
                 </li>
               </ul>
             </div>
@@ -90,22 +90,22 @@ const Footer = () => {
             <div className="links_container">
               <ul>
                 <li>
-                  <Link>Customer Service</Link>
+                  <Link to="/contact">Customer Service</Link>
                 </li>
                 <li>
-                  <Link>My Account</Link>
+                  <Link to="/">My Account</Link>
                 </li>
                 <li>
-                  <Link>Find a Store</Link>
+                  <Link to="/contact">Find a Store</Link>
                 </li>
                 <li>
-                  <Link>Legal & Privacy</Link>
+                  <Link to="/about">Legal & Privacy</Link>
                 </li>
                 <li>
-                  <Link>Contact</Link>
+                  <Link to="/contact">Contact</Link>
                 </li>
                 <li>
-                  <Link>Gift Card</Link>
+                  <Link to="/">Gift Card</Link>
                 </li>
               </ul>
             </div>
