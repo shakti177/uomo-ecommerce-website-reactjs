@@ -83,10 +83,9 @@ const AboutPage = () => {
           slidesPerView={1}
           loop={true}
           breakpoints={{
-
             640: {
               slidesPerView: 2,
-              spaceBetween: "20px",
+              spaceBetween: 5,
             },
 
             768: {
