@@ -16,6 +16,13 @@ const Footer = () => {
     alert("Subscribed Successfully");
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div>
       <footer className="footer">
@@ -44,7 +51,7 @@ const Footer = () => {
           <div className="footer_content">
             <h5>Company</h5>
             <div className="links_container">
-              <ul>
+              <ul onClick={scrollToTop}>
                 <li>
                   <Link to="/about">About Us</Link>
                 </li>
@@ -66,7 +73,7 @@ const Footer = () => {
           <div className="footer_content">
             <h5>Shop</h5>
             <div className="links_container">
-              <ul>
+              <ul onClick={scrollToTop}>
                 <li>
                   <Link to="/">New Arrivals</Link>
                 </li>
@@ -88,7 +95,7 @@ const Footer = () => {
           <div className="footer_content">
             <h5>Help</h5>
             <div className="links_container">
-              <ul>
+              <ul onClick={scrollToTop}>
                 <li>
                   <Link to="/contact">Customer Service</Link>
                 </li>
