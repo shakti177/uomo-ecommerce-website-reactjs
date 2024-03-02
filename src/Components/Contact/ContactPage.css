@@ -9,6 +9,7 @@
 .contactMap iframe {
   width: 100%;
   border: none;
+  background-color: #e4e4e4;
 }
 
 .contactInfo {
