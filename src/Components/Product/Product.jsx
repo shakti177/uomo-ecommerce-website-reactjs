@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Tooltip from "@mui/material/Tooltip";
 
 import product1 from "../../Assets/ProductDetail/productdetail-1.jpg";
 import product2 from "../../Assets/ProductDetail/productdetail-2.jpg";
@@ -57,6 +58,24 @@ const Product = () => {
   const handleWishClick = () => {
     setClicked(!clicked);
   };
+
+  // Product Sizes
+
+  const sizes = ["XS", "S", "M", "L", "XL"];
+  const sizesFullName = [
+    "Extra Small",
+    "Small",
+    "Medium",
+    "Large",
+    "Extra Large",
+  ];
+  const [selectSize, setSelectSize] = useState("S");
+
+  // Product Colors
+
+  const [highlightedColor, setHighlightedColor] = useState("#222222");
+  const colors = ["#222222", "#C8393D", "#E4E4E4"];
+  const colorsName = ["Black", "Red", "Grey"];
 
   return (
     <div>
@@ -119,6 +138,60 @@ const Product = () => {
                 ultricies tellus sodales eu. Donec dignissim viverra nunc, ut
                 aliquet magna posuere eget.
               </p>
+            </div>
+            <div className="productSizeColor">
+              <div className="productSize">
+                <p>Sizes</p>
+                <div className="sizeBtn">
+                  {sizes.map((size, index) => (
+                    <Tooltip
+                      key={size}
+                      title={sizesFullName[index]}
+                      placement="top"
+                      arrow
+                    >
+                      <button
+                        style={{
+                          borderColor: selectSize === size ? "#000" : "#e0e0e0",
+                        }}
+                        onClick={() => setSelectSize(size)}
+                      >
+                        {size}
+                      </button>
+                    </Tooltip>
+                  ))}
+                </div>
+              </div>
+              <div className="productColor">
+                <p>Color</p>
+                <div className="colorBtn">
+                  {colors.map((color, index) => (
+                    <Tooltip
+                      key={color}
+                      title={colorsName[index]}
+                      placement="top"
+                      arrow
+                    >
+                      <button
+                        className={
+                          highlightedColor === color ? "highlighted" : ""
+                        }
+                        style={{
+                          backgroundColor: color.toLowerCase(),
+                          border:
+                            highlightedColor === color
+                              ? "0px solid #000"
+                              : "0px solid white",
+                          padding: "8px",
+                          margin: "5px",
+                          cursor: "pointer",
+                        }}
+                        onClick={() => setHighlightedColor(color)}
+                      />
+                    </Tooltip>
+                  ))}
+                </div>
+              </div>
             </div>
             <div className="productCartQuantity">
               <div className="productQuantity">

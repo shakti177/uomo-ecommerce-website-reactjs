@@ -35,7 +35,7 @@
 
 .buttonsGroup {
   position: absolute;
-  top: 45%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -132,6 +132,80 @@
   font-size: 15px;
   line-height: 25px;
   margin-bottom: 20px;
+}
+
+.productSizeColor {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.productSize {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.productSize p {
+  font-size: 14px;
+  color: black;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.sizeBtn {
+  display: flex;
+  gap: 10px;
+}
+
+.sizeBtn button {
+  background-color: white;
+  border: 1px solid;
+  padding: 5px 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.productColor {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.colorBtn {
+  display: flex;
+  gap: 15px;
+}
+
+.colorBtn button {
+  background-color: white;
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+  position: relative;
+}
+
+.colorBtn button.highlighted::after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 50%;
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+  left: -6px;
+  top: -6px;
+}
+
+.productColor p {
+  font-size: 14px;
+  color: black;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
 .productCartQuantity {
