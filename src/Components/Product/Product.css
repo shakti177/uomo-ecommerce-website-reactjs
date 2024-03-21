@@ -1,0 +1,52 @@
+.productSection {
+  padding: 0 160px;
+}
+
+.productGallery {
+  display: flex;
+  gap: 10px;
+}
+
+.productThumb {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.productThumb img {
+  width: 80px;
+  height: 80px;
+}
+
+.productFullImg {
+  position: relative;
+}
+
+.productFullImg img {
+  width: 520px;
+  height: 520px;
+  pointer-events: none;
+}
+
+.buttonsGroup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.directionBtn {
+  background-color: white;
+  border: none;
+  display: flex;
+  border-radius: 50%;
+  padding: 13px;
+  outline: none;
+}
+
+.directionBtn:hover{
+  background-color: rgb(239, 239, 239);
+}

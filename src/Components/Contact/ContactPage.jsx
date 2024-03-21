@@ -9,7 +9,7 @@ const ContactPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert(
-      `Thank You ${name} for Contacting Us. We will Get Back to You Soon. Your Mail Id - ${email}. Your Message is - ${message}`
+      `Thank You ${name} for Contacting Us. We will Get Back to You Soon.\n\nYour Mail Id - ${email}.\nYour Message is - ${message}`
     );
     setname("");
     setEmail("");
@@ -86,7 +86,6 @@ const ContactPage = () => {
             </form>
           </div>
         </div>
-        
       </div>
     </div>
   );

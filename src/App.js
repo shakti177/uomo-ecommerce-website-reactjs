@@ -13,6 +13,7 @@ import Footer from "../src/Components/Footer/Footer";
 // import Slider from "./Components/Slider/Slider";
 
 import "./App.css";
+import ProductDetails from "./Pages/ProductDetails";
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
           <Route path="/shop" element={<Shop />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/product" element={<ProductDetails />} />
         </Routes>
         <Footer />
       </BrowserRouter>
