@@ -4,6 +4,8 @@ import "./Trendy.css";
 import product1 from "../../../Assets/Products/product_1.jpg";
 import product1_1 from "../../../Assets/Products/product_1-1.jpg";
 
+import { Link } from "react-router-dom";
+
 const Trendy = () => {
   const [activeTab, setActiveTab] = useState("tab1");
 
@@ -52,11 +54,21 @@ const Trendy = () => {
             )}
             {activeTab === "tab2" && (
               <div>
-                <div className="clothContainer">
-                  <img src={product1} alt="product1" className="cloth_front" />
-                  <img src={product1_1} className="cloth_back" alt="product2" />
-                  <h4>Add to Cart</h4>
-                </div>
+                <Link to="/product">
+                  <div className="clothContainer">
+                    <img
+                      src={product1}
+                      alt="product1"
+                      className="cloth_front"
+                    />
+                    <img
+                      src={product1_1}
+                      className="cloth_back"
+                      alt="product2"
+                    />
+                    <h4>Add to Cart</h4>
+                  </div>
+                </Link>
               </div>
             )}
             {activeTab === "tab3" && <div>Tab 3</div>}

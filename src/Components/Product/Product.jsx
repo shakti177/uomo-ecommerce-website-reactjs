@@ -169,6 +169,7 @@ const Product = () => {
                     <Tooltip
                       key={color}
                       title={colorsName[index]}
+                      sx={{ fontSize: 14, bgcolor: "lightblue" }}
                       placement="top"
                       arrow
                     >

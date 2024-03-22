@@ -231,21 +231,21 @@
 
 .productQuantity input {
   width: 40px;
-  height: 50px;
+  height: 57px;
   text-align: center;
   border: none;
   outline: none;
 }
 
 .productCartBtn button {
-  height: 55px;
-  padding: 0 110px;
+  padding: 20px 110px;
   background-color: black;
   color: white;
   font-weight: 600;
   text-transform: uppercase;
   border: none;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .productWishShare {
@@ -293,24 +293,82 @@
   color: #767676;
 }
 
-/* @media screen and (max-width: 1210px) {
+/* Responsive CSS */
+
+@media screen and (max-width: 1210px) {
   .productSection {
     padding: 0 60px;
   }
 
-  .productGallery {
+  .productShowCase {
     display: flex;
+    gap: 30px;
+  }
+
+  .productFullImg img {
+    width: 420px;
+    height: 420px;
+    pointer-events: none;
+  }
+
+  .productCartBtn button {
+    padding: 20px 80px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .productShowCase {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .productGallery {
     flex-direction: column-reverse;
-    gap: 10px;
   }
 
   .productThumb {
     flex-direction: row;
-    gap: 10px;
   }
 
   .productFullImg img {
-    width: auto;
+    width: 100%;
     height: auto;
   }
-} */
+
+  .productDetails {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .productSection {
+    padding: 0 15px;
+  }
+
+  .productGallery {
+    gap: 5px;
+  }
+
+  .productThumb img {
+    width: 75px;
+    height: 75px;
+  }
+
+  .buttonsGroup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+  }
+
+  .directionBtn {
+    padding: 10px;
+  }
+
+  .productCartBtn button {
+    padding: 20px 50px;
+  }
+}
