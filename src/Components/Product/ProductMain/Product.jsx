@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Tooltip from "@mui/material/Tooltip";
+import Zoom from "@mui/material/Zoom";
 
 import product1 from "../../../Assets/ProductDetail/productdetail-1.jpg";
 import product2 from "../../../Assets/ProductDetail/productdetail-2.jpg";
@@ -73,7 +74,7 @@ const Product = () => {
 
   // Product Colors
 
-  const [highlightedColor, setHighlightedColor] = useState("#222222");
+  const [highlightedColor, setHighlightedColor] = useState("#C8393D");
   const colors = ["#222222", "#C8393D", "#E4E4E4"];
   const colorsName = ["Black", "Red", "Grey"];
 
@@ -148,6 +149,8 @@ const Product = () => {
                       key={size}
                       title={sizesFullName[index]}
                       placement="top"
+                      TransitionComponent={Zoom}
+                      enterTouchDelay={0}
                       arrow
                     >
                       <button
@@ -171,6 +174,8 @@ const Product = () => {
                       title={colorsName[index]}
                       sx={{ fontSize: 14, bgcolor: "lightblue" }}
                       placement="top"
+                      enterTouchDelay={0}
+                      TransitionComponent={Zoom}
                       arrow
                     >
                       <button

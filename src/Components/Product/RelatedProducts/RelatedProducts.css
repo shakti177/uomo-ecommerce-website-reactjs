@@ -2,3 +2,14 @@
   margin-top: 80px;
   padding: 0px 160px;
 }
+
+@media screen and (max-width: 1210px) {
+  .relatedProductSection {
+    padding: 0 60px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .relatedProductSection {
+    padding: 0 15px;
+  }
+}
