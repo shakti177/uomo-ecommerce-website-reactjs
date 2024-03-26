@@ -56,6 +56,7 @@
   padding: 15px;
   border: 2px solid #e4e4e4;
   color: #272727;
+  outline-color: black;
 }
 
 .contactForm form textarea {
@@ -63,6 +64,7 @@
   padding: 15px;
   border: 2px solid #e4e4e4;
   color: #272727;
+  outline-color: black;
 }
 
 .contactForm form button {
