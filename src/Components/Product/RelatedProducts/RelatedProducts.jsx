@@ -24,6 +24,7 @@ const RelatedProducts = () => {
             slidesPerView={4}
             spaceBetween={20}
             slidesPerGroup={4}
+            loop={true}
             pagination={{
               clickable: true,
             }}

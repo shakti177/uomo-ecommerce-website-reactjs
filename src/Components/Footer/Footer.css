@@ -181,9 +181,15 @@
   .paymentIconContainer {
     width: 150px;
   }
-
-  .paymentIconContainer {
+  .paymentIconContainer img {
     height: 40px;
-    width: 300px;
+    width: 320px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .paymentIconContainer img {
+    height: 35px;
+    width: 280px;
   }
 }

@@ -372,3 +372,18 @@
     padding: 20px 50px;
   }
 }
+
+@media screen and (max-width: 320px) {
+  .productThumb img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .productCartBtn button {
+    padding: 20px 30px;
+  }
+
+  .sizeBtn button {
+    padding: 5px 12px;
+  }
+}
