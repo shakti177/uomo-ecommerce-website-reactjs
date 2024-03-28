@@ -15,6 +15,10 @@ import { FiHeart } from "react-icons/fi";
 const RelatedProducts = () => {
   const [wishList, setWishList] = useState(false);
 
+  const handleWishButton = () => {
+    setWishList(!wishList);
+  };
+
   return (
     <div>
       <div className="relatedProductSection">
@@ -25,14 +29,31 @@ const RelatedProducts = () => {
 
           <Swiper
             slidesPerView={4}
-            spaceBetween={15}
             slidesPerGroup={4}
+            spaceBetween={30}
             loop={true}
             pagination={{
               clickable: true,
             }}
             navigation={true}
             modules={[Pagination, Navigation]}
+            breakpoints={{
+              320: {
+                slidesPerView: 2,
+                slidesPerGroup: 2,
+                spaceBetween: 14,
+              },
+              768: {
+                slidesPerView: 3,
+                slidesPerGroup: 3,
+                spaceBetween: 24,
+              },
+              1024: {
+                slidesPerView: 4,
+                slidesPerGroup: 4,
+                spaceBetween: 30,
+              },
+            }}
           >
             {relatedProductData.map((product, index) => {
               return (
@@ -58,7 +79,7 @@ const RelatedProducts = () => {
                         <FiHeart />
                       </div>
                       <div className="productNameInfo">
-                        <h3>{product.productName}</h3>
+                        <h6>{product.productName}</h6>
                         <p>{product.productPrice}</p>
                         <span>{product.productReviews}</span>
                       </div>
