@@ -25,7 +25,7 @@ const RelatedProducts = () => {
 
           <Swiper
             slidesPerView={4}
-            spaceBetween={20}
+            spaceBetween={15}
             slidesPerGroup={4}
             loop={true}
             pagination={{
@@ -37,18 +37,21 @@ const RelatedProducts = () => {
             {relatedProductData.map((product, index) => {
               return (
                 <SwiperSlide key={index}>
-                  <div className="clothContainer">
-                    <img
-                      src={product.frontImg}
-                      alt={product.name}
-                      className="cloth_front"
-                    />
-                    <img
-                      src={product.backImg}
-                      className="cloth_back"
-                      alt={product.name}
-                    />
-                    <h4>Add to Cart</h4>
+                  <div className="rpContainer">
+                    <div className="rpImages">
+                      <img
+                        src={product.frontImg}
+                        alt={product.name}
+                        className="rpFrontImg"
+                      />
+                      <img
+                        src={product.backImg}
+                        className="rpBackImg"
+                        alt={product.name}
+                      />
+                      <h4>Add to Cart</h4>
+                    </div>
+
                     <div className="relatedProductInfo">
                       <div className="rpCategoryWishlist">
                         <p>Dresses</p>

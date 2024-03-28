@@ -3,6 +3,58 @@
   padding: 0px 160px;
 }
 
+.rpContainer {
+  /* border: 2px solid red; */
+}
+
+.rpImages {
+  position: relative;
+  width: 250px;
+  height: 300px;
+  overflow: hidden;
+  -webkit-transition: all 0.2s cubic-bezier(0.99, 0.99, 0, 0.61);
+  transition: 0.3s linear;
+  -moz-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+}
+
+.rpImages img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 250px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.rpImages .rpFrontImg {
+  z-index: 1;
+  transition: opacity 0.3s linear;
+  cursor: pointer;
+}
+
+.rpImages:hover > .rpFrontImg {
+  opacity: 0;
+}
+
+.rpImages h4 {
+  position: relative;
+  top: 300px;
+  text-align: center;
+  padding: 10px;
+  background-color: rgb(253, 253, 253);
+  transition: all 0.2s cubic-bezier(0.99, 0.99, 0, 0.61);
+  margin: 0 10px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.rpImages:hover h4 {
+  top: 250px;
+}
+
 @media screen and (max-width: 1210px) {
   .relatedProductSection {
     padding: 0 60px;
