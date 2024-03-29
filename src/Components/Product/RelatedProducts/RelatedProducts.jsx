@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./RelatedProducts.css";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -13,11 +13,7 @@ import relatedProductData from "../../../Data/RelatedProducts";
 import { FiHeart } from "react-icons/fi";
 
 const RelatedProducts = () => {
-  const [wishList, setWishList] = useState(false);
-
-  const handleWishButton = () => {
-    setWishList(!wishList);
-  };
+  // const [wishList, setWishList] = useState(false);
 
   return (
     <div>
