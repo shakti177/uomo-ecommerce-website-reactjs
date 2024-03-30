@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./RelatedProducts.css";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -13,7 +13,14 @@ import relatedProductData from "../../../Data/RelatedProducts";
 import { FiHeart } from "react-icons/fi";
 
 const RelatedProducts = () => {
-  // const [wishList, setWishList] = useState(false);
+  const [wishList, setWishList] = useState({});
+
+  const handleWishlistClick = (productID) => {
+    setWishList((prevWishlist) => ({
+      ...prevWishlist,
+      [productID]: !prevWishlist[productID],
+    }));
+  };
 
   return (
     <div>
@@ -51,20 +58,20 @@ const RelatedProducts = () => {
               },
             }}
           >
-            {relatedProductData.map((product, index) => {
+            {relatedProductData.map((product) => {
               return (
-                <SwiperSlide key={index}>
+                <SwiperSlide key={product.productID}>
                   <div className="rpContainer">
                     <div className="rpImages">
                       <img
                         src={product.frontImg}
-                        alt={product.name}
+                        alt={product.productName}
                         className="rpFrontImg"
                       />
                       <img
                         src={product.backImg}
                         className="rpBackImg"
-                        alt={product.name}
+                        alt={product.productName}
                       />
                       <h4>Add to Cart</h4>
                     </div>
@@ -72,7 +79,15 @@ const RelatedProducts = () => {
                     <div className="relatedProductInfo">
                       <div className="rpCategoryWishlist">
                         <p>Dresses</p>
-                        <FiHeart />
+                        <FiHeart
+                          onClick={() => handleWishlistClick(product.productID)}
+                          style={{
+                            color: wishList[product.productID]
+                              ? "red"
+                              : "black",
+                            cursor: "pointer",
+                          }}
+                        />
                       </div>
                       <div className="productNameInfo">
                         <h6>{product.productName}</h6>

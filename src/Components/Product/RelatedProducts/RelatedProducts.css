@@ -83,8 +83,30 @@
     padding: 0 60px;
   }
 }
+
 @media screen and (max-width: 450px) {
   .relatedProductSection {
     padding: 0 15px;
+  }
+
+  .rpImages {
+    width: 160px;
+    height: 200px;
+  }
+
+  .rpImages h4 {
+    top: 170px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .rpImages {
+    width: 138px;
+    height: 167px;
+  }
+
+  .rpImages h4 {
+    top: 145px;
+    font-size: 12px;
   }
 }
