@@ -1,0 +1,70 @@
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 620px;
+}
+
+.errorContainer h1 {
+  font-size: 100px;
+  font-weight: 700;
+}
+
+.errorContainer h3 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.errorContainer p {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.errorContainer a {
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 20px 140px;
+  transition: background-color 0.3s;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 1210px) {
+  .errorContainer a {
+    padding: 20px 100px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+    
+  .errorContainer a {
+    padding: 20px 60px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .errorContainer {
+    height: 500px;
+  }
+  .errorContainer h1 {
+    font-size: 70px;
+  }
+
+  .errorContainer h3 {
+    font-size: 20px;
+  }
+
+  .errorContainer p {
+    font-size: 12px;
+  }
+
+  .errorContainer a {
+    padding: 20px 40px;
+  }
+}
