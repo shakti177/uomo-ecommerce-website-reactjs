@@ -3,110 +3,17 @@
   padding: 0px 160px;
 }
 
-.rpImages {
-  position: relative;
-  width: 255px;
-  height: 340px;
-  overflow: hidden;
-  -webkit-transition: all 0.2s cubic-bezier(0.99, 0.99, 0, 0.61);
-  transition: 0.3s linear;
-  -moz-transition: 0.3s linear;
-  -o-transition: 0.3s linear;
-}
-
-.rpImages img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.rpImages .rpFrontImg {
-  z-index: 1;
-  transition: opacity 0.3s linear;
-  cursor: pointer;
-}
-
-.rpImages:hover > .rpFrontImg {
-  opacity: 0;
-}
-
-.rpImages h4 {
-  position: relative;
-  top: 300px;
-  text-align: center;
-  padding: 10px;
-  background-color: rgb(253, 253, 253);
-  transition: all 0.2s cubic-bezier(0.99, 0.99, 0, 0.61);
-  margin: 0 10px;
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: 14px;
-}
-
-.rpImages:hover h4 {
-  top: 290px;
-}
-
-.relatedProductInfo {
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
-}
-
-.rpCategoryWishlist {
-  display: flex;
-  justify-content: space-between;
-}
-
-.productNameInfo {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.productNameInfo h6 {
-  font-size: 16px;
-  font-weight: 400;
-}
-
-.productNameInfo p {
-  font-size: 16px;
-  font-weight: 400;
-}
-
 @media screen and (max-width: 1210px) {
   .relatedProductSection {
-    padding: 0 60px;
+    padding: 0px 60px;
   }
 }
 
 @media screen and (max-width: 450px) {
   .relatedProductSection {
-    padding: 0 15px;
-  }
-
-  .rpImages {
-    width: 160px;
-    height: 200px;
-  }
-
-  .rpImages h4 {
-    top: 170px;
+    padding: 0px 15px;
   }
 }
 
 @media screen and (max-width: 320px) {
-  .rpImages {
-    width: 138px;
-    height: 167px;
-  }
-
-  .rpImages h4 {
-    top: 145px;
-    font-size: 12px;
-  }
 }

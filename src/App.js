@@ -14,6 +14,7 @@ import Footer from "../src/Components/Footer/Footer";
 
 import "./App.css";
 import ProductDetails from "./Pages/ProductDetails";
+import NotFound from "./Pages/NotFound";
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/product" element={<ProductDetails />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
       </BrowserRouter>
