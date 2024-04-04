@@ -1,17 +1,6 @@
 .relatedProductSection {
-  margin-top: 80px;
+  margin-top: 20px;
   padding: 0px 160px;
-}
-
-.relatedProductContainer h2 {
-  text-transform: uppercase;
-  font-size: 26px;
-  font-weight: 500;
-  margin-bottom: 30px;
-}
-
-.relatedProductContainer h2 span {
-  font-weight: 700;
 }
 
 .relatedProductSlider {

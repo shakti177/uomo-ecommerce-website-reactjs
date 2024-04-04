@@ -6,7 +6,7 @@ const ProductDetails = () => {
   return (
     <>
       <Product />
-      <RelatedProducts />
+      <RelatedProducts autoplayed="false" />
     </>
   );
 };

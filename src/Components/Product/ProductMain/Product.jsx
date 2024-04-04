@@ -238,6 +238,11 @@ const Product = () => {
             </div>
           </div>
         </div>
+        <div className="relatedProducts">
+          <h2>
+            RELATED <span>PRODUCTS</span>
+          </h2>
+        </div>
       </div>
     </div>
   );
