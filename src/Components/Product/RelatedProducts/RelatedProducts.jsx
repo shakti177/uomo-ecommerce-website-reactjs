@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 
-import { Autoplay, Navigation } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 
 import relatedProductData from "../../../Data/RelatedProducts";
 
@@ -13,7 +13,7 @@ import { FiHeart } from "react-icons/fi";
 import { FaStar } from "react-icons/fa";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
-const RelatedProducts = ({ autoplayed }) => {
+const RelatedProducts = () => {
   const [wishList, setWishList] = useState({});
 
   const handleWishlistClick = (productID) => {
@@ -42,12 +42,7 @@ const RelatedProducts = ({ autoplayed }) => {
               nextEl: ".image-swiper-button-next",
               prevEl: ".image-swiper-button-prev",
             }}
-            autoplay={{
-              autoplay: { autoplayed },
-              delay: 2500,
-              disableOnInteraction: false,
-            }}
-            modules={[Autoplay, Navigation]}
+            modules={[Navigation]}
             breakpoints={{
               320: {
                 slidesPerView: 2,
