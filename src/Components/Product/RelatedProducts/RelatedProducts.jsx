@@ -11,6 +11,7 @@ import { Pagination, Navigation } from "swiper/modules";
 import relatedProductData from "../../../Data/RelatedProducts";
 
 import { FiHeart } from "react-icons/fi";
+import { FaStar } from "react-icons/fa";
 
 const RelatedProducts = () => {
   const [wishList, setWishList] = useState({});
@@ -84,15 +85,25 @@ const RelatedProducts = () => {
                           style={{
                             color: wishList[product.productID]
                               ? "red"
-                              : "black",
+                              : "#767676",
                             cursor: "pointer",
                           }}
                         />
                       </div>
                       <div className="productNameInfo">
-                        <h6>{product.productName}</h6>
+                        <h5>{product.productName}</h5>
                         <p>{product.productPrice}</p>
-                        <span>{product.productReviews}</span>
+                        <div className="productRatingReviews">
+                          <div className="productRatingStar">
+                            <FaStar color="#FEC78A" size={10} />
+                            <FaStar color="#FEC78A" size={10} />
+                            <FaStar color="#FEC78A" size={10} />
+                            <FaStar color="#FEC78A" size={10} />
+                            <FaStar color="#FEC78A" size={10} />
+                          </div>
+
+                          <span>{product.productReviews}</span>
+                        </div>
                       </div>
                     </div>
                   </div>
