@@ -5,6 +5,9 @@
   align-items: center;
   gap: 10px;
   height: 620px;
+  background-image: url("../../Assets/pattern_bg.png");
+  background-size: cover;
+  background-position: center;
 }
 
 .errorContainer h1 {
@@ -42,7 +45,11 @@
 }
 
 @media screen and (max-width: 450px) {
-    
+  .errorContainer {
+    padding: 0 20px;
+    height: 550px;
+  }
+
   .errorContainer a {
     padding: 20px 60px;
   }
