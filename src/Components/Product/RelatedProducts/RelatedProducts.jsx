@@ -7,7 +7,7 @@ import "swiper/css/navigation";
 
 import { Navigation } from "swiper/modules";
 
-import relatedProductData from "../../../Data/RelatedProducts";
+import StoreData from "../../../Data/StoreData";
 
 import { FiHeart } from "react-icons/fi";
 import { FaStar } from "react-icons/fa";
@@ -61,7 +61,7 @@ const RelatedProducts = () => {
               },
             }}
           >
-            {relatedProductData.map((product) => {
+            {StoreData.slice(0, 8).map((product) => {
               return (
                 <SwiperSlide key={product.productID}>
                   <div className="rpContainer">
