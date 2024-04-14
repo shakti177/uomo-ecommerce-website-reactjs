@@ -19,6 +19,7 @@ import limited1 from "../Assets/LimitedEdition/limited-1.jpg";
 import limited2 from "../Assets/LimitedEdition/limited-2.jpg";
 import limited3 from "../Assets/LimitedEdition/limited-3.jpg";
 import limited4 from "../Assets/LimitedEdition/limited-4.jpg";
+import limited5 from "../Assets/LimitedEdition/limited-5.jpg";
 
 let StoreData = [
   {
@@ -112,6 +113,13 @@ let StoreData = [
     productName: "Hub Accent Mirror",
     productPrice: "$27",
     productReviews: "7k+ reviews",
+  },
+  {
+    productID: 13,
+    frontImg: limited5,
+    productName: "Bold Male Black Analog",
+    productPrice: "$39",
+    productReviews: "71+ reviews",
   },
 ];
 

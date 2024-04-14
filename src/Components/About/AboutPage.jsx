@@ -106,25 +106,39 @@ const AboutPage = () => {
           modules={[Autoplay]}
         >
           <SwiperSlide>
-            <img src={brand1} alt="" />
+            <div className="aboutBrands">
+              <img src={brand1} alt="" />
+            </div>
           </SwiperSlide>
           <SwiperSlide>
-            <img src={brand2} alt="" />
+            <div className="aboutBrands">
+              <img src={brand2} alt="" />
+            </div>
           </SwiperSlide>
           <SwiperSlide>
-            <img src={brand3} alt="" />
+            <div className="aboutBrands">
+              <img src={brand3} alt="" />
+            </div>
           </SwiperSlide>
           <SwiperSlide>
-            <img src={brand4} alt="" />
+            <div className="aboutBrands">
+              <img src={brand4} alt="" />
+            </div>
           </SwiperSlide>
           <SwiperSlide>
-            <img src={brand5} alt="" />
+            <div className="aboutBrands">
+              <img src={brand5} alt="" />
+            </div>
           </SwiperSlide>
           <SwiperSlide>
-            <img src={brand6} alt="" />
+            <div className="aboutBrands">
+              <img src={brand6} alt="" />
+            </div>
           </SwiperSlide>
           <SwiperSlide>
-            <img src={brand7} alt="" />
+            <div className="aboutBrands">
+              <img src={brand7} alt="" />
+            </div>
           </SwiperSlide>
         </Swiper>
       </div>

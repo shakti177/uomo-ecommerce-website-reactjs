@@ -93,11 +93,20 @@
   margin-bottom: 40px;
 }
 
-.swiper-slide {
-  text-align: center;
+.aboutBrands {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.aboutBrands img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
 }
 
 @media screen and (max-width: 1210px) {
