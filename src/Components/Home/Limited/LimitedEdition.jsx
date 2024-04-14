@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import { Navigation } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 
 import StoreData from "../../../Data/StoreData";
 
@@ -45,7 +46,11 @@ const LimitedEdition = () => {
               nextEl: ".image-swiper-button-next",
               prevEl: ".image-swiper-button-prev",
             }}
-            modules={[Navigation]}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            modules={[Navigation, Autoplay]}
             breakpoints={{
               320: {
                 slidesPerView: 2,
