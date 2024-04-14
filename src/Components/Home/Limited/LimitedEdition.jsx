@@ -26,6 +26,9 @@ const LimitedEdition = () => {
   return (
     <div>
       <div className="limitedProductSection">
+        <h2>
+          Limited <span>Edition</span>
+        </h2>
         <div className="limitedProductSlider">
           <div className="swiper-button image-swiper-button-next">
             <IoIosArrowForward />

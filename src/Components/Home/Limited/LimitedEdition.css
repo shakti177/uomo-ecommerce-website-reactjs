@@ -1,6 +1,18 @@
 .limitedProductSection {
-  margin-top: 20px;
+  margin: 40px 0;
   padding: 0px 160px;
+}
+
+.limitedProductSection h2 {
+  text-transform: uppercase;
+  font-size: 35px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.limitedProductSection h2 span {
+  font-weight: 700;
 }
 
 .limitedProductSlider {
@@ -143,6 +155,10 @@
 @media screen and (max-width: 450px) {
   .limitedProductSection {
     padding: 0px 15px;
+  }
+
+  .limitedProductSection h2 {
+    font-size: 25px;
   }
 
   .lpImageContainer {
