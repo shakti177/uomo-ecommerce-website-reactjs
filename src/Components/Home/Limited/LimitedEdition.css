@@ -147,11 +147,11 @@
 
   .lpImageContainer {
     width: 100%;
-    height: 250px;
+    height: 200px;
   }
 
   .lpContainer:hover h4 {
-    top: 200px;
+    top: 150px;
   }
 
   .image-swiper-button-prev {
