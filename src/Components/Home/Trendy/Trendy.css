@@ -80,17 +80,16 @@
   transition-delay: 0.2s;
 }
 
-.trendyTabContent {
-  border: 1px solid #ccc;
-  padding: 20px;
+.trendyMainContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
 }
 
-.productContainer {
-  height: 300px;
-  width: 250px;
-  background-image: url("../../../Assets/Products/product_1.jpg");
-  background-size: contain;
+.trendyProductImages {
   position: relative;
+  width: 258px;
+  height: 320px;
   overflow: hidden;
   -webkit-transition: all 0.2s cubic-bezier(0.99, 0.99, 0, 0.61);
   transition: 0.3s linear;
@@ -98,75 +97,27 @@
   -o-transition: 0.3s linear;
 }
 
-.productContainer h4 {
-  position: relative;
-  top: 300px;
-  text-align: center;
-  padding: 10px;
-  background-color: rgb(177, 177, 177);
-  opacity: 0.7;
-  transition: all 0.2s cubic-bezier(0.99, 0.99, 0, 0.61);
-}
-
-.productContainer:hover {
-  background-image: url("../../../Assets/Products/product_1-1.jpg");
-}
-
-.productContainer:hover h4 {
-  top: 260px;
-}
-
-@media screen and (max-width: 1210px) {
-  .trendyProducts {
-    padding: 0 60px;
-  }
-
-  .trendyProducts h2 {
-    font-size: 26px;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .trendyProducts {
-    padding: 0 15px;
-  }
-  .tabs {
-    gap: 30px;
-  }
-}
-
-.clothContainer {
-  position: relative;
-  width: 250px;
-  height: 300px;
-  overflow: hidden;
-  -webkit-transition: all 0.2s cubic-bezier(0.99, 0.99, 0, 0.61);
-  transition: 0.3s linear;
-  -moz-transition: 0.3s linear;
-  -o-transition: 0.3s linear;
-}
-
-.clothContainer img {
+.trendyProductImages img {
   position: absolute;
   top: 0;
   left: 0;
   overflow: hidden;
-  width: 250px;
-  height: 300px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
-.clothContainer .cloth_front {
+.trendyProductImages .trendyProduct_front {
   z-index: 1;
   transition: opacity 0.3s linear;
   cursor: pointer;
 }
 
-.clothContainer:hover > .cloth_front {
+.trendyProductImages:hover > .trendyProduct_front {
   opacity: 0;
 }
 
-.clothContainer h4 {
+.trendyProductImages h4 {
   position: relative;
   top: 300px;
   text-align: center;
@@ -179,6 +130,149 @@
   font-size: 14px;
 }
 
-.clothContainer:hover h4 {
-  top: 250px;
+.trendyProductImages:hover h4 {
+  top: 270px;
+}
+
+.trendyProductInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.trendyProductCategoryWishlist {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.trendyProductCategoryWishlist p {
+  color: #767676;
+  font-size: 14px;
+}
+
+.trendyProductNameInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.trendyProductNameInfo h5 {
+  font-weight: 400;
+  font-size: 16px;
+  text-align: left;
+}
+
+.trendyProductRatingReviews {
+  display: flex;
+  gap: 10px;
+}
+
+.trendyProductRatingReviews span {
+  color: #767676;
+  font-size: 14px;
+}
+
+.trendyProductRatingStar {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+@media screen and (max-width: 1210px) {
+  .trendyProducts {
+    padding: 0 60px;
+  }
+
+  .trendyProducts h2 {
+    font-size: 26px;
+  }
+
+  .trendyProductImages {
+    width: 100%;
+    height: 250px;
+  }
+
+  .trendyProductImages:hover h4 {
+    top: 200px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .trendyMainContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .trendyProductImages {
+    width: 100%;
+    height: 240px;
+  }
+
+  .trendyProductImages:hover h4 {
+    top: 190px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .trendyProducts {
+    padding: 0 15px;
+  }
+
+  .tabs {
+    gap: 30px;
+  }
+
+  .trendyMainContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .trendyProductImages {
+    width: 100%;
+    height: 235px;
+  }
+
+  .trendyProductImages:hover h4 {
+    top: 185px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .trendyProductImages {
+    width: 100%;
+    height: 170px;
+  }
+
+  .trendyProductImages h4 {
+    font-size: 12px;
+  }
+
+  .trendyProductImages:hover h4 {
+    top: 125px;
+  }
+
+  .trendyProductNameInfo h5 {
+    font-size: 14px;
+  }
+
+  .trendyProductNameInfo p {
+    font-size: 12px;
+  }
+
+  .trendyProductRatingReviews {
+    display: flex;
+    gap: 5px;
+  }
+
+  .trendyProductRatingReviews span {
+    font-size: 12px;
+  }
+
+  .trendyProductRatingStar {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
 }
