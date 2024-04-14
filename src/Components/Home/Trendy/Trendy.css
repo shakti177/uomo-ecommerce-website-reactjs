@@ -206,8 +206,8 @@
 
 @media screen and (max-width: 768px) {
   .trendyMainContainer {
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
   }
 
   .trendyProductImages {
@@ -230,7 +230,6 @@
   }
 
   .trendyMainContainer {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
 
