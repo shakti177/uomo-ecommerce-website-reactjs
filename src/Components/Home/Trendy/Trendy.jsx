@@ -7,7 +7,6 @@ import StoreData from "../../../Data/StoreData";
 
 import { FiHeart } from "react-icons/fi";
 import { FaStar } from "react-icons/fa";
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 const Trendy = () => {
   const [activeTab, setActiveTab] = useState("tab1");
@@ -93,7 +92,10 @@ const Trendy = () => {
                           />
                         </div>
                         <div className="trendyProductNameInfo">
-                          <h5>{product.productName}</h5>
+                          <Link to="product">
+                            <h5>{product.productName}</h5>
+                          </Link>
+
                           <p>{product.productPrice}</p>
                           <div className="trendyProductRatingReviews">
                             <div className="trendyProductRatingStar">
