@@ -317,6 +317,9 @@ const Trendy = () => {
             )}
           </div>
         </div>
+        <Link to="/shop">
+          <p>Discover More</p>
+        </Link>
       </div>
     </div>
   );
