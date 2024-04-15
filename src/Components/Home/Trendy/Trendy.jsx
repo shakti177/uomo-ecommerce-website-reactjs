@@ -114,7 +114,64 @@ const Trendy = () => {
                 })}
               </div>
             )}
-            {activeTab === "tab2" && <div>tab2</div>}
+            {activeTab === "tab2" && (
+              <div className="trendyMainContainer">
+                {StoreData.slice(0, 8)
+                  .reverse()
+                  .map((product) => {
+                    return (
+                      <div className="trendyProductContainer">
+                        <div className="trendyProductImages">
+                          <img
+                            src={product.frontImg}
+                            alt=""
+                            className="trendyProduct_front"
+                          />
+                          <img
+                            src={product.backImg}
+                            alt=""
+                            className="trendyProduct_back"
+                          />
+                          <h4>Add to Cart</h4>
+                        </div>
+                        <div className="trendyProductInfo">
+                          <div className="trendyProductCategoryWishlist">
+                            <p>Dresses</p>
+                            <FiHeart
+                              onClick={() =>
+                                handleWishlistClick(product.productID)
+                              }
+                              style={{
+                                color: wishList[product.productID]
+                                  ? "red"
+                                  : "#767676",
+                                cursor: "pointer",
+                              }}
+                            />
+                          </div>
+                          <div className="trendyProductNameInfo">
+                            <Link to="product">
+                              <h5>{product.productName}</h5>
+                            </Link>
+
+                            <p>{product.productPrice}</p>
+                            <div className="trendyProductRatingReviews">
+                              <div className="trendyProductRatingStar">
+                                <FaStar color="#FEC78A" size={10} />
+                                <FaStar color="#FEC78A" size={10} />
+                                <FaStar color="#FEC78A" size={10} />
+                                <FaStar color="#FEC78A" size={10} />
+                                <FaStar color="#FEC78A" size={10} />
+                              </div>
+                              <span>{product.productReviews}</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+              </div>
+            )}
             {activeTab === "tab3" && <div>Tab 3</div>}
             {activeTab === "tab4" && <div>Tab 4</div>}
           </div>
