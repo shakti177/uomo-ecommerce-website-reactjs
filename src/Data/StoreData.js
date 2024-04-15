@@ -43,7 +43,7 @@ let StoreData = [
     frontImg: Product_3,
     backImg: Product_3_1,
     productName: "Shirt In Botanical Cheetah Print",
-    productPrice: "$62",
+    productPrice: "$60",
     productReviews: "7k+ reviews",
   },
   {
@@ -52,14 +52,14 @@ let StoreData = [
     backImg: Product_4_1,
     productName: "Cotton Jersey T-Shirt",
     productPrice: "$17",
-    productReviews: "17k+ reviews",
+    productReviews: "5k+ reviews",
   },
   {
     productID: 5,
     frontImg: Product_5,
     backImg: Product_5_1,
     productName: "Cableknit Shawl",
-    productPrice: "$99",
+    productPrice: "$109",
     productReviews: "9k+ reviews",
   },
   {
@@ -67,7 +67,7 @@ let StoreData = [
     frontImg: Product_6,
     backImg: Product_6_1,
     productName: "Colorful Jacket",
-    productPrice: "$29",
+    productPrice: "$69",
     productReviews: "1k+ reviews",
   },
   {
@@ -83,7 +83,7 @@ let StoreData = [
     frontImg: Product_8,
     backImg: Product_8_1,
     productName: "Kirby T-Shirt",
-    productPrice: "$17",
+    productPrice: "$37",
     productReviews: "4k+ reviews",
   },
   {

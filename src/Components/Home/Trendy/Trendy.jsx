@@ -24,6 +24,22 @@ const Trendy = () => {
     }));
   };
 
+  const sortByPrice = (a, b) => {
+    const priceA = parseFloat(a.productPrice.replace("$", ""));
+    const priceB = parseFloat(b.productPrice.replace("$", ""));
+    return priceA - priceB;
+  };
+
+  const sortByReviews = (a, b) => {
+    const reviewsA = parseInt(
+      a.productReviews.replace("k+ reviews", "").replace(",", "")
+    );
+    const reviewsB = parseInt(
+      b.productReviews.replace("k+ reviews", "").replace(",", "")
+    );
+    return reviewsB - reviewsA;
+  };
+
   return (
     <div>
       <div className="trendyProducts">
@@ -182,58 +198,60 @@ const Trendy = () => {
 
             {activeTab === "tab3" && (
               <div className="trendyMainContainer">
-                {StoreData.slice(0, 8).map((product) => {
-                  return (
-                    <div className="trendyProductContainer">
-                      <div className="trendyProductImages">
-                        <img
-                          src={product.frontImg}
-                          alt=""
-                          className="trendyProduct_front"
-                        />
-                        <img
-                          src={product.backImg}
-                          alt=""
-                          className="trendyProduct_back"
-                        />
-                        <h4>Add to Cart</h4>
-                      </div>
-                      <div className="trendyProductInfo">
-                        <div className="trendyProductCategoryWishlist">
-                          <p>Dresses</p>
-                          <FiHeart
-                            onClick={() =>
-                              handleWishlistClick(product.productID)
-                            }
-                            style={{
-                              color: wishList[product.productID]
-                                ? "red"
-                                : "#767676",
-                              cursor: "pointer",
-                            }}
+                {StoreData.slice(0, 8)
+                  .sort(sortByReviews)
+                  .map((product) => {
+                    return (
+                      <div className="trendyProductContainer">
+                        <div className="trendyProductImages">
+                          <img
+                            src={product.frontImg}
+                            alt=""
+                            className="trendyProduct_front"
                           />
+                          <img
+                            src={product.backImg}
+                            alt=""
+                            className="trendyProduct_back"
+                          />
+                          <h4>Add to Cart</h4>
                         </div>
-                        <div className="trendyProductNameInfo">
-                          <Link to="product">
-                            <h5>{product.productName}</h5>
-                          </Link>
+                        <div className="trendyProductInfo">
+                          <div className="trendyProductCategoryWishlist">
+                            <p>Dresses</p>
+                            <FiHeart
+                              onClick={() =>
+                                handleWishlistClick(product.productID)
+                              }
+                              style={{
+                                color: wishList[product.productID]
+                                  ? "red"
+                                  : "#767676",
+                                cursor: "pointer",
+                              }}
+                            />
+                          </div>
+                          <div className="trendyProductNameInfo">
+                            <Link to="product">
+                              <h5>{product.productName}</h5>
+                            </Link>
 
-                          <p>{product.productPrice}</p>
-                          <div className="trendyProductRatingReviews">
-                            <div className="trendyProductRatingStar">
-                              <FaStar color="#FEC78A" size={10} />
-                              <FaStar color="#FEC78A" size={10} />
-                              <FaStar color="#FEC78A" size={10} />
-                              <FaStar color="#FEC78A" size={10} />
-                              <FaStar color="#FEC78A" size={10} />
+                            <p>{product.productPrice}</p>
+                            <div className="trendyProductRatingReviews">
+                              <div className="trendyProductRatingStar">
+                                <FaStar color="#FEC78A" size={10} />
+                                <FaStar color="#FEC78A" size={10} />
+                                <FaStar color="#FEC78A" size={10} />
+                                <FaStar color="#FEC78A" size={10} />
+                                <FaStar color="#FEC78A" size={10} />
+                              </div>
+                              <span>{product.productReviews}</span>
                             </div>
-                            <span>{product.productReviews}</span>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  );
-                })}
+                    );
+                  })}
               </div>
             )}
 
@@ -241,58 +259,60 @@ const Trendy = () => {
 
             {activeTab === "tab4" && (
               <div className="trendyMainContainer">
-                {StoreData.slice(0, 8).map((product) => {
-                  return (
-                    <div className="trendyProductContainer">
-                      <div className="trendyProductImages">
-                        <img
-                          src={product.frontImg}
-                          alt=""
-                          className="trendyProduct_front"
-                        />
-                        <img
-                          src={product.backImg}
-                          alt=""
-                          className="trendyProduct_back"
-                        />
-                        <h4>Add to Cart</h4>
-                      </div>
-                      <div className="trendyProductInfo">
-                        <div className="trendyProductCategoryWishlist">
-                          <p>Dresses</p>
-                          <FiHeart
-                            onClick={() =>
-                              handleWishlistClick(product.productID)
-                            }
-                            style={{
-                              color: wishList[product.productID]
-                                ? "red"
-                                : "#767676",
-                              cursor: "pointer",
-                            }}
+                {StoreData.slice(0, 8)
+                  .sort(sortByPrice)
+                  .map((product) => {
+                    return (
+                      <div className="trendyProductContainer">
+                        <div className="trendyProductImages">
+                          <img
+                            src={product.frontImg}
+                            alt=""
+                            className="trendyProduct_front"
                           />
+                          <img
+                            src={product.backImg}
+                            alt=""
+                            className="trendyProduct_back"
+                          />
+                          <h4>Add to Cart</h4>
                         </div>
-                        <div className="trendyProductNameInfo">
-                          <Link to="product">
-                            <h5>{product.productName}</h5>
-                          </Link>
+                        <div className="trendyProductInfo">
+                          <div className="trendyProductCategoryWishlist">
+                            <p>Dresses</p>
+                            <FiHeart
+                              onClick={() =>
+                                handleWishlistClick(product.productID)
+                              }
+                              style={{
+                                color: wishList[product.productID]
+                                  ? "red"
+                                  : "#767676",
+                                cursor: "pointer",
+                              }}
+                            />
+                          </div>
+                          <div className="trendyProductNameInfo">
+                            <Link to="product">
+                              <h5>{product.productName}</h5>
+                            </Link>
 
-                          <p>{product.productPrice}</p>
-                          <div className="trendyProductRatingReviews">
-                            <div className="trendyProductRatingStar">
-                              <FaStar color="#FEC78A" size={10} />
-                              <FaStar color="#FEC78A" size={10} />
-                              <FaStar color="#FEC78A" size={10} />
-                              <FaStar color="#FEC78A" size={10} />
-                              <FaStar color="#FEC78A" size={10} />
+                            <p>{product.productPrice}</p>
+                            <div className="trendyProductRatingReviews">
+                              <div className="trendyProductRatingStar">
+                                <FaStar color="#FEC78A" size={10} />
+                                <FaStar color="#FEC78A" size={10} />
+                                <FaStar color="#FEC78A" size={10} />
+                                <FaStar color="#FEC78A" size={10} />
+                                <FaStar color="#FEC78A" size={10} />
+                              </div>
+                              <span>{product.productReviews}</span>
                             </div>
-                            <span>{product.productReviews}</span>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  );
-                })}
+                    );
+                  })}
               </div>
             )}
           </div>
