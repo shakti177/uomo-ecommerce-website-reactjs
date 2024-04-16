@@ -5,12 +5,14 @@ import Services from "../Components/Home/Services/Services";
 import Instagram from "../Components/Home/Insragram/Instagram";
 import Trendy from "../Components/Home/Trendy/Trendy";
 import LimitedEdition from "../Components/Home/Limited/LimitedEdition";
+import DealTimer from "../Components/Home/Deal/DealTimer";
 
 const Home = () => {
   return (
     <div>
       <CollectionBox />
       <Trendy />
+      <DealTimer />
       <Banner />
       <LimitedEdition />
       <Instagram />

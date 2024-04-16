@@ -1,0 +1,161 @@
+.mainDeal {
+  padding: 15px;
+}
+
+.dealTimer {
+  background-color: #ebebeb;
+  background-image: url(../../../Assets/Deal/dealbg.jpg);
+  height: 500px;
+  background-size: cover;
+  padding: 0 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.dealTimerMainContent {
+  display: flex;
+  flex-direction: column;
+  padding: 60px 0;
+  gap: 40px;
+}
+
+.dealTimeContent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dealTimeContent p {
+  position: relative;
+  padding-left: 50px;
+  color: #c32929;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.dealTimeContent p::before {
+  content: "";
+  display: block;
+  width: 35px;
+  height: 2px;
+  background-color: #c32929;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.dealTimeContent h3 {
+  font-size: 70px;
+  text-transform: uppercase;
+}
+
+.dealTimeContent h3 span {
+  font-weight: 500;
+}
+
+.dealTimeContent a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.dealTimeCounter {
+  display: flex;
+  gap: 10px;
+}
+
+.dealTimeDigit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dealTimeCounter h4 {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.dealTimeDigit h4 {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.dealTimeDigit p {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #767676;
+}
+
+@media screen and (max-width: 1210px) {
+  .dealTimer {
+    padding: 0 60px;
+    height: 450px;
+    background-position: center;
+  }
+  .dealTimerMainContent {
+    padding: 50px 0;
+  }
+  .dealTimeContent p {
+    padding-left: 40px;
+  }
+  .dealTimeContent h3 {
+    font-size: 60px;
+  }
+  .dealTimeCounter h4 {
+    font-size: 25px;
+  }
+  .dealTimeDigit h4 {
+    font-size: 25px;
+  }
+  .dealTimeDigit p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .dealTimer {
+    height: 450px;
+    background-position: center right 40%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .dealTimer {
+    padding: 0 15px;
+    height: 400px;
+    background-position: center right 40%;
+  }
+  .dealTimerMainContent {
+    padding: 40px 0;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .dealTimer {
+    padding: 0 20px;
+    height: 350px;
+  }
+  .dealTimerMainContent {
+    padding: 20px 0;
+  }
+  .dealTimeContent p {
+    padding-left: 50px;
+  }
+  .dealTimeContent h3 {
+    font-size: 40px;
+  }
+  .dealTimeCounter h4 {
+    font-size: 20px;
+  }
+  .dealTimeDigit h4 {
+    font-size: 20px;
+  }
+  .dealTimeDigit p {
+    font-size: 12px;
+  }
+}
