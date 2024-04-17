@@ -23,10 +23,6 @@
   text-transform: uppercase;
 }
 
-.trendyProducts p:hover {
-  text-decoration: underline;
-}
-
 .trendyProducts a {
   text-decoration: none;
   color: black;
