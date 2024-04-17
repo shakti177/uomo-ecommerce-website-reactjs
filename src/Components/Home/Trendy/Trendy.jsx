@@ -317,9 +317,11 @@ const Trendy = () => {
             )}
           </div>
         </div>
-        <Link to="/shop" className="tabs">
-          <p>Discover More</p>
-        </Link>
+        <div className="discoverMore">
+          <Link to="/shop">
+            <p>Discover More</p>
+          </Link>
+        </div>
       </div>
     </div>
   );

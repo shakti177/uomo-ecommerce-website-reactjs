@@ -17,17 +17,6 @@
   font-weight: 700;
 }
 
-.trendyProducts p {
-  font-size: 14px;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-
-.trendyProducts a {
-  text-decoration: none;
-  color: black;
-}
-
 .trendyTabs {
   display: flex;
   flex-direction: column;
@@ -194,6 +183,33 @@
   display: flex;
   align-items: center;
   gap: 3px;
+}
+
+.discoverMore p {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+}
+
+.discoverMore p::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  border-bottom: 2px solid black;
+  transition: width 0.3s ease;
+}
+
+.discoverMore p:hover::after {
+  width: 100%;
+}
+
+.discoverMore a {
+  text-decoration: none;
+  color: black;
 }
 
 @media screen and (max-width: 1210px) {
