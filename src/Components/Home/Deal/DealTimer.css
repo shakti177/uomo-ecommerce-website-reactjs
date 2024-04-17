@@ -133,6 +133,9 @@
   .dealTimerMainContent {
     padding: 40px 0;
   }
+  .dealTimeContent h3 {
+    font-size: 40px;
+  }
 }
 
 @media screen and (max-width: 320px) {
@@ -145,9 +148,6 @@
   }
   .dealTimeContent p {
     padding-left: 50px;
-  }
-  .dealTimeContent h3 {
-    font-size: 40px;
   }
   .dealTimeCounter h4 {
     font-size: 20px;
