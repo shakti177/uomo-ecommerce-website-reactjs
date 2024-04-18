@@ -1,0 +1,12 @@
+.shopDetails {
+  padding: 0 160px;
+}
+
+.shopDetailMain {
+  display: flex;
+  gap: 60px;
+}
+
+.shopDetails__left {
+  width: 27%;
+}
