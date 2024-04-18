@@ -125,7 +125,7 @@ const Footer = () => {
             </p>
 
             <form onSubmit={handleSubscribe}>
-              <input type="email" placeholder="Your emil address" required />
+              <input type="email" placeholder="Your email address" required />
               <button type="submit">Join</button>
             </form>
 
