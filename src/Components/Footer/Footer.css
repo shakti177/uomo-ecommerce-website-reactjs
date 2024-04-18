@@ -41,6 +41,10 @@
   width: 240px;
 }
 
+.social_links svg {
+  cursor: pointer;
+}
+
 .footer_content {
   display: flex;
   flex-direction: column;
