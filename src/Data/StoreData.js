@@ -59,7 +59,7 @@ let StoreData = [
     frontImg: Product_5,
     backImg: Product_5_1,
     productName: "Cableknit Shawl",
-    productPrice: "$109",
+    productPrice: "$100",
     productReviews: "9k+ reviews",
   },
   {
@@ -97,7 +97,7 @@ let StoreData = [
     productID: 10,
     frontImg: limited2,
     productName: "Hanneman Pouf",
-    productPrice: "$99",
+    productPrice: "$92",
     productReviews: "5k+ reviews",
   },
   {

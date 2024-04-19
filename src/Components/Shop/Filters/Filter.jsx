@@ -8,11 +8,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import Slider from "@mui/material/Slider";
 
 const Filter = () => {
-  function valuetext(value) {
-    return `$${value}`;
-  }
-
-  const [value, setValue] = useState([20, 37]);
+  const [value, setValue] = useState([20, 69]);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -105,7 +101,7 @@ const Filter = () => {
                 value={value}
                 onChange={handleChange}
                 valueLabelDisplay="auto"
-                getAriaValueText={valuetext}
+                valueLabelFormat={(value) => `$${value}`}
                 sx={{
                   color: "black",
                 }}
