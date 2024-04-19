@@ -10,3 +10,17 @@
 .shopDetails__left {
   width: 27%;
 }
+
+/* responsive */
+
+@media screen and (max-width: 1210px) {
+  .shopDetails {
+    padding: 0 60px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .shopDetails__left {
+    display: none;
+  }
+}
