@@ -73,6 +73,17 @@
   font-weight: bolder;
 }
 
+.collection h5 {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.collection a {
+  text-decoration: none;
+  color: black;
+}
+
 @media screen and (max-width: 1210px) {
   .collection {
     grid-template-columns: 1fr;

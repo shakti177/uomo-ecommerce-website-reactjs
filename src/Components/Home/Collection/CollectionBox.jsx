@@ -1,6 +1,8 @@
 import React from "react";
 import "./CollectionBox.css";
 
+import { Link } from "react-router-dom";
+
 const CollectionBox = () => {
   return (
     <div>
@@ -10,7 +12,9 @@ const CollectionBox = () => {
           <h3 className="col-h3">
             <span>Women</span> Collection
           </h3>
-          <h5>Shop Now</h5>
+          <Link to="/shop">
+            <h5>Shop Now</h5>
+          </Link>
         </div>
         <div className="collectionRight">
           <div className="collectionTop">
@@ -18,7 +22,9 @@ const CollectionBox = () => {
             <h3 className="col-h3">
               <span>Men</span> Collection
             </h3>
-            <h5>Shop Now</h5>
+            <Link to="/shop">
+              <h5>Shop Now</h5>
+            </Link>
           </div>
           <div className="collectionBottom">
             <div className="box1">
@@ -26,7 +32,9 @@ const CollectionBox = () => {
               <h3 className="col-h3">
                 <span>Kids</span> Collection
               </h3>
-              <h5>Shop Now</h5>
+              <Link to="/shop">
+                <h5>Shop Now</h5>
+              </Link>
             </div>
             <div className="box2">
               <h3 className="col-h3">
@@ -35,7 +43,9 @@ const CollectionBox = () => {
               <p className="col-p">
                 Surprise someone with the gift they really want.
               </p>
-              <h5>Shop Now</h5>
+              <Link to="/shop">
+                <h5>Shop Now</h5>
+              </Link>
             </div>
           </div>
         </div>
