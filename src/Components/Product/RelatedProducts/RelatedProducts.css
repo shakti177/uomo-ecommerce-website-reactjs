@@ -33,6 +33,10 @@
   right: -15px;
 }
 
+.rpContainer {
+  position: relative;
+}
+
 .rpImages {
   position: relative;
   width: 100%;
@@ -52,21 +56,32 @@
   left: 0;
   overflow: hidden;
   object-fit: cover;
+  transition: opacity 0.3s linear;
+}
+
+.rpImages .rpBackImg {
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s linear;
+}
+
+.rpContainer:hover .rpBackImg {
+  opacity: 1;
 }
 
 .rpImages .rpFrontImg {
-  z-index: 1;
+  z-index: 2;
   transition: opacity 0.3s linear;
   cursor: pointer;
 }
 
-.rpImages:hover > .rpFrontImg {
+.rpContainer:hover .rpFrontImg {
   opacity: 0;
 }
 
 .rpContainer h4 {
   position: relative;
-  top: 300px;
+  top: 320px;
   text-align: center;
   padding: 10px;
   background-color: rgb(253, 253, 253);
@@ -75,6 +90,7 @@
   text-transform: uppercase;
   font-weight: 500;
   font-size: 14px;
+  z-index: 3;
 }
 
 .rpContainer:hover h4 {
