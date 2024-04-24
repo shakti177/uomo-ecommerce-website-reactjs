@@ -15,10 +15,12 @@ import Footer from "../src/Components/Footer/Footer";
 import "./App.css";
 import ProductDetails from "./Pages/ProductDetails";
 import NotFound from "./Pages/NotFound";
+import ScrollToTop from "./Components/ScrollButton/ScrollToTop";
 
 const App = () => {
   return (
     <div>
+      <ScrollToTop />
       <BrowserRouter>
         <Header />
         <Routes>
