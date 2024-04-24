@@ -242,7 +242,7 @@
     height: 250px;
   }
 
-  .trendyProductImages:hover h4 {
+  .trendyProductContainer:hover h4 {
     top: 200px;
   }
 }
@@ -258,7 +258,7 @@
     height: 240px;
   }
 
-  .trendyProductImages:hover h4 {
+  .trendyProductContainer:hover h4 {
     top: 190px;
   }
 }
@@ -281,7 +281,7 @@
     height: 235px;
   }
 
-  .trendyProductImages:hover h4 {
+  .trendyProductContainer:hover h4 {
     top: 185px;
   }
 }
@@ -292,11 +292,11 @@
     height: 170px;
   }
 
-  .trendyProductImages h4 {
+  .trendyProductContainer h4 {
     font-size: 12px;
   }
 
-  .trendyProductImages:hover h4 {
+  .trendyProductContainer:hover h4 {
     top: 125px;
   }
 
