@@ -4,6 +4,12 @@ import Filter from "../Filters/Filter";
 import { Link } from "react-router-dom";
 
 import "./ShopDetails.css";
+import StoreData from "../../../Data/StoreData";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation } from "swiper/modules";
 
 const ShopDetails = () => {
   return (
@@ -33,7 +39,20 @@ const ShopDetails = () => {
                 </select>
               </div>
             </div>
-            <div className="shopDetailsProducts"></div>
+            <div className="shopDetailsProducts">
+              {StoreData.map((product) => (
+                <div className="shopDetailsProduct" key={product.id}>
+                  <Swiper navigation={true} modules={[Navigation]} loop={true}>
+                    <SwiperSlide>
+                      <img src={product.frontImg} alt="" />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <img src={product.backImg} alt="" />
+                    </SwiperSlide>
+                  </Swiper>
+                </div>
+              ))}
+            </div>
             <div className="shopDetailsPagination"></div>
           </div>
         </div>
