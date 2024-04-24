@@ -25,8 +25,8 @@ const ScrollToTop = () => {
   return (
     <div className="top-to-btm">
       {showTopBtn && (
-        <div className="iconStyle">
-          <GoChevronUp color="black" size={23} onClick={goToTop} />
+        <div className="iconStyle" onClick={goToTop}>
+          <GoChevronUp color="black" size={23} />
         </div>
       )}
     </div>
