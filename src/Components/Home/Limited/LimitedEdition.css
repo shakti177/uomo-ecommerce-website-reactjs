@@ -129,19 +129,6 @@
   gap: 3px;
 }
 
-.swiper-button-prev {
-  font-size: 10px;
-}
-
-.swiper-button-prev::after {
-  background-color: white;
-  border: none;
-  display: flex;
-  border-radius: 50%;
-  padding: 13px;
-  outline: none;
-}
-
 @media screen and (max-width: 1210px) {
   .limitedProductSection {
     padding: 0px 60px;
