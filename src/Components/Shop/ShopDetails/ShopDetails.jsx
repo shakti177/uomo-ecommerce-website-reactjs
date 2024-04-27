@@ -52,7 +52,7 @@ const ShopDetails = () => {
               </div>
             </div>
             <div className="shopDetailsProducts">
-              {StoreData.slice(0, 7).map((product) => (
+              {StoreData.slice(0, 6).map((product) => (
                 <div className="shopDetailsProduct" key={product.id}>
                   <div className="shopDetailsProductImages">
                     <Swiper
