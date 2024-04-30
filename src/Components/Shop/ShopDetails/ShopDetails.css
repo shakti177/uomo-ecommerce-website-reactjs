@@ -4,7 +4,7 @@
 
 .shopDetailMain {
   display: flex;
-  gap: 60px;
+  gap: 40px;
 }
 
 .shopDetails__left {
@@ -60,28 +60,6 @@
 }
 
 /* Shop Products */
-
-.shopDetailsProducts {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
-}
-
-.shopDetailsProduct {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.shopDetailsProductImages {
-  width: 258px;
-  height: 320px;
-}
-
-.shopDetailsProductImages img {
-  width: 100%;
-  height: 100%;
-}
 
 /* responsive */
 
