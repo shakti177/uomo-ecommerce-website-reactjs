@@ -6,11 +6,6 @@ import { Link } from "react-router-dom";
 import "./ShopDetails.css";
 import StoreData from "../../../Data/StoreData";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import { Navigation } from "swiper/modules";
-
 import { FiHeart } from "react-icons/fi";
 import { FaStar } from "react-icons/fa";
 
@@ -52,53 +47,7 @@ const ShopDetails = () => {
               </div>
             </div>
             <div className="shopDetailsProducts">
-              {StoreData.slice(0, 6).map((product) => (
-                <div className="shopDetailsProduct" key={product.id}>
-                  <div className="shopDetailsProductImages">
-                    <Swiper
-                      navigation={true}
-                      modules={[Navigation]}
-                      loop={true}
-                    >
-                      <SwiperSlide>
-                        <img src={product.frontImg} alt="" />
-                      </SwiperSlide>
-                      <SwiperSlide>
-                        <img src={product.backImg} alt="" />
-                      </SwiperSlide>
-                    </Swiper>
-                  </div>
-
-                  <div className="shopDetailsProductInfo">
-                    <div className="sdCategoryWishList">
-                      <p>Dresses</p>
-                      <FiHeart
-                        onClick={() => handleWishlistClick(product.productID)}
-                        style={{
-                          color: wishList[product.productID]
-                            ? "red"
-                            : "#767676",
-                          cursor: "pointer",
-                        }}
-                      />
-                    </div>
-                    <div className="sdProductNameInfo">
-                      <h5>{product.productName}</h5>
-                      <p>{product.productPrice}</p>
-                      <div className="sdProductRatingReviews">
-                        <div className="sdProductRating">
-                          <FaStar color="#FEC78A" size={10} />
-                          <FaStar color="#FEC78A" size={10} />
-                          <FaStar color="#FEC78A" size={10} />
-                          <FaStar color="#FEC78A" size={10} />
-                          <FaStar color="#FEC78A" size={10} />
-                        </div>
-                        <span>{product.productReviews}</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
+              <div className="shopDetailsProductContainer"></div>
             </div>
             <div className="shopDetailsPagination"></div>
           </div>
