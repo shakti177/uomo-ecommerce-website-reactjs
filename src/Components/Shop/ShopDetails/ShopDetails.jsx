@@ -47,7 +47,56 @@ const ShopDetails = () => {
               </div>
             </div>
             <div className="shopDetailsProducts">
-              <div className="shopDetailsProductContainer"></div>
+              <div className="shopDetailsProductsContainer">
+                {StoreData.slice(0, 6).map((product) => (
+                  <div className="sdProductContainer">
+                    <div className="sdProductImages">
+                      <img
+                        src={product.frontImg}
+                        alt=""
+                        className="sdProduct_front"
+                      />
+                      <img
+                        src={product.backImg}
+                        alt=""
+                        className="sdProduct_back"
+                      />
+                      <h4>Add to Cart</h4>
+                    </div>
+                    <div className="sdProductInfo">
+                      <div className="sdProductCategoryWishlist">
+                        <p>Dresses</p>
+                        <FiHeart
+                          onClick={() => handleWishlistClick(product.productID)}
+                          style={{
+                            color: wishList[product.productID]
+                              ? "red"
+                              : "#767676",
+                            cursor: "pointer",
+                          }}
+                        />
+                      </div>
+                      <div className="sdProductNameInfo">
+                        <Link to="product">
+                          <h5>{product.productName}</h5>
+                        </Link>
+
+                        <p>{product.productPrice}</p>
+                        <div className="sdProductRatingReviews">
+                          <div className="sdProductRatingStar">
+                            <FaStar color="#FEC78A" size={10} />
+                            <FaStar color="#FEC78A" size={10} />
+                            <FaStar color="#FEC78A" size={10} />
+                            <FaStar color="#FEC78A" size={10} />
+                            <FaStar color="#FEC78A" size={10} />
+                          </div>
+                          <span>{product.productReviews}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
             <div className="shopDetailsPagination"></div>
           </div>
