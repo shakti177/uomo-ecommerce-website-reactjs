@@ -51,6 +51,11 @@
   font-weight: 600;
 }
 
+.bannerh5 a {
+  text-decoration: none;
+  color: none;
+}
+
 @media screen and (max-width: 1210px) {
   .banner {
     grid-gap: 30px;

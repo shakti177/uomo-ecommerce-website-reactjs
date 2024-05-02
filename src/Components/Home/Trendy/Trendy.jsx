@@ -333,7 +333,7 @@ const Trendy = () => {
           </div>
         </div>
         <div className="discoverMore">
-          <Link to="/shop">
+          <Link to="/shop" onClick={scrollToTop}>
             <p>Discover More</p>
           </Link>
         </div>

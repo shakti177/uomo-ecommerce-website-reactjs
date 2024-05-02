@@ -3,6 +3,13 @@ import { Link } from "react-router-dom";
 import "./DealTimer.css";
 
 const DealTimer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   const [timeLeft, setTimeLeft] = useState({
     days: 31,
     hours: 29,
@@ -63,7 +70,9 @@ const DealTimer = () => {
                 Spring
                 <span> Collection</span>
               </h3>
-              <Link to="/shop">Shop Now</Link>
+              <Link to="/shop" onClick={scrollToTop}>
+                Shop Now
+              </Link>
             </div>
             <div className="dealTimeCounter">
               <div className="dealTimeDigit">

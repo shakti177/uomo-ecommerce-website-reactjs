@@ -77,16 +77,18 @@ const ShopDetails = () => {
                 {StoreData.slice(0, 6).map((product) => (
                   <div className="sdProductContainer">
                     <div className="sdProductImages">
-                      <img
-                        src={product.frontImg}
-                        alt=""
-                        className="sdProduct_front"
-                      />
-                      <img
-                        src={product.backImg}
-                        alt=""
-                        className="sdProduct_back"
-                      />
+                      <Link to="/Product" onClick={scrollToTop}>
+                        <img
+                          src={product.frontImg}
+                          alt=""
+                          className="sdProduct_front"
+                        />
+                        <img
+                          src={product.backImg}
+                          alt=""
+                          className="sdProduct_back"
+                        />
+                      </Link>
                       <h4>Add to Cart</h4>
                     </div>
                     <div className="sdProductInfo">

@@ -4,6 +4,13 @@ import "./CollectionBox.css";
 import { Link } from "react-router-dom";
 
 const CollectionBox = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div>
       <div className="collection">
@@ -12,7 +19,7 @@ const CollectionBox = () => {
           <h3 className="col-h3">
             <span>Women</span> Collection
           </h3>
-          <Link to="/shop">
+          <Link to="/shop" onClick={scrollToTop}>
             <h5>Shop Now</h5>
           </Link>
         </div>
@@ -22,7 +29,7 @@ const CollectionBox = () => {
             <h3 className="col-h3">
               <span>Men</span> Collection
             </h3>
-            <Link to="/shop">
+            <Link to="/shop" onClick={scrollToTop}>
               <h5>Shop Now</h5>
             </Link>
           </div>
@@ -32,7 +39,7 @@ const CollectionBox = () => {
               <h3 className="col-h3">
                 <span>Kids</span> Collection
               </h3>
-              <Link to="/shop">
+              <Link to="/shop" onClick={scrollToTop}>
                 <h5>Shop Now</h5>
               </Link>
             </div>
@@ -43,7 +50,7 @@ const CollectionBox = () => {
               <p className="col-p">
                 Surprise someone with the gift they really want.
               </p>
-              <Link to="/shop">
+              <Link to="/shop" onClick={scrollToTop}>
                 <h5>Shop Now</h5>
               </Link>
             </div>
