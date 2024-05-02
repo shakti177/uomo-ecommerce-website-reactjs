@@ -18,6 +18,13 @@ const ShopDetails = () => {
     }));
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   const toggleDrawer = () => {
     setIsDrawerOpen(!isDrawerOpen);
   };
@@ -36,7 +43,10 @@ const ShopDetails = () => {
           <div className="shopDetails__right">
             <div className="shopDetailsSorting">
               <div className="shopDetailsBreadcrumbLink">
-                <Link to="/">Home</Link>&nbsp;/&nbsp;
+                <Link to="/" onClick={scrollToTop}>
+                  Home
+                </Link>
+                &nbsp;/&nbsp;
                 <Link to="/shop">The Shop</Link>
               </div>
               <div className="filterLeft" onClick={toggleDrawer}>
@@ -93,7 +103,7 @@ const ShopDetails = () => {
                         />
                       </div>
                       <div className="sdProductNameInfo">
-                        <Link to="product">
+                        <Link to="/product" onClick={scrollToTop}>
                           <h5>{product.productName}</h5>
                         </Link>
 

@@ -15,6 +15,13 @@ const Trendy = () => {
     setActiveTab(tab);
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   const [wishList, setWishList] = useState({});
 
   const handleWishlistClick = (productID) => {
@@ -82,16 +89,18 @@ const Trendy = () => {
                   return (
                     <div className="trendyProductContainer">
                       <div className="trendyProductImages">
-                        <img
-                          src={product.frontImg}
-                          alt=""
-                          className="trendyProduct_front"
-                        />
-                        <img
-                          src={product.backImg}
-                          alt=""
-                          className="trendyProduct_back"
-                        />
+                        <Link to="/Product" onClick={scrollToTop}>
+                          <img
+                            src={product.frontImg}
+                            alt=""
+                            className="trendyProduct_front"
+                          />
+                          <img
+                            src={product.backImg}
+                            alt=""
+                            className="trendyProduct_back"
+                          />
+                        </Link>
                         <h4>Add to Cart</h4>
                       </div>
                       <div className="trendyProductInfo">
@@ -110,7 +119,7 @@ const Trendy = () => {
                           />
                         </div>
                         <div className="trendyProductNameInfo">
-                          <Link to="product">
+                          <Link to="product" onClick={scrollToTop}>
                             <h5>{product.productName}</h5>
                           </Link>
 
@@ -143,16 +152,18 @@ const Trendy = () => {
                     return (
                       <div className="trendyProductContainer">
                         <div className="trendyProductImages">
-                          <img
-                            src={product.frontImg}
-                            alt=""
-                            className="trendyProduct_front"
-                          />
-                          <img
-                            src={product.backImg}
-                            alt=""
-                            className="trendyProduct_back"
-                          />
+                          <Link to="/Product" onClick={scrollToTop}>
+                            <img
+                              src={product.frontImg}
+                              alt=""
+                              className="trendyProduct_front"
+                            />
+                            <img
+                              src={product.backImg}
+                              alt=""
+                              className="trendyProduct_back"
+                            />
+                          </Link>
                           <h4>Add to Cart</h4>
                         </div>
                         <div className="trendyProductInfo">
@@ -171,7 +182,7 @@ const Trendy = () => {
                             />
                           </div>
                           <div className="trendyProductNameInfo">
-                            <Link to="product">
+                            <Link to="product" onClick={scrollToTop}>
                               <h5>{product.productName}</h5>
                             </Link>
 
@@ -204,16 +215,18 @@ const Trendy = () => {
                     return (
                       <div className="trendyProductContainer">
                         <div className="trendyProductImages">
-                          <img
-                            src={product.frontImg}
-                            alt=""
-                            className="trendyProduct_front"
-                          />
-                          <img
-                            src={product.backImg}
-                            alt=""
-                            className="trendyProduct_back"
-                          />
+                          <Link to="/Product" onClick={scrollToTop}>
+                            <img
+                              src={product.frontImg}
+                              alt=""
+                              className="trendyProduct_front"
+                            />
+                            <img
+                              src={product.backImg}
+                              alt=""
+                              className="trendyProduct_back"
+                            />
+                          </Link>
                           <h4>Add to Cart</h4>
                         </div>
                         <div className="trendyProductInfo">
@@ -232,7 +245,7 @@ const Trendy = () => {
                             />
                           </div>
                           <div className="trendyProductNameInfo">
-                            <Link to="product">
+                            <Link to="product" onClick={scrollToTop}>
                               <h5>{product.productName}</h5>
                             </Link>
 
@@ -265,16 +278,18 @@ const Trendy = () => {
                     return (
                       <div className="trendyProductContainer">
                         <div className="trendyProductImages">
-                          <img
-                            src={product.frontImg}
-                            alt=""
-                            className="trendyProduct_front"
-                          />
-                          <img
-                            src={product.backImg}
-                            alt=""
-                            className="trendyProduct_back"
-                          />
+                          <Link to="/Product">
+                            <img
+                              src={product.frontImg}
+                              alt=""
+                              className="trendyProduct_front"
+                            />
+                            <img
+                              src={product.backImg}
+                              alt=""
+                              className="trendyProduct_back"
+                            />
+                          </Link>
                           <h4>Add to Cart</h4>
                         </div>
                         <div className="trendyProductInfo">
@@ -293,7 +308,7 @@ const Trendy = () => {
                             />
                           </div>
                           <div className="trendyProductNameInfo">
-                            <Link to="product">
+                            <Link to="/product" onClick={scrollToTop}>
                               <h5>{product.productName}</h5>
                             </Link>
 

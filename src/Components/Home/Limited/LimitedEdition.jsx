@@ -8,6 +8,8 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import { Autoplay } from "swiper/modules";
 
+import { Link } from "react-router-dom";
+
 import StoreData from "../../../Data/StoreData";
 
 import { FiHeart } from "react-icons/fi";
@@ -22,6 +24,13 @@ const LimitedEdition = () => {
       ...prevWishlist,
       [productID]: !prevWishlist[productID],
     }));
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   return (
@@ -73,11 +82,13 @@ const LimitedEdition = () => {
                 <SwiperSlide key={product.productID}>
                   <div className="lpContainer">
                     <div className="lpImageContainer">
-                      <img
-                        src={product.frontImg}
-                        alt={product.productName}
-                        className="lpImage"
-                      />
+                      <Link to="/Product" onClick={scrollToTop}>
+                        <img
+                          src={product.frontImg}
+                          alt={product.productName}
+                          className="lpImage"
+                        />
+                      </Link>
                       <h4>Add to Cart</h4>
                     </div>
 
@@ -95,7 +106,9 @@ const LimitedEdition = () => {
                         />
                       </div>
                       <div className="productNameInfo">
-                        <h5>{product.productName}</h5>
+                        <Link to="/Product" onClick={scrollToTop}>
+                          <h5>{product.productName}</h5>
+                        </Link>
                         <p>{product.productPrice}</p>
                         <div className="productRatingReviews">
                           <div className="productRatingStar">

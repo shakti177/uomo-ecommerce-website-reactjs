@@ -23,6 +23,13 @@ const RelatedProducts = () => {
     }));
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div>
       <div className="relatedProductSection">
@@ -65,7 +72,7 @@ const RelatedProducts = () => {
               return (
                 <SwiperSlide key={product.productID}>
                   <div className="rpContainer">
-                    <div className="rpImages">
+                    <div className="rpImages" onClick={scrollToTop}>
                       <img
                         src={product.frontImg}
                         alt={product.productName}
@@ -93,7 +100,7 @@ const RelatedProducts = () => {
                         />
                       </div>
                       <div className="productNameInfo">
-                        <h5>{product.productName}</h5>
+                        <h5 onClick={scrollToTop}>{product.productName}</h5>
                         <p>{product.productPrice}</p>
                         <div className="productRatingReviews">
                           <div className="productRatingStar">
