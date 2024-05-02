@@ -14,7 +14,7 @@
 /* Shop Right Section */
 
 .shopDetails__right {
-  width: 73%;
+  width: 77%;
   display: flex;
   flex-direction: column;
   padding-top: 12px;
@@ -51,6 +51,19 @@
   width: 100%;
 }
 
+.filterLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  display: none;
+}
+
+.filterLeft p {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+}
+
 .shopDetailsSort select {
   border: none;
   text-transform: uppercase;
@@ -58,6 +71,57 @@
   font-weight: 500;
   font-size: 14px;
   background-color: white;
+}
+
+.shopDetailsSort {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filterRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  display: none;
+}
+
+.filterSeprator {
+  width: 2px;
+  height: 22px;
+  background-color: #e4e4e4;
+}
+
+/* Add to the existing CSS file */
+
+.filterDrawer {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: white;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+.filterDrawer.open {
+  right: 0;
+}
+
+.drawerHeader {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.closeButton {
+  cursor: pointer;
+}
+
+.drawerContent {
+  padding: 20px;
 }
 
 /* Shop Products */
@@ -189,10 +253,68 @@
   .shopDetails {
     padding: 0 60px;
   }
+
+  .sdProductImages {
+    width: 100%;
+    height: 250px;
+  }
+
+  .sdProductContainer:hover h4 {
+    top: 200px;
+  }
 }
 
 @media screen and (max-width: 991px) {
   .shopDetails__left {
+    display: none;
+  }
+
+  .shopDetails__right {
+    width: 100%;
+  }
+
+  .filterRight {
+    display: flex;
+  }
+
+  .shopDetailsProductsContainer {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+
+  .sdProductContainer h4 {
+    top: 520px;
+  }
+
+  .sdProductImages {
+    width: 100%;
+    height: 490px;
+  }
+
+  .sdProductContainer:hover h4 {
+    top: 440px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sdProductImages {
+    width: 100%;
+    height: 370px;
+  }
+
+  .sdProductContainer:hover h4 {
+    top: 320px;
+  }
+
+  .shopDetailsBreadcrumbLink {
+    display: none;
+  }
+
+  .filterLeft {
+    display: flex;
+  }
+
+  .filterRight {
     display: none;
   }
 }
@@ -203,5 +325,53 @@
   }
   .shopDetails__right {
     width: 100%;
+    gap: 30px;
+  }
+
+  .sdProductImages {
+    width: 100%;
+    height: 235px;
+  }
+
+  .sdProductContainer:hover h4 {
+    top: 185px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .sdProductImages {
+    width: 100%;
+    height: 170px;
+  }
+
+  .sdProductContainer h4 {
+    font-size: 12px;
+  }
+
+  .sdProductContainer:hover h4 {
+    top: 125px;
+  }
+
+  .sdProductNameInfo h5 {
+    font-size: 14px;
+  }
+
+  .sdProductNameInfo p {
+    font-size: 12px;
+  }
+
+  .sdProductRatingReviews {
+    display: flex;
+    gap: 5px;
+  }
+
+  .sdProductRatingReviews span {
+    font-size: 12px;
+  }
+
+  .sdProductRatingStar {
+    display: flex;
+    align-items: center;
+    gap: 2px;
   }
 }

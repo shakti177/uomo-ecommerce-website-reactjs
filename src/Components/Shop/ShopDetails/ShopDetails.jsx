@@ -1,22 +1,29 @@
 import React, { useState } from "react";
 import Filter from "../Filters/Filter";
-
 import { Link } from "react-router-dom";
-
 import "./ShopDetails.css";
 import StoreData from "../../../Data/StoreData";
-
 import { FiHeart } from "react-icons/fi";
 import { FaStar } from "react-icons/fa";
+import { IoFilterSharp } from "react-icons/io5";
 
 const ShopDetails = () => {
   const [wishList, setWishList] = useState({});
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const handleWishlistClick = (productID) => {
     setWishList((prevWishlist) => ({
       ...prevWishlist,
       [productID]: !prevWishlist[productID],
     }));
+  };
+
+  const toggleDrawer = () => {
+    setIsDrawerOpen(!isDrawerOpen);
+  };
+
+  const closeDrawer = () => {
+    setIsDrawerOpen(false);
   };
 
   return (
@@ -32,6 +39,10 @@ const ShopDetails = () => {
                 <Link to="/">Home</Link>&nbsp;/&nbsp;
                 <Link to="/shop">The Shop</Link>
               </div>
+              <div className="filterLeft">
+                <IoFilterSharp onClick={toggleDrawer} />
+                <p>Filter</p>
+              </div>
               <div className="shopDetailsSort">
                 <select name="sort" id="sort">
                   <option value="default">Default Sorting</option>
@@ -44,6 +55,11 @@ const ShopDetails = () => {
                   <option value="oldToNew">Date, old to new</option>
                   <option value="newToOld">Date, new to old</option>
                 </select>
+                <div className="filterRight">
+                  <div className="filterSeprator"></div>
+                  <IoFilterSharp onClick={toggleDrawer} />
+                  <p>Filter</p>
+                </div>
               </div>
             </div>
             <div className="shopDetailsProducts">
@@ -100,6 +116,15 @@ const ShopDetails = () => {
             </div>
             <div className="shopDetailsPagination"></div>
           </div>
+        </div>
+      </div>
+      {/* Drawer */}
+      <div className={`filterDrawer ${isDrawerOpen ? "open" : ""}`}>
+        <div className="drawerHeader">
+          <IoFilterSharp onClick={closeDrawer} className="closeButton" />
+        </div>
+        <div className="drawerContent">
+          <Filter />
         </div>
       </div>
     </div>
