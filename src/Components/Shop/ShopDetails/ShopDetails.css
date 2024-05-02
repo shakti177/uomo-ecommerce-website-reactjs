@@ -92,38 +92,6 @@
   background-color: #e4e4e4;
 }
 
-/* Add to the existing CSS file */
-
-.filterDrawer {
-  position: fixed;
-  top: 0;
-  right: -300px;
-  width: 300px;
-  height: 100%;
-  background-color: white;
-  transition: right 0.3s ease;
-  z-index: 1000;
-}
-
-.filterDrawer.open {
-  right: 0;
-}
-
-.drawerHeader {
-  display: flex;
-  justify-content: flex-end;
-  padding: 10px;
-  border-bottom: 1px solid #ccc;
-}
-
-.closeButton {
-  cursor: pointer;
-}
-
-.drawerContent {
-  padding: 20px;
-}
-
 /* Shop Products */
 
 .shopDetailsProductsContainer {
@@ -247,6 +215,47 @@
   gap: 3px;
 }
 
+/* Drawer */
+
+.filterDrawer {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: white;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+.filterDrawer.open {
+  right: 0;
+}
+
+.drawerHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #faf9f8;
+  padding: 28px 20px;
+}
+
+.drawerHeader p {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.closeButton {
+  cursor: pointer;
+}
+
+.drawerContent {
+  padding: 20px;
+  height: calc(100% - 130px);
+  overflow-y: auto;
+}
+
 /* responsive */
 
 @media screen and (max-width: 1210px) {
@@ -294,6 +303,11 @@
   .sdProductContainer:hover h4 {
     top: 440px;
   }
+
+  .filterDrawer {
+    right: -750px;
+    width: 440px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -317,6 +331,11 @@
   .filterRight {
     display: none;
   }
+
+  .filterDrawer {
+    right: -750px;
+    width: 420px;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -335,6 +354,11 @@
 
   .sdProductContainer:hover h4 {
     top: 185px;
+  }
+
+  .filterDrawer {
+    right: -440px;
+    width: 100%;
   }
 }
 

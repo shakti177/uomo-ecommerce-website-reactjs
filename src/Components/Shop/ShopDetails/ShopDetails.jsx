@@ -5,7 +5,7 @@ import "./ShopDetails.css";
 import StoreData from "../../../Data/StoreData";
 import { FiHeart } from "react-icons/fi";
 import { FaStar } from "react-icons/fa";
-import { IoFilterSharp } from "react-icons/io5";
+import { IoFilterSharp, IoClose } from "react-icons/io5";
 
 const ShopDetails = () => {
   const [wishList, setWishList] = useState({});
@@ -39,8 +39,8 @@ const ShopDetails = () => {
                 <Link to="/">Home</Link>&nbsp;/&nbsp;
                 <Link to="/shop">The Shop</Link>
               </div>
-              <div className="filterLeft">
-                <IoFilterSharp onClick={toggleDrawer} />
+              <div className="filterLeft" onClick={toggleDrawer}>
+                <IoFilterSharp />
                 <p>Filter</p>
               </div>
               <div className="shopDetailsSort">
@@ -55,9 +55,9 @@ const ShopDetails = () => {
                   <option value="oldToNew">Date, old to new</option>
                   <option value="newToOld">Date, new to old</option>
                 </select>
-                <div className="filterRight">
+                <div className="filterRight" onClick={toggleDrawer}>
                   <div className="filterSeprator"></div>
-                  <IoFilterSharp onClick={toggleDrawer} />
+                  <IoFilterSharp />
                   <p>Filter</p>
                 </div>
               </div>
@@ -121,7 +121,8 @@ const ShopDetails = () => {
       {/* Drawer */}
       <div className={`filterDrawer ${isDrawerOpen ? "open" : ""}`}>
         <div className="drawerHeader">
-          <IoFilterSharp onClick={closeDrawer} className="closeButton" />
+          <p>Filter By</p>
+          <IoClose onClick={closeDrawer} className="closeButton" size={26} />
         </div>
         <div className="drawerContent">
           <Filter />
