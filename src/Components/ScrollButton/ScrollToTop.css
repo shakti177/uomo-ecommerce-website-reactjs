@@ -1,5 +1,6 @@
 .top-to-btm {
   position: relative;
+  cursor: pointer;
 }
 
 .iconStyle {
