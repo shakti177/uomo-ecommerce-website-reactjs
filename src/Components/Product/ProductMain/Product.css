@@ -84,6 +84,21 @@
   text-transform: uppercase;
   font-weight: 500;
   font-size: 14px;
+  position: relative;
+}
+
+.breadcrumbLink a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  border-bottom: 2px solid black;
+  transition: width 0.3s ease;
+}
+
+.breadcrumbLink a:hover::after {
+  width: 100%;
 }
 
 .prevNextLink {
@@ -101,6 +116,21 @@
   text-transform: uppercase;
   font-weight: 500;
   font-size: 14px;
+  position: relative;
+}
+
+.prevNextLink a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  border-bottom: 2px solid black;
+  transition: width 0.3s ease;
+}
+
+.prevNextLink a:hover::after {
+  width: 100%;
 }
 
 .productName h1 {
@@ -261,6 +291,21 @@
   border: none;
   gap: 10px;
   outline: none;
+  position: relative;
+}
+
+.productWishList button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 0;
+  border-bottom: 2px solid black;
+  transition: width 0.3s ease;
+}
+
+.productWishList button:hover::after {
+  width: 50%;
 }
 
 .productWishList button p {
@@ -275,6 +320,21 @@
   text-transform: uppercase;
   font-size: 13px;
   font-weight: 500;
+  position: relative;
+}
+
+.productShare::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 0;
+  border-bottom: 2px solid black;
+  transition: width 0.3s ease;
+}
+
+.productShare:hover::after {
+  width: 50%;
 }
 
 .productTags {
