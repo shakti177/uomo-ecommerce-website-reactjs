@@ -98,7 +98,7 @@
 }
 
 .breadcrumbLink a:hover::after {
-  width: 100%;
+  width: 50%;
 }
 
 .prevNextLink {
@@ -130,7 +130,7 @@
 }
 
 .prevNextLink a:hover::after {
-  width: 100%;
+  width: 50%;
 }
 
 .productName h1 {
