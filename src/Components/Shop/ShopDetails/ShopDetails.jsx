@@ -6,6 +6,7 @@ import StoreData from "../../../Data/StoreData";
 import { FiHeart } from "react-icons/fi";
 import { FaStar } from "react-icons/fa";
 import { IoFilterSharp, IoClose } from "react-icons/io5";
+import { FaAngleRight, FaAngleLeft } from "react-icons/fa6";
 
 const ShopDetails = () => {
   const [wishList, setWishList] = useState({});
@@ -126,7 +127,28 @@ const ShopDetails = () => {
                 ))}
               </div>
             </div>
-            <div className="shopDetailsPagination"></div>
+            <div className="shopDetailsPagination">
+              <div className="sdPaginationPrev">
+                <p>
+                  <FaAngleLeft />
+                  Prev
+                </p>
+              </div>
+              <div className="sdPaginationNumber">
+                <div className="paginationNum">
+                  <p>1</p>
+                  <p>2</p>
+                  <p>3</p>
+                  <p>4</p>
+                </div>
+              </div>
+              <div className="sdPaginationNext">
+                <p>
+                  Next
+                  <FaAngleRight />
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

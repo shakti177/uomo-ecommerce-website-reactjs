@@ -256,6 +256,26 @@
   overflow-y: auto;
 }
 
+/* Pagination */
+
+.shopDetailsPagination {
+  display: flex;
+  justify-content: space-between;
+}
+
+.shopDetailsPagination p {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+
+.paginationNum {
+  display: flex;
+  gap: 30px;
+}
+
 /* responsive */
 
 @media screen and (max-width: 1210px) {
