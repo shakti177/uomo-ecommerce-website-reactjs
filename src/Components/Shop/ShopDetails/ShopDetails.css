@@ -271,6 +271,60 @@
   align-items: center;
 }
 
+.sdPaginationPrev p,
+.sdPaginationNext p {
+  position: relative;
+  cursor: pointer;
+}
+
+.sdPaginationPrev p::after,
+.sdPaginationNext p::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  transition: width 0.3s ease;
+}
+
+.sdPaginationPrev p:hover::after,
+.sdPaginationNext p:hover::after {
+  width: 100%;
+}
+
+.paginationNum p {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.paginationNum p:not(:first-child)::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  transition: width 0.3s ease;
+}
+
+.paginationNum p:hover::after {
+  width: 100%;
+}
+
+.paginationNum p:first-child::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+}
+
 .paginationNum {
   display: flex;
   gap: 30px;
