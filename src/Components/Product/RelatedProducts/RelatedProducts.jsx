@@ -33,6 +33,11 @@ const RelatedProducts = () => {
   return (
     <div>
       <div className="relatedProductSection">
+        <div className="relatedProducts">
+          <h2>
+            RELATED <span>PRODUCTS</span>
+          </h2>
+        </div>
         <div className="relatedProductSlider">
           <div className="swiper-button image-swiper-button-next">
             <IoIosArrowForward />
