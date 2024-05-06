@@ -1,18 +1,12 @@
 .productAdditionalInfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
-  padding: 0 160px;
+  padding: 0 250px;
   margin: 85px 0;
 }
 
 .productAdditonalInfoContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 60px;
-  padding: 0 90px;
 }
 
 .aiTabs {
@@ -110,25 +104,41 @@
   gap: 20px;
 }
 
+/* Tab2 */
+
+.aiTabAdditionalInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.additionalInfoContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.additionalInfoContainer h6 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.additionalInfoContainer p {
+  font-size: 14px;
+  font-weight: 400;
+}
+
 /* reponsive */
 
 @media screen and (max-width: 1210px) {
   .productAdditionalInfo {
     padding: 0 60px;
   }
-
-  .productAdditonalInfoContainer {
-    padding: 0 50px;
-  }
 }
 
 @media screen and (max-width: 768px) {
   .aiTabs p {
     font-size: 14px;
-  }
-
-  .productAdditonalInfoContainer {
-    padding: 0;
   }
 
   .descriptionPara {

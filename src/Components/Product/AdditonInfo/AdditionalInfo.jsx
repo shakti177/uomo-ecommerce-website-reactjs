@@ -92,13 +92,34 @@ const AdditionalInfo = () => {
 
           {/* Tab2 */}
 
-          {activeTab === "aiTab1" && (
-            <div className="aiTabAdditionalInfo"></div>
+          {activeTab === "aiTab2" && (
+            <div className="aiTabAdditionalInfo">
+              <div className="additionalInfoContainer">
+                <h6>Weight</h6>
+                <p> 1.25 kg</p>
+              </div>
+              <div className="additionalInfoContainer">
+                <h6>Dimensions</h6>
+                <p> 90 x 60 x 90 cm</p>
+              </div>
+              <div className="additionalInfoContainer">
+                <h6>Size</h6>
+                <p> XS, S, M, L, XL</p>
+              </div>
+              <div className="additionalInfoContainer">
+                <h6>Color</h6>
+                <p> Black, Orange, White</p>
+              </div>
+              <div className="additionalInfoContainer">
+                <h6>Storage</h6>
+                <p> Relaxed fit shirt-style dress with a rugged</p>
+              </div>
+            </div>
           )}
 
           {/* Tab3 */}
 
-          {activeTab === "aiTab1" && <div className="aiTabReview"></div>}
+          {activeTab === "aiTab3" && <div className="aiTabReview"></div>}
         </div>
       </div>
     </div>
