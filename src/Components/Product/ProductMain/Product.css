@@ -31,6 +31,7 @@
   width: 520px;
   height: 520px;
   pointer-events: none;
+  background-color: #767676;
 }
 
 .buttonsGroup {
