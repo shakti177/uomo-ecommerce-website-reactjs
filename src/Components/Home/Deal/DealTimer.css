@@ -55,7 +55,11 @@
   font-weight: 500;
 }
 
-.dealTimeContent a {
+.dealTimeLink {
+  display: flex;
+}
+
+.dealTimeLink a {
   text-transform: uppercase;
   text-decoration: none;
   color: black;
@@ -64,18 +68,18 @@
   position: relative;
 }
 
-.dealTimeContent a::after {
+.dealTimeLink a::after {
   content: "";
   position: absolute;
   left: 0;
   bottom: -5px;
-  width: 0;
+  width: 50%;
   border-bottom: 2px solid black;
   transition: width 0.2s ease;
 }
 
-.dealTimeContent a:hover::after {
-  width: 7%;
+.dealTimeLink a:hover::after {
+  width: 100%;
 }
 
 .dealTimeCounter {

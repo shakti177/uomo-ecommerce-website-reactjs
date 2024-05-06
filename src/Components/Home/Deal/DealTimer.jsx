@@ -70,9 +70,11 @@ const DealTimer = () => {
                 Spring
                 <span> Collection</span>
               </h3>
-              <Link to="/shop" onClick={scrollToTop}>
-                Shop Now
-              </Link>
+              <div className="dealTimeLink">
+                <Link to="/shop" onClick={scrollToTop}>
+                  Shop Now
+                </Link>
+              </div>
             </div>
             <div className="dealTimeCounter">
               <div className="dealTimeDigit">

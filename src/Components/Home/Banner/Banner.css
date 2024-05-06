@@ -61,7 +61,7 @@
   position: absolute;
   left: 0;
   bottom: -5px;
-  width: 0;
+  width: 50%;
   border-bottom: 2px solid rgb(255, 255, 255);
   transition: width 0.2s ease;
 }

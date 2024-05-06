@@ -19,9 +19,11 @@ const CollectionBox = () => {
           <h3 className="col-h3">
             <span>Women</span> Collection
           </h3>
-          <Link to="/shop" onClick={scrollToTop}>
-            <h5>Shop Now</h5>
-          </Link>
+          <div className="col-link">
+            <Link to="/shop" onClick={scrollToTop}>
+              <h5>Shop Now</h5>
+            </Link>
+          </div>
         </div>
         <div className="collectionRight">
           <div className="collectionTop">
@@ -29,9 +31,11 @@ const CollectionBox = () => {
             <h3 className="col-h3">
               <span>Men</span> Collection
             </h3>
-            <Link to="/shop" onClick={scrollToTop}>
-              <h5>Shop Now</h5>
-            </Link>
+            <div className="col-link">
+              <Link to="/shop" onClick={scrollToTop}>
+                <h5>Shop Now</h5>
+              </Link>
+            </div>
           </div>
           <div className="collectionBottom">
             <div className="box1">
@@ -39,9 +43,11 @@ const CollectionBox = () => {
               <h3 className="col-h3">
                 <span>Kids</span> Collection
               </h3>
-              <Link to="/shop" onClick={scrollToTop}>
-                <h5>Shop Now</h5>
-              </Link>
+              <div className="col-link">
+                <Link to="/shop" onClick={scrollToTop}>
+                  <h5>Shop Now</h5>
+                </Link>
+              </div>
             </div>
             <div className="box2">
               <h3 className="col-h3">
@@ -50,9 +56,11 @@ const CollectionBox = () => {
               <p className="col-p">
                 Surprise someone with the gift they really want.
               </p>
-              <Link to="/shop" onClick={scrollToTop}>
-                <h5>Shop Now</h5>
-              </Link>
+              <div className="col-link">
+                <Link to="/shop" onClick={scrollToTop}>
+                  <h5>Shop Now</h5>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
