@@ -226,8 +226,8 @@ const AdditionalInfo = () => {
                         className="userNewReviewFormInput"
                       />
                       <div className="userNewReviewFormCheck">
-                        <input type="checkbox" placeholder="Subject" />
                         <label>
+                          <input type="checkbox" placeholder="Subject" />
                           Save my name, email, and website in this browser for
                           the next time I comment.
                         </label>

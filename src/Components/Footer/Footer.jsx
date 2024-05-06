@@ -135,6 +135,40 @@ const Footer = () => {
             </div>
           </div>
         </div>
+        <div className="footer_bottom">
+          <p>
+            © 2024 Uomo. All Rights Reserved | Made By{" "}
+            <a
+              href="https://github.com/shakti177"
+              target="_blank"
+              rel="noreferrer"
+              style={{ color: "#C22928", textDecoration: "none" }}
+            >
+              Shakti Tamrakar
+            </a>{" "}
+            with ❤️
+          </p>
+          <div className="footerLangCurrency">
+            <div className="footerLang">
+              <p>Language</p>
+              <select name="language" id="language">
+                <option value="english">United States | English</option>
+                <option value="Hindi">Hindi</option>
+                <option value="Germany">Germany</option>
+                <option value="French">French</option>
+              </select>
+            </div>
+            <div className="footerCurrency">
+              <p>Currency</p>
+              <select name="currency" id="currency">
+                <option value="USD">$ USD</option>
+                <option value="INR">₹ INR</option>
+                <option value="EUR">€ EUR</option>
+                <option value="GBP">£ GBP</option>
+              </select>
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
   );

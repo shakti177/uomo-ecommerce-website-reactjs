@@ -1,13 +1,17 @@
 .footer {
-  padding: 120px 160px;
+  padding: 30px 160px;
   background-color: #e4e4e4;
   margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
 }
 
 .footer__container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 50px;
+  padding-top: 50px;
 }
 
 .footer_left {
@@ -144,9 +148,52 @@
   height: 100%;
 }
 
+.footer_bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  border-top: 1px solid #cfcdcd;
+  padding-top: 30px;
+  gap: 20px;
+}
+
+.footerLangCurrency {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footerLang {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.footerLang select {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 14px;
+}
+
+.footerCurrency {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.footerCurrency select {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 14px;
+}
+
 @media screen and (max-width: 1210px) {
   .footer {
-    padding: 120px 60px;
+    padding: 50px 60px;
   }
   .footer__container {
     grid-template-columns: repeat(2, 1fr);
@@ -167,7 +214,8 @@
 
 @media screen and (max-width: 450px) {
   .footer {
-    padding: 50px 15px;
+    padding: 20px 15px;
+    gap: 30px;
   }
   .footer__container {
     grid-template-columns: 1fr;
@@ -188,6 +236,9 @@
   .paymentIconContainer img {
     height: 40px;
     width: 320px;
+  }
+  .footerLangCurrency {
+    gap: 10px;
   }
 }
 

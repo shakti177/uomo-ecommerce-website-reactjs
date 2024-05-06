@@ -129,21 +129,21 @@ const ShopDetails = () => {
             </div>
             <div className="shopDetailsPagination">
               <div className="sdPaginationPrev">
-                <p>
+                <p onClick={scrollToTop}>
                   <FaAngleLeft />
                   Prev
                 </p>
               </div>
               <div className="sdPaginationNumber">
                 <div className="paginationNum">
-                  <p>1</p>
-                  <p>2</p>
-                  <p>3</p>
-                  <p>4</p>
+                  <p onClick={scrollToTop}>1</p>
+                  <p onClick={scrollToTop}>2</p>
+                  <p onClick={scrollToTop}>3</p>
+                  <p onClick={scrollToTop}>4</p>
                 </div>
               </div>
               <div className="sdPaginationNext">
-                <p>
+                <p onClick={scrollToTop}>
                   Next
                   <FaAngleRight />
                 </p>
