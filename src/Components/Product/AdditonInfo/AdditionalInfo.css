@@ -128,6 +128,180 @@
   font-weight: 400;
 }
 
+/* tab3 */
+
+.aiTabReviewContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.aiTabReviewContainer h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: -20px;
+}
+
+.userReviews {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.userReview {
+  display: flex;
+  gap: 40px;
+}
+
+.userReviewImg img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.userReviewContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.userReviewTopContent {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.userNameRating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.userNameRating h6 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.userRating {
+  display: flex;
+  gap: 3px;
+}
+
+.userDate p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #767676;
+}
+
+.userReviewBottomContent p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #767676;
+  line-height: 24px;
+}
+
+.userNewReview {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.userNewReviewMessage {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.userNewReviewMessage h5 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.userNewReviewMessage p {
+  font-size: 14px;
+  color: #767676;
+}
+
+.userNewReviewRating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.userNewReviewRating label {
+  font-size: 14px;
+}
+
+.userNewReviewForm form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.userNewReviewForm form textarea {
+  padding: 10px;
+  border: 0.125rem solid #e4e4e4;
+  font-size: 14px;
+  outline-color: black;
+}
+
+.userNewReviewFormInput {
+  padding: 15px;
+  font-size: 14px;
+  border: 0.125rem solid #e4e4e4;
+  outline-color: black;
+}
+
+.userNewReviewForm button {
+  width: 20%;
+  padding: 15px;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.userNewReviewFormCheck input {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #e4e4e4;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.userNewReviewFormCheck input:checked {
+  border: 2px solid #000000;
+}
+
+.userNewReviewFormCheck input::after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+.userNewReviewFormCheck input:checked::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.userNewReviewFormCheck label {
+  font-size: 14px;
+}
+
 /* reponsive */
 
 @media screen and (max-width: 1210px) {
@@ -140,6 +314,8 @@
   .aiTabs p {
     font-size: 14px;
   }
+
+  /* tab1 */
 
   .descriptionPara {
     gap: 15px;
@@ -159,7 +335,18 @@
     gap: 20px;
   }
 
+  /* tab1 */
+
   .descriptionPara {
     gap: 10px;
+  }
+
+  /* tab3 */
+  .userReviewBottomContent p {
+    font-size: 12px;
+  }
+
+  .userNewReviewForm button {
+    width: 40%;
   }
 }
