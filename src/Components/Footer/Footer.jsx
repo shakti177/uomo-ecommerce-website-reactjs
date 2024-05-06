@@ -75,19 +75,19 @@ const Footer = () => {
             <div className="links_container">
               <ul onClick={scrollToTop}>
                 <li>
-                  <Link to="/">New Arrivals</Link>
+                  <Link to="/shop">New Arrivals</Link>
                 </li>
                 <li>
-                  <Link to="/">Accessories</Link>
+                  <Link to="/shop">Accessories</Link>
                 </li>
                 <li>
-                  <Link to="/">Men</Link>
+                  <Link to="/shop">Men</Link>
                 </li>
                 <li>
-                  <Link to="/">Women</Link>
+                  <Link to="/shop">Women</Link>
                 </li>
                 <li>
-                  <Link to="/">Shop All</Link>
+                  <Link to="/shop">Shop All</Link>
                 </li>
               </ul>
             </div>
