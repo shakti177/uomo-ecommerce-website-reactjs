@@ -16,6 +16,24 @@
   justify-content: flex-end;
 }
 
+.collectionLeft a {
+  position: relative;
+}
+
+.collectionLeft a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  border-bottom: 2px solid black;
+  transition: width 0.2s ease;
+}
+
+.collectionLeft a:hover::after {
+  width: 15%;
+}
+
 .collectionRight {
   display: grid;
   grid-template-rows: 1fr 1fr;
@@ -32,10 +50,46 @@
   padding: 30px;
 }
 
+.collectionTop a {
+  position: relative;
+}
+
+.collectionTop a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  border-bottom: 2px solid black;
+  transition: width 0.2s ease;
+}
+
+.collectionTop a:hover::after {
+  width: 15%;
+}
+
 .collectionBottom {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 30px;
+}
+
+.collectionBottom a {
+  position: relative;
+}
+
+.collectionBottom a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  border-bottom: 2px solid black;
+  transition: width 0.2s ease;
+}
+
+.collectionBottom a:hover::after {
+  width: 35%;
 }
 
 .box1 {
@@ -96,6 +150,18 @@
     background-position: top center;
     height: 150px;
   }
+
+  .collectionLeft a:hover::after {
+    width: 9%;
+  }
+
+  .collectionTop a:hover::after {
+    width: 9%;
+  }
+
+  .collectionBottom a:hover::after {
+    width: 20%;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -125,5 +191,17 @@
 
   .box2 {
     height: 150px;
+  }
+
+  .collectionLeft a:hover::after {
+    width: 30%;
+  }
+
+  .collectionTop a:hover::after {
+    width: 30%;
+  }
+
+  .collectionBottom a:hover::after {
+    width: 30%;
   }
 }

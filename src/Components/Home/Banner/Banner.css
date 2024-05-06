@@ -53,6 +53,21 @@
 .bannerh5 a {
   text-decoration: none;
   color: none;
+  position: relative;
+}
+
+.bannerh5 a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  border-bottom: 2px solid rgb(255, 255, 255);
+  transition: width 0.2s ease;
+}
+
+.bannerh5 a:hover::after {
+  width: 100%;
 }
 
 @media screen and (max-width: 1210px) {

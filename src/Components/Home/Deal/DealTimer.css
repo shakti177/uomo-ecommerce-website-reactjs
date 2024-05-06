@@ -61,6 +61,21 @@
   color: black;
   font-weight: 500;
   font-size: 14px;
+  position: relative;
+}
+
+.dealTimeContent a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  border-bottom: 2px solid black;
+  transition: width 0.2s ease;
+}
+
+.dealTimeContent a:hover::after {
+  width: 7%;
 }
 
 .dealTimeCounter {
@@ -115,12 +130,18 @@
   .dealTimeDigit p {
     font-size: 14px;
   }
+  .dealTimeContent a:hover::after {
+    width: 9%;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .dealTimer {
     height: 450px;
     background-position: center right 40%;
+  }
+  .dealTimeContent a:hover::after {
+    width: 13%;
   }
 }
 
@@ -135,6 +156,9 @@
   }
   .dealTimeContent h3 {
     font-size: 40px;
+  }
+  .dealTimeContent a:hover::after {
+    width: 25%;
   }
 }
 
@@ -157,5 +181,8 @@
   }
   .dealTimeDigit p {
     font-size: 12px;
+  }
+  .dealTimeContent a:hover::after {
+    width: 30%;
   }
 }
