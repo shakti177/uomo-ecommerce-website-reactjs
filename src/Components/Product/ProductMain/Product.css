@@ -356,6 +356,16 @@
 
 /* Responsive CSS */
 
+@media screen and (max-width: 1250px) {
+  .productCartBtn button {
+    padding: 20px 40px;
+  }
+  .productFullImg img {
+    width: 450px;
+    height: 450px;
+  }
+}
+
 @media screen and (max-width: 1210px) {
   .productSection {
     padding: 0 60px;
