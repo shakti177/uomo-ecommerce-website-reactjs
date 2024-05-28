@@ -100,7 +100,7 @@ const Footer = () => {
                   <Link to="/contact">Customer Service</Link>
                 </li>
                 <li>
-                  <Link to="/">My Account</Link>
+                  <Link to="/loginSignUp">My Account</Link>
                 </li>
                 <li>
                   <Link to="/contact">Find a Store</Link>
