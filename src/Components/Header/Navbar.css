@@ -62,6 +62,14 @@
   gap: 35px;
 }
 
+.iconContainer a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: black;
+}
+
 .mobile-nav {
   display: none;
 }

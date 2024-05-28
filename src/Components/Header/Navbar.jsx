@@ -49,7 +49,10 @@ const Navbar = () => {
         </div>
         <div className="iconContainer">
           <FiSearch size={22} />
-          <FaRegUser size={22} />
+          <Link to="/loginSignUp">
+            <FaRegUser size={22} />
+          </Link>
+
           <Badge
             badgeContent={3}
             color="primary"

@@ -16,6 +16,7 @@ import "./App.css";
 import ProductDetails from "./Pages/ProductDetails";
 import NotFound from "./Pages/NotFound";
 import ScrollToTop from "./Components/ScrollButton/ScrollToTop";
+import Authentication from "./Pages/Authentication";
 
 const App = () => {
   return (
@@ -30,6 +31,7 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/product" element={<ProductDetails />} />
+          <Route path="/loginSignUp" element={<Authentication />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
