@@ -1,0 +1,65 @@
+.resetPasswordSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 50px 0;
+}
+
+.resetPasswordSection h2 {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.resetPasswordContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 500px;
+}
+
+.resetPasswordContainer p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #767676;
+}
+
+.resetPasswordContainer form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.resetPasswordContainer form input {
+  padding: 20px;
+  border: 2px solid #e4e4e4;
+  outline-color: black;
+  outline-color: black;
+}
+
+.resetPasswordContainer form button {
+  padding: 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.resetPasswordSection p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #767676;
+}
+
+.resetPasswordSection p a {
+  color: black;
+}
+
+@media screen and (max-width: 450px) {
+  .resetPasswordContainer {
+    width: 90%;
+  }
+}
