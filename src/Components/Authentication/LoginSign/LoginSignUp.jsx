@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./LoginSignUp.css";
+import { Link } from "react-router-dom";
 
 const LoginSignUp = () => {
   const [activeTab, setActiveTab] = useState("tabButton1");
@@ -39,8 +40,8 @@ const LoginSignUp = () => {
                       <input type="checkbox" className="brandRadio" />
                       <p>Remember me</p>
                     </label>
-                    <p style={{ textDecoration: "underline", color: "black" }}>
-                      Lost password?
+                    <p>
+                      <Link to="/resetPassword">Lost password?</Link>
                     </p>
                   </div>
                   <button>Log In</button>
