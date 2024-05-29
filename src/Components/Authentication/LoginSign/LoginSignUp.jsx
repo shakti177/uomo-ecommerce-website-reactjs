@@ -33,7 +33,7 @@ const LoginSignUp = () => {
             {activeTab === "tabButton1" && (
               <div className="loginSignUpTabsContentLogin">
                 <form>
-                  <input type="text" placeholder="Email address *" required />
+                  <input type="email" placeholder="Email address *" required />
                   <input type="password" placeholder="Password *" required />
                   <div className="loginSignUpForgetPass">
                     <label>
@@ -63,7 +63,7 @@ const LoginSignUp = () => {
               <div className="loginSignUpTabsContentRegister">
                 <form>
                   <input type="text" placeholder="Username *" required />
-                  <input type="text" placeholder="Email address *" required />
+                  <input type="email" placeholder="Email address *" required />
                   <input type="password" placeholder="Password *" required />
                   <p>
                     Your personal data will be used to support your experience
