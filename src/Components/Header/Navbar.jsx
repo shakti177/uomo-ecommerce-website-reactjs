@@ -116,6 +116,12 @@ const Navbar = () => {
               </Link>
             </li>
           </ul>
+          <div className="mobile-menuFooter">
+            <Link to="/loginSignUp">
+              <FaRegUser />
+              <p>My Account</p>
+            </Link>
+          </div>
         </div>
       </nav>
     </>

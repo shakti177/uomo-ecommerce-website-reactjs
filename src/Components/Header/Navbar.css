@@ -98,10 +98,6 @@
 
 /* Mobile Menu */
 
-.mobile-menu-icon {
-  cursor: pointer;
-}
-
 .mobile-menu {
   display: flex;
   flex-direction: column;
@@ -126,20 +122,36 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .mobile-menu ul li {
-  padding: 15px 20px;
-  border-bottom: 1px solid #e0e0e0;
+  padding: 10px 20px;
 }
 
 .mobile-menu ul li a {
   text-decoration: none;
   color: #1b1b1b;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
 }
 
 .mobile-menu ul li a:hover {
   color: #007bff;
+}
+
+.mobile-menuFooter a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 20px;
+  border-top: 1px solid #e0e0e0;
+  text-decoration: none;
+  color: black;
+}
+
+.mobile-menuFooter p {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
 }
