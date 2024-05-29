@@ -7,6 +7,8 @@ import { RiMenu2Line } from "react-icons/ri";
 import { FiSearch } from "react-icons/fi";
 import { FaRegUser } from "react-icons/fa6";
 import { RiShoppingBagLine } from "react-icons/ri";
+import { MdOutlineClose } from "react-icons/md";
+
 import { FiHeart } from "react-icons/fi";
 import Badge from "@mui/material/Badge";
 
@@ -71,7 +73,11 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <nav>
         <div className="mobile-nav">
-          <RiMenu2Line size={22} onClick={toggleMobileMenu} />
+          {mobileMenuOpen ? (
+            <MdOutlineClose size={22} onClick={toggleMobileMenu} />
+          ) : (
+            <RiMenu2Line size={22} onClick={toggleMobileMenu} />
+          )}
           <div className="logoContainer">
             <Link to="/">
               <img src={logo} alt="Logo" />
