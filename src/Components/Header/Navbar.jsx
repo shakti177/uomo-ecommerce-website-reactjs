@@ -109,7 +109,7 @@ const Navbar = () => {
               <div className="mobile-menuSearchBarContainer">
                 <input type="text" placeholder="Search products" />
                 <Link to="/shop">
-                  <FiSearch size={22} />
+                  <FiSearch size={22} onClick={toggleMobileMenu} />
                 </Link>
               </div>
             </div>
