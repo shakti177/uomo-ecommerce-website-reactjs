@@ -108,7 +108,9 @@ const Navbar = () => {
             <div className="mobile-menuSearchBar">
               <div className="mobile-menuSearchBarContainer">
                 <input type="text" placeholder="Search products" />
-                <FiSearch size={22} />
+                <Link to="/shop">
+                  <FiSearch size={22} />
+                </Link>
               </div>
             </div>
             <div className="mobile-menuList">
