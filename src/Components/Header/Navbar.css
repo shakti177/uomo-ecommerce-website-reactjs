@@ -101,7 +101,7 @@
 .mobile-menu {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 30px;
   background-color: #fff;
   position: absolute;
   top: 74px;
