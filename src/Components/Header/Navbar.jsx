@@ -117,7 +117,7 @@ const Navbar = () => {
             </li>
           </ul>
           <div className="mobile-menuFooter">
-            <Link to="/loginSignUp">
+            <Link to="/loginSignUp" onClick={toggleMobileMenu}>
               <FaRegUser />
               <p>My Account</p>
             </Link>
