@@ -25,6 +25,7 @@ const Navbar = () => {
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
+    document.body.style.overflow = mobileMenuOpen ? "auto" : "hidden";
   };
 
   return (
