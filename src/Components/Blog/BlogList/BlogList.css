@@ -1,0 +1,125 @@
+.blogListHeaderContainer {
+  border: 1px solid #e4e4e4;
+  padding: 10px;
+  margin: 10px;
+  margin-bottom: 50px;
+}
+
+.blogListHeader {
+  background-image: url(../../../Assets/pattern_bg.png);
+  background-size: cover;
+  background-color: #eeeeee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 140px;
+  gap: 15px;
+  height: 440px;
+}
+
+.blogListHeader h2 {
+  font-size: 60px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.blogListHeaderCategories {
+  display: flex;
+  gap: 15px;
+}
+
+.blogListHeaderCategories p {
+  font-size: 16px;
+  font-weight: 600;
+  position: relative;
+  cursor: pointer;
+}
+
+.blogListHeaderCategories p::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  border-bottom: 2px solid black;
+  transition: width 0.2s ease;
+}
+
+.blogListHeaderCategories p:hover::after {
+  width: 60%;
+}
+
+.blogListHeaderCategories p:hover::after,
+.blogListHeaderCategories p.activeCategory::after {
+  width: 60%;
+}
+
+.blogPostListContainer {
+  padding: 0 160px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  grid-row-gap: 50px;
+}
+
+.blogPost {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.blogPostThumb img {
+  width: 100%;
+  height: 100%;
+}
+
+.blogPostContent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.blogPostContentDate {
+  display: flex;
+  gap: 30px;
+}
+
+.blogPostContentDate p {
+  font-size: 14px;
+  color: #767676;
+  text-transform: uppercase;
+}
+
+.blogPostContentHeading a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+.blogPostContentDescription p {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.blogPostContentReadMore a {
+  text-decoration: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: black;
+  font-weight: 500;
+  position: relative;
+}
+
+.blogPostContentReadMore a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 70%;
+  border-bottom: 2px solid black;
+  transition: width 0.2s ease;
+}
+
+.blogPostContentReadMore a:hover::after {
+  width: 100%;
+}
