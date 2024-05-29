@@ -1,5 +1,5 @@
 .blogListHeaderContainer {
-  border: 1px solid #e4e4e4;
+  border: 2px solid #e4e4e4;
   padding: 10px;
   margin: 10px;
   margin-bottom: 50px;
@@ -25,6 +25,7 @@
 
 .blogListHeaderCategories {
   display: flex;
+  flex-wrap: wrap;
   gap: 15px;
 }
 
@@ -122,4 +123,37 @@
 
 .blogPostContentReadMore a:hover::after {
   width: 100%;
+}
+
+/* responsive */
+
+@media screen and (max-width: 1210px) {
+  .blogPostListContainer {
+    padding: 0 60px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .blogListHeader {
+    padding-left: 40px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .blogListHeaderContainer {
+    margin-bottom: 20px;
+  }
+
+  .blogListHeader {
+    height: 240px;
+    padding-left: 35px;
+  }
+
+  .blogPostListContainer {
+    padding: 0 15px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .blogListHeader h2 {
+    font-size: 37px;
+  }
 }
