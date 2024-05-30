@@ -5,8 +5,6 @@ import "./BlogDetails.css";
 import blogdetail1 from "../../../Assets/Blog/blogDetail1.jpg";
 import blogimage1 from "../../../Assets/Blog/blogDetail2.jpg";
 import blogimage2 from "../../../Assets/Blog/blogDetail3.jpg";
-import user1 from "../../../Assets/Users/user1.jpeg";
-import user2 from "../../../Assets/Users/user2.jpeg";
 
 import { FaFacebookF } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -14,9 +12,6 @@ import { FaPinterest } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa6";
 import { GoChevronLeft } from "react-icons/go";
 import { GoChevronRight } from "react-icons/go";
-import { FaStar } from "react-icons/fa";
-
-import Rating from "@mui/material/Rating";
 
 const BlogDetails = () => {
   return (
