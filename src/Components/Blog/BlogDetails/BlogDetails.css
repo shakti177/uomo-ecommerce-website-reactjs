@@ -1,0 +1,144 @@
+.blogDetailsSectionContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 160px;
+}
+
+.blogDetailsHeading {
+  padding: 0 100px;
+  margin-bottom: 50px;
+}
+
+.blogDetailsHeading h2 {
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.blogDetailsMetaData {
+  display: flex;
+  gap: 25px;
+}
+
+.blogDetailsMetaData span {
+  color: #767676;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.blogDetailsFeaturedImg img {
+  width: 100%;
+  height: 100%;
+}
+
+.blogDetailsContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 50px 100px;
+}
+
+.blogDetailsContent p {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.blogDetailsContent h5 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.blogDetailsContentBullets {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.blogDetailsContentBulletscontent {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.blogDetailsContentBulletscontent p ul {
+  padding-left: 15px;
+}
+
+.blogDetailsContentBulletscontent p ol {
+  padding-left: 15px;
+}
+
+.blogDetailsContentImg {
+  display: flex;
+  gap: 30px;
+}
+
+.blogDetailsContentImg img {
+  width: 100%;
+  height: 100%;
+}
+
+/* share Buttons */
+
+.share-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 100px;
+}
+
+.share-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 35px;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.share-button svg {
+  margin-right: 15px;
+}
+
+.facebook {
+  background-color: #3b5998;
+}
+
+.facebook:hover {
+  background-color: #2d4373;
+}
+
+.twitter {
+  background-color: #1da1f2;
+}
+
+.twitter:hover {
+  background-color: #0d95e8;
+}
+
+.pinterest {
+  background-color: #bd081c;
+}
+
+.pinterest:hover {
+  background-color: #8c0615;
+}
+
+.more {
+  background-color: #333;
+  width: 55px;
+  height: 55px;
+  padding: 0;
+}
+
+.more svg {
+  margin-right: 0;
+}
+
+.more:hover {
+  background-color: #000;
+}
