@@ -162,6 +162,7 @@
 .blogDetailsNextPrevContainerIcon {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .blogDetailsNextPrevContainerIcon p {
@@ -188,6 +189,7 @@
   display: flex;
   align-items: center;
   justify-content: right;
+  cursor: pointer;
 }
 
 .blogDetailsNextPrevContainerIcon2 p {

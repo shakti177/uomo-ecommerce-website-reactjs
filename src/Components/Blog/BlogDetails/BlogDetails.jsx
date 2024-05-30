@@ -14,6 +14,12 @@ import { GoChevronLeft } from "react-icons/go";
 import { GoChevronRight } from "react-icons/go";
 
 const BlogDetails = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <div>
       <div className="blogDetailsSection">
@@ -135,14 +141,20 @@ const BlogDetails = () => {
           </div>
           <div className="blogDetailsNextPrev">
             <div className="blogDetailsNextPrevContainer">
-              <div className="blogDetailsNextPrevContainerIcon">
+              <div
+                className="blogDetailsNextPrevContainerIcon"
+                onClick={scrollToTop}
+              >
                 <GoChevronLeft size={20} />
                 <p>PREVIOUS POST</p>
               </div>
               <p>Given Set was without from god divide rule Hath</p>
             </div>
             <div className="blogDetailsNextPrevContainer">
-              <div className="blogDetailsNextPrevContainerIcon2">
+              <div
+                className="blogDetailsNextPrevContainerIcon2"
+                onClick={scrollToTop}
+              >
                 <p>NEXT POST</p>
                 <GoChevronRight size={20} />
               </div>

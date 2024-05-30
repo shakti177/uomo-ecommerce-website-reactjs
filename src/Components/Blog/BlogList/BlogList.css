@@ -125,6 +125,15 @@
   width: 100%;
 }
 
+.blogListShowMore {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-top: 60px;
+  cursor: pointer;
+}
+
 /* responsive */
 
 @media screen and (max-width: 1210px) {

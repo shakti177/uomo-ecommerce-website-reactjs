@@ -6,6 +6,13 @@ import BlogData from "../../../Data/BlogData";
 import { Link } from "react-router-dom";
 
 const BlogList = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div>
       <div className="blogListSection">
@@ -34,7 +41,9 @@ const BlogList = () => {
                   <p>{blogPost.blogDate}</p>
                 </div>
                 <div className="blogPostContentHeading">
-                  <Link to="/BlogDetails">{blogPost.blogHeading}</Link>
+                  <Link to="/BlogDetails" onClick={scrollToTop}>
+                    {blogPost.blogHeading}
+                  </Link>
                 </div>
                 <div className="blogPostContentDescription">
                   <p>
@@ -44,12 +53,17 @@ const BlogList = () => {
                   </p>
                 </div>
                 <div className="blogPostContentReadMore">
-                  <Link to="/BlogDetails">Continue Reading</Link>
+                  <Link to="/BlogDetails" onClick={scrollToTop}>
+                    Continue Reading
+                  </Link>
                 </div>
               </div>
             </div>
           ))}
         </div>
+        <p className="blogListShowMore" onClick={scrollToTop}>
+          Show More
+        </p>
       </div>
     </div>
   );
