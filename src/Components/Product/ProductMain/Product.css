@@ -401,6 +401,11 @@
     flex-direction: row;
   }
 
+  .buttonsGroup {
+    top: 47%;
+    left: 50%;
+  }
+
   .productFullImg img {
     width: 100%;
     height: auto;

@@ -68,6 +68,7 @@ const LimitedEdition = () => {
               },
               768: {
                 slidesPerView: 3,
+                slidesPerGroup: 1,
                 spaceBetween: 24,
               },
               1024: {
