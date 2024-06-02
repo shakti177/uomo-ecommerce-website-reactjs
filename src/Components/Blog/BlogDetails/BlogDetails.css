@@ -255,6 +255,23 @@
     padding: 0 25px;
   }
 
+  .share-button {
+    padding: 10px 10px;
+  }
+
+  .share-button svg {
+    margin-right: 10px;
+  }
+
+  .more {
+    width: 43px;
+    height: 43px;
+  }
+
+  .more svg {
+    margin-right: 0;
+  }
+
   .blogDetailsNextPrev {
     padding: 50px 25px;
   }
