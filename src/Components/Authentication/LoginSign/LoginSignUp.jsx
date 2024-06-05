@@ -68,7 +68,15 @@ const LoginSignUp = () => {
                   <p>
                     Your personal data will be used to support your experience
                     throughout this website, to manage access to your account,
-                    and for other purposes described in our privacy policy.
+                    and for other purposes described in our
+                    <Link
+                      to="/terms"
+                      style={{ textDecoration: "none", color: "#c32929" }}
+                    >
+                      {" "}
+                      privacy policy
+                    </Link>
+                    .
                   </p>
                   <button>Register</button>
                 </form>
