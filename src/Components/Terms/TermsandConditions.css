@@ -1,0 +1,44 @@
+.termsContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 270px;
+  gap: 50px;
+}
+
+.termsContainer h2 {
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.termsContent {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.termsContent h6 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.termsContainer p {
+  font-size: 14px;
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1210px) {
+  .termsContainer {
+    padding: 30px 60px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .termsContainer {
+    padding: 15px;
+  }
+
+  .termsContainer h2 {
+    font-size: 25px;
+  }
+}

@@ -19,6 +19,7 @@ import ScrollToTop from "./Components/ScrollButton/ScrollToTop";
 import Authentication from "./Pages/Authentication";
 import ResetPass from "./Components/Authentication/Reset/ResetPass";
 import BlogDetails from "./Components/Blog/BlogDetails/BlogDetails";
+import TermsConditions from "./Pages/TermsConditions";
 
 const App = () => {
   return (
@@ -36,6 +37,7 @@ const App = () => {
           <Route path="/loginSignUp" element={<Authentication />} />
           <Route path="/resetPassword" element={<ResetPass />} />
           <Route path="/BlogDetails" element={<BlogDetails />} />
+          <Route path="/terms" element={<TermsConditions />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
