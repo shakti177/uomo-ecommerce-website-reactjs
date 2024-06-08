@@ -99,7 +99,7 @@ const Navbar = () => {
             </Link>
           </div>
           <Badge
-            badgeContent={3}
+            badgeContent={cart.items.length === 0 ? "0" : cart.items.length}
             color="primary"
             anchorOrigin={{
               vertical: "bottom",
