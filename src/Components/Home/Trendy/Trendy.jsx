@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import "./Trendy.css";
 
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../../Features/Cart/cartSlice";
+
 import { Link } from "react-router-dom";
 
 import StoreData from "../../../Data/StoreData";
@@ -9,6 +12,8 @@ import { FiHeart } from "react-icons/fi";
 import { FaStar } from "react-icons/fa";
 
 const Trendy = () => {
+  const dispatch = useDispatch();
+
   const [activeTab, setActiveTab] = useState("tab1");
 
   const handleTabClick = (tab) => {
@@ -87,7 +92,7 @@ const Trendy = () => {
               <div className="trendyMainContainer">
                 {StoreData.slice(0, 8).map((product) => {
                   return (
-                    <div className="trendyProductContainer">
+                    <div className="trendyProductContainer" key={product.id}>
                       <div className="trendyProductImages">
                         <Link to="/Product" onClick={scrollToTop}>
                           <img
@@ -101,7 +106,9 @@ const Trendy = () => {
                             className="trendyProduct_back"
                           />
                         </Link>
-                        <h4>Add to Cart</h4>
+                        <h4 onClick={() => dispatch(addToCart(product))}>
+                          Add to Cart
+                        </h4>
                       </div>
                       <div className="trendyProductInfo">
                         <div className="trendyProductCategoryWishlist">

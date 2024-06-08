@@ -20,6 +20,7 @@ import Authentication from "./Pages/Authentication";
 import ResetPass from "./Components/Authentication/Reset/ResetPass";
 import BlogDetails from "./Components/Blog/BlogDetails/BlogDetails";
 import TermsConditions from "./Pages/TermsConditions";
+import ShoppingCart from "./Components/ShoppingCart/ShoppingCart";
 
 const App = () => {
   return (
@@ -38,6 +39,8 @@ const App = () => {
           <Route path="/resetPassword" element={<ResetPass />} />
           <Route path="/BlogDetails" element={<BlogDetails />} />
           <Route path="/terms" element={<TermsConditions />} />
+          <Route path="/cart" element={<ShoppingCart />} />
+
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />

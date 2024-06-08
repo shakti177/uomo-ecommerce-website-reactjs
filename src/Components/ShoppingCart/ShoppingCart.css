@@ -1,0 +1,84 @@
+.shoppingCartSection {
+  padding: 30px 160px;
+  display: flex;
+  flex-direction: column;
+}
+
+.shoppingCartSection h2 {
+  font-size: 35px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.shoppingCartTabsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.shoppingCartTabs {
+  display: flex;
+  position: relative;
+}
+
+.shoppingCartTabs button {
+  background: none;
+  border: none;
+  border-bottom: 2px solid #e4e4e4;
+  text-align: left;
+  padding-bottom: 20px;
+  flex-grow: 1;
+}
+
+.shoppingCartTabs button.active {
+  border-bottom: 2px solid #000;
+}
+
+.shoppingCartTabsNumber {
+  display: flex;
+  gap: 10px;
+}
+
+.shoppingCartTabsHeading {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.shoppingCartTabsNumber h3 {
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.shoppingCartTabsNumber p {
+  font-size: 14px;
+  color: #767676;
+}
+
+/* Tab underline effect */
+.shoppingCartTabs.cartTab1::after,
+.shoppingCartTabs.cartTab2::after,
+.shoppingCartTabs.cartTab3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  background-color: #000;
+}
+
+.shoppingCartTabs.cartTab1::after {
+  width: 28%;
+  left: 0;
+}
+
+.shoppingCartTabs.cartTab2::after {
+  width: 66.66%;
+  left: 0;
+}
+
+.shoppingCartTabs.cartTab3::after {
+  width: 100%;
+  left: 0;
+}

@@ -63,17 +63,18 @@ const Navbar = () => {
           <Link to="/loginSignUp">
             <FaRegUser size={22} />
           </Link>
-
-          <Badge
-            badgeContent={3}
-            color="primary"
-            anchorOrigin={{
-              vertical: "bottom",
-              horizontal: "right",
-            }}
-          >
-            <RiShoppingBagLine size={22} />
-          </Badge>
+          <Link to="/cart">
+            <Badge
+              badgeContent={3}
+              color="primary"
+              anchorOrigin={{
+                vertical: "bottom",
+                horizontal: "right",
+              }}
+            >
+              <RiShoppingBagLine size={22} />
+            </Badge>
+          </Link>
           <FiHeart size={22} />
           <RiMenu2Line size={22} />
         </div>

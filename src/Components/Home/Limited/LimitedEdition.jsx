@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import "./LimitedEdition.css";
 
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../../Features/Cart/cartSlice";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -17,6 +20,8 @@ import { FaStar } from "react-icons/fa";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 const LimitedEdition = () => {
+  const dispatch = useDispatch();
+
   const [wishList, setWishList] = useState({});
 
   const handleWishlistClick = (productID) => {
@@ -58,6 +63,7 @@ const LimitedEdition = () => {
             autoplay={{
               delay: 2500,
               disableOnInteraction: false,
+              pauseOnMouseEnter: true,
             }}
             modules={[Navigation, Autoplay]}
             breakpoints={{
@@ -90,7 +96,9 @@ const LimitedEdition = () => {
                           className="lpImage"
                         />
                       </Link>
-                      <h4>Add to Cart</h4>
+                      <h4 onClick={() => dispatch(addToCart(product))}>
+                        Add to Cart
+                      </h4>
                     </div>
 
                     <div className="limitedProductInfo">
