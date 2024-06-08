@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import "./Navbar.css";
+
+import { useSelector } from "react-redux";
+
 import logo from "../../Assets/logo.png";
 import { Link } from "react-router-dom";
 
@@ -21,6 +24,8 @@ import { FaPinterest } from "react-icons/fa";
 import Badge from "@mui/material/Badge";
 
 const Navbar = () => {
+  const cart = useSelector((state) => state.cart);
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
@@ -65,7 +70,7 @@ const Navbar = () => {
           </Link>
           <Link to="/cart">
             <Badge
-              badgeContent={3}
+              badgeContent={cart.items.length === 0 ? "0" : cart.items.length}
               color="primary"
               anchorOrigin={{
                 vertical: "bottom",
