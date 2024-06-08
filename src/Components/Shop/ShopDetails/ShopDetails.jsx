@@ -1,7 +1,11 @@
 import React, { useState } from "react";
+import "./ShopDetails.css";
+
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../../Features/Cart/cartSlice";
+
 import Filter from "../Filters/Filter";
 import { Link } from "react-router-dom";
-import "./ShopDetails.css";
 import StoreData from "../../../Data/StoreData";
 import { FiHeart } from "react-icons/fi";
 import { FaStar } from "react-icons/fa";
@@ -9,6 +13,8 @@ import { IoFilterSharp, IoClose } from "react-icons/io5";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa6";
 
 const ShopDetails = () => {
+  const dispatch = useDispatch();
+
   const [wishList, setWishList] = useState({});
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
@@ -90,7 +96,9 @@ const ShopDetails = () => {
                           className="sdProduct_back"
                         />
                       </Link>
-                      <h4>Add to Cart</h4>
+                      <h4 onClick={() => dispatch(addToCart(product))}>
+                        Add to Cart
+                      </h4>
                     </div>
                     <div className="sdProductInfo">
                       <div className="sdProductCategoryWishlist">
