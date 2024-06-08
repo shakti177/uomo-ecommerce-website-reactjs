@@ -3,8 +3,8 @@ import "./ShoppingCart.css";
 import { useSelector, useDispatch } from "react-redux";
 import {
   removeFromCart,
-  updateQuantity,
-  selectCartTotalAmount,
+  // updateQuantity,
+  // selectCartTotalAmount,
 } from "../../Features/Cart/cartSlice";
 
 const ShoppingCart = () => {
