@@ -89,8 +89,9 @@ const Product = () => {
     const productDetails = {
       productID: 14,
       productName: "Lightweight Puffer Jacket With a Hood",
-      productPrice: "$449",
+      productPrice: 449,
       frontImg: productImg[0],
+      productReviews: "8k+ reviews",
     };
     dispatch(addToCart(productDetails));
   };
