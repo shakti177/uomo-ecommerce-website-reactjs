@@ -28,6 +28,7 @@
   border-bottom: 2px solid #e4e4e4;
   text-align: left;
   padding-bottom: 20px;
+  outline: none;
   flex-grow: 1;
 }
 
@@ -81,4 +82,15 @@
 .shoppingCartTabs.cartTab3::after {
   width: 100%;
   left: 0;
+}
+
+/* Tab1 */
+
+.shoppingBagSection {
+  display: flex;
+  gap: 20px;
+}
+
+.shoppingBagTable {
+  flex: 1;
 }

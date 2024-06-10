@@ -106,7 +106,7 @@ const RelatedProducts = () => {
                       </div>
                       <div className="productNameInfo">
                         <h5 onClick={scrollToTop}>{product.productName}</h5>
-                        <p>{product.productPrice}</p>
+                        <p>${product.productPrice}</p>
                         <div className="productRatingReviews">
                           <div className="productRatingStar">
                             <FaStar color="#FEC78A" size={10} />

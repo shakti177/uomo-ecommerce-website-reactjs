@@ -118,7 +118,7 @@ const LimitedEdition = () => {
                         <Link to="/Product" onClick={scrollToTop}>
                           <h5>{product.productName}</h5>
                         </Link>
-                        <p>{product.productPrice}</p>
+                        <p>${product.productPrice}</p>
                         <div className="productRatingReviews">
                           <div className="productRatingStar">
                             <FaStar color="#FEC78A" size={10} />

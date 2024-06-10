@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import Tooltip from "@mui/material/Tooltip";
 import Zoom from "@mui/material/Zoom";
 
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../../Features/Cart/cartSlice";
+
 import product1 from "../../../Assets/ProductDetail/productdetail-1.jpg";
 import product2 from "../../../Assets/ProductDetail/productdetail-2.jpg";
 import product3 from "../../../Assets/ProductDetail/productdetail-3.jpg";
@@ -77,6 +80,20 @@ const Product = () => {
   const [highlightedColor, setHighlightedColor] = useState("#C8393D");
   const colors = ["#222222", "#C8393D", "#E4E4E4"];
   const colorsName = ["Black", "Red", "Grey"];
+
+  // Product Detail to Redux
+
+  const dispatch = useDispatch();
+
+  const handleAddToCart = () => {
+    const productDetails = {
+      productID: 14,
+      productName: "Lightweight Puffer Jacket With a Hood",
+      productPrice: "$449",
+      frontImg: productImg[0],
+    };
+    dispatch(addToCart(productDetails));
+  };
 
   return (
     <div>
@@ -209,7 +226,7 @@ const Product = () => {
                 <button onClick={increment}>+</button>
               </div>
               <div className="productCartBtn">
-                <button>Add to Cart</button>
+                <button onClick={handleAddToCart}>Add to Cart</button>
               </div>
             </div>
             <div className="productWishShare">

@@ -5,8 +5,6 @@ const initialState = {
   totalAmount: 0,
 };
 
-const parsePrice = (priceString) => parseFloat(priceString.replace("$", ""));
-
 const cartSlice = createSlice({
   name: "cart",
   initialState,
@@ -21,7 +19,7 @@ const cartSlice = createSlice({
       } else {
         state.items.push({ ...product, quantity: 1 });
       }
-      state.totalAmount += parsePrice(product.productPrice);
+      state.totalAmount += product.productPrice;
     },
     removeFromCart(state, action) {
       const productId = action.payload;
@@ -29,8 +27,7 @@ const cartSlice = createSlice({
         (item) => item.productID === productId
       );
       if (itemToRemove) {
-        state.totalAmount -=
-          parsePrice(itemToRemove.productPrice) * itemToRemove.quantity;
+        state.totalAmount -= itemToRemove.productPrice * itemToRemove.quantity;
         state.items = state.items.filter(
           (item) => item.productID !== productId
         );
@@ -44,7 +41,7 @@ const cartSlice = createSlice({
       if (itemToUpdate) {
         const difference = quantity - itemToUpdate.quantity;
         itemToUpdate.quantity = quantity;
-        state.totalAmount += difference * parsePrice(itemToUpdate.productPrice);
+        state.totalAmount += difference * itemToUpdate.productPrice;
       }
     },
   },

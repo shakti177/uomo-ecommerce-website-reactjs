@@ -37,9 +37,7 @@ const Trendy = () => {
   };
 
   const sortByPrice = (a, b) => {
-    const priceA = parseFloat(a.productPrice.replace("$", ""));
-    const priceB = parseFloat(b.productPrice.replace("$", ""));
-    return priceA - priceB;
+    return a.productPrice - b.productPrice;
   };
 
   const sortByReviews = (a, b) => {
@@ -130,7 +128,7 @@ const Trendy = () => {
                             <h5>{product.productName}</h5>
                           </Link>
 
-                          <p>{product.productPrice}</p>
+                          <p>${product.productPrice}</p>
                           <div className="trendyProductRatingReviews">
                             <div className="trendyProductRatingStar">
                               <FaStar color="#FEC78A" size={10} />
@@ -193,7 +191,7 @@ const Trendy = () => {
                               <h5>{product.productName}</h5>
                             </Link>
 
-                            <p>{product.productPrice}</p>
+                            <p>${product.productPrice}</p>
                             <div className="trendyProductRatingReviews">
                               <div className="trendyProductRatingStar">
                                 <FaStar color="#FEC78A" size={10} />
@@ -256,7 +254,7 @@ const Trendy = () => {
                               <h5>{product.productName}</h5>
                             </Link>
 
-                            <p>{product.productPrice}</p>
+                            <p>${product.productPrice}</p>
                             <div className="trendyProductRatingReviews">
                               <div className="trendyProductRatingStar">
                                 <FaStar color="#FEC78A" size={10} />
@@ -319,7 +317,7 @@ const Trendy = () => {
                               <h5>{product.productName}</h5>
                             </Link>
 
-                            <p>{product.productPrice}</p>
+                            <p>${product.productPrice}</p>
                             <div className="trendyProductRatingReviews">
                               <div className="trendyProductRatingStar">
                                 <FaStar color="#FEC78A" size={10} />

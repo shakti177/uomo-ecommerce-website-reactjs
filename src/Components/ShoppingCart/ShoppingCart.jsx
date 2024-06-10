@@ -3,8 +3,8 @@ import "./ShoppingCart.css";
 import { useSelector, useDispatch } from "react-redux";
 import {
   removeFromCart,
-  // updateQuantity,
-  // selectCartTotalAmount,
+  updateQuantity,
+  selectCartTotalAmount,
 } from "../../Features/Cart/cartSlice";
 
 const ShoppingCart = () => {
@@ -64,19 +64,42 @@ const ShoppingCart = () => {
           <div className="shoppingCartTabsContent">
             {/* tab1 */}
             {activeTab === "cartTab1" && (
-              <div>
-                {cartItems.map((item) => (
-                  <div>
-                    <h4>{item.productName}</h4>
-                    <button
-                      onClick={() => {
-                        dispatch(removeFromCart(item.productID));
-                      }}
-                    >
-                      X
-                    </button>
-                  </div>
-                ))}
+              <div className="shoppingBagSection">
+                <div className="shoppingBagTableSection">
+                  <table className="shoppingBagTable">
+                    <thead>
+                      <tr>
+                        <th>Product</th>
+                        <th></th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Subtotal</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {cartItems.map((item) => (
+                        <tr>
+                          <td>
+                            <div className="shoppingBagTableImg">
+                              <img src={item.frontImg} alt="" />
+                            </div>
+                          </td>
+                          <td>
+                            <h4>{item.productName}</h4>
+                            <p>{item.productReviews}</p>
+                          </td>
+                          <td>{item.productPrice}</td>
+                          <td>{item.quantity}</td>
+                          <td>
+                            <p>{item.quantity * item.productPrice}</p>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                <div className="shoppingBagTotal"></div>
               </div>
             )}
 
