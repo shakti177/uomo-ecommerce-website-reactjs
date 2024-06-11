@@ -98,16 +98,18 @@ const Navbar = () => {
               <img src={logo} alt="Logo" />
             </Link>
           </div>
-          <Badge
-            badgeContent={cart.items.length === 0 ? "0" : cart.items.length}
-            color="primary"
-            anchorOrigin={{
-              vertical: "bottom",
-              horizontal: "right",
-            }}
-          >
-            <RiShoppingBagLine size={22} />
-          </Badge>
+          <Link to="/cart">
+            <Badge
+              badgeContent={cart.items.length === 0 ? "0" : cart.items.length}
+              color="primary"
+              anchorOrigin={{
+                vertical: "bottom",
+                horizontal: "right",
+              }}
+            >
+              <RiShoppingBagLine size={22} />
+            </Badge>
+          </Link>
         </div>
         <div className={`mobile-menu ${mobileMenuOpen ? "open" : ""}`}>
           <div className="mobile-menuTop">

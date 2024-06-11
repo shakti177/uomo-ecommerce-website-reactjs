@@ -148,6 +148,7 @@ const ShoppingCart = () => {
                             <p
                               style={{
                                 textAlign: "center",
+                                fontWeight: "500",
                               }}
                             >
                               ${item.quantity * item.productPrice}
@@ -166,26 +167,38 @@ const ShoppingCart = () => {
                   </table>
                 </div>
                 <div className="shoppingBagTotal">
-                  {/* <h3>Cart Total</h3>
+                  <h3>Cart Total</h3>
                   <table className="shoppingBagTotalTable">
                     <tbody>
                       <tr>
-                        <td>Subtotal</td>
+                        <th>Subtotal</th>
                         <td>${totalPrice.toFixed(2)}</td>
                       </tr>
                       <tr>
-                        <td>Shipping</td>
-                        <td>Free</td>
+                        <th>Shipping</th>
+                        <td>
+                          <div className="shoppingBagTotalTableCheck">
+                            <p>${(totalPrice === 0 ? 0 : 5).toFixed(2)}</p>
+                            <p>Shipping to Al..</p>
+                            <p>CHANGE ADDRESS</p>
+                          </div>
+                        </td>
                       </tr>
                       <tr>
-                        <td>Total</td>
+                        <th>VAT</th>
+                        <td>${(totalPrice === 0 ? 0 : 11).toFixed(2)}</td>
+                      </tr>
+                      <tr>
+                        <th>Total</th>
                         <td>
-                          Total Price: $
-                          {(totalPrice === 0 ? 0 : totalPrice + 12).toFixed(2)}
+                          ${(totalPrice === 0 ? 0 : totalPrice + 16).toFixed(2)}
                         </td>
                       </tr>
                     </tbody>
-                  </table> */}
+                  </table>
+                  <button onClick={() => handleTabClick("cartTab2")}>
+                    Proceed to Checkout
+                  </button>
                 </div>
               </div>
             )}

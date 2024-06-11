@@ -89,7 +89,7 @@ const Product = () => {
     const productDetails = {
       productID: 14,
       productName: "Lightweight Puffer Jacket With a Hood",
-      productPrice: 449,
+      productPrice: 90,
       frontImg: productImg[0],
       productReviews: "8k+ reviews",
     };
@@ -148,7 +148,7 @@ const Product = () => {
               <p>8k+ reviews</p>
             </div>
             <div className="productPrice">
-              <h3>$449</h3>
+              <h3>$90</h3>
             </div>
             <div className="productDescription">
               <p>
