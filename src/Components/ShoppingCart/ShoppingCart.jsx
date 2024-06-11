@@ -9,6 +9,8 @@ import {
 
 import { MdOutlineClose } from "react-icons/md";
 
+import { Link } from "react-router-dom";
+
 const ShoppingCart = () => {
   const cartItems = useSelector((state) => state.cart.items);
   const dispatch = useDispatch();
@@ -16,7 +18,9 @@ const ShoppingCart = () => {
   const [activeTab, setActiveTab] = useState("cartTab1");
 
   const handleTabClick = (tab) => {
-    setActiveTab(tab);
+    if (tab === "cartTab1" || cartItems.length > 0) {
+      setActiveTab(tab);
+    }
   };
 
   const handleQuantityChange = (productId, quantity) => {
@@ -26,6 +30,13 @@ const ShoppingCart = () => {
   };
 
   const totalPrice = useSelector(selectCartTotalAmount);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <div>
@@ -49,6 +60,7 @@ const ShoppingCart = () => {
             <button
               className={activeTab === "cartTab2" ? "active" : ""}
               onClick={() => handleTabClick("cartTab2")}
+              disabled={cartItems.length === 0}
             >
               <div className="shoppingCartTabsNumber">
                 <h3>02</h3>
@@ -61,6 +73,7 @@ const ShoppingCart = () => {
             <button
               className={activeTab === "cartTab3" ? "active" : ""}
               onClick={() => handleTabClick("cartTab3")}
+              disabled={cartItems.length === 0}
             >
               <div className="shoppingCartTabsNumber">
                 <h3>03</h3>
@@ -88,81 +101,94 @@ const ShoppingCart = () => {
                       </tr>
                     </thead>
                     <tbody>
-                      {cartItems.map((item) => (
-                        <tr key={item.productID}>
-                          <td>
-                            <div className="shoppingBagTableImg">
-                              <img src={item.frontImg} alt="" />
-                            </div>
-                          </td>
-                          <td>
-                            <div className="shoppingBagTableProductDetail">
-                              <h4>{item.productName}</h4>
-                              <p>{item.productReviews}</p>
-                            </div>
-                          </td>
-                          <td
-                            style={{
-                              textAlign: "center",
-                            }}
-                          >
-                            ${item.productPrice}
-                          </td>
-                          <td>
-                            <div className="ShoppingBagTableQuantity">
-                              <button
-                                onClick={() =>
-                                  handleQuantityChange(
-                                    item.productID,
-                                    item.quantity - 1
-                                  )
-                                }
-                              >
-                                -
-                              </button>
-                              <input
-                                type="text"
-                                min="1"
-                                max="20"
-                                value={item.quantity}
-                                onChange={(e) =>
-                                  handleQuantityChange(
-                                    item.productID,
-                                    parseInt(e.target.value)
-                                  )
-                                }
-                              />
-                              <button
-                                onClick={() =>
-                                  handleQuantityChange(
-                                    item.productID,
-                                    item.quantity + 1
-                                  )
-                                }
-                              >
-                                +
-                              </button>
-                            </div>
-                          </td>
-                          <td>
-                            <p
+                      {cartItems.length > 0 ? (
+                        cartItems.map((item) => (
+                          <tr key={item.productID}>
+                            <td>
+                              <div className="shoppingBagTableImg">
+                                <img src={item.frontImg} alt="" />
+                              </div>
+                            </td>
+                            <td>
+                              <div className="shoppingBagTableProductDetail">
+                                <h4>{item.productName}</h4>
+                                <p>{item.productReviews}</p>
+                              </div>
+                            </td>
+                            <td
                               style={{
                                 textAlign: "center",
-                                fontWeight: "500",
                               }}
                             >
-                              ${item.quantity * item.productPrice}
-                            </p>
-                          </td>
-                          <td>
-                            <MdOutlineClose
-                              onClick={() =>
-                                dispatch(removeFromCart(item.productID))
-                              }
-                            />
+                              ${item.productPrice}
+                            </td>
+                            <td>
+                              <div className="ShoppingBagTableQuantity">
+                                <button
+                                  onClick={() =>
+                                    handleQuantityChange(
+                                      item.productID,
+                                      item.quantity - 1
+                                    )
+                                  }
+                                >
+                                  -
+                                </button>
+                                <input
+                                  type="text"
+                                  min="1"
+                                  max="20"
+                                  value={item.quantity}
+                                  onChange={(e) =>
+                                    handleQuantityChange(
+                                      item.productID,
+                                      parseInt(e.target.value)
+                                    )
+                                  }
+                                />
+                                <button
+                                  onClick={() =>
+                                    handleQuantityChange(
+                                      item.productID,
+                                      item.quantity + 1
+                                    )
+                                  }
+                                >
+                                  +
+                                </button>
+                              </div>
+                            </td>
+                            <td>
+                              <p
+                                style={{
+                                  textAlign: "center",
+                                  fontWeight: "500",
+                                }}
+                              >
+                                ${item.quantity * item.productPrice}
+                              </p>
+                            </td>
+                            <td>
+                              <MdOutlineClose
+                                onClick={() =>
+                                  dispatch(removeFromCart(item.productID))
+                                }
+                              />
+                            </td>
+                          </tr>
+                        ))
+                      ) : (
+                        <tr>
+                          <td colSpan="6">
+                            <div className="shoppingCartEmpty">
+                              <span>Your cart is empty!</span>
+                              <Link to="/shop" onClick={scrollToTop}>
+                                <button>Shop Now</button>
+                              </Link>
+                            </div>
                           </td>
                         </tr>
-                      ))}
+                      )}
                     </tbody>
                   </table>
                 </div>
@@ -196,7 +222,13 @@ const ShoppingCart = () => {
                       </tr>
                     </tbody>
                   </table>
-                  <button onClick={() => handleTabClick("cartTab2")}>
+                  <button
+                    onClick={() => {
+                      handleTabClick("cartTab2");
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                    disabled={cartItems.length === 0}
+                  >
                     Proceed to Checkout
                   </button>
                 </div>

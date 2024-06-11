@@ -36,6 +36,11 @@
   border-bottom: 2px solid #000;
 }
 
+.shoppingCartTabs button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
 .shoppingCartTabsNumber {
   display: flex;
   gap: 10px;
@@ -171,6 +176,33 @@
   outline: none;
 }
 
+.shoppingCartEmpty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 20px 10px;
+  text-transform: uppercase;
+}
+
+.shoppingCartEmpty button {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.shoppingCartEmpty button a {
+  color: #fff;
+  text-decoration: none;
+}
+
 /* shopping Bag total Side */
 
 .shoppingBagTotal {
@@ -230,6 +262,11 @@
   font-weight: 600;
 }
 
+.shoppingBagTotal button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
 /* Responsive */
 
 @media screen and (max-width: 1210px) {
@@ -243,7 +280,8 @@
   }
 
   .shoppingBagTotal {
-    width: 100%;
+    width: auto;
+    padding: 20px;
   }
 }
 
@@ -326,40 +364,6 @@
     align-items: center;
     justify-content: center;
     margin-left: 20px;
-  }
-
-  .ShoppingBagTableQuantity input {
-    width: 10px;
-    height: 10px;
-    padding: 10px 0;
-  }
-
-  .shoppingBagTotal {
-    width: 90%;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .shoppingCartSection h2 {
-    font-size: 20px;
-  }
-
-  .shoppingBagTableImg {
-    width: 80px;
-    height: 80px;
-  }
-
-  .shoppingBagTableProductDetail h4 {
-    font-size: 12px;
-  }
-
-  .shoppingBagTableProductDetail p {
-    font-size: 10px;
-  }
-
-  .ShoppingBagTableQuantity {
-    width: 30px;
-    margin-left: 10px;
   }
 
   .ShoppingBagTableQuantity input {
