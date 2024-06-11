@@ -101,7 +101,13 @@ const ShoppingCart = () => {
                               <p>{item.productReviews}</p>
                             </div>
                           </td>
-                          <td>${item.productPrice}</td>
+                          <td
+                            style={{
+                              textAlign: "center",
+                            }}
+                          >
+                            ${item.productPrice}
+                          </td>
                           <td>
                             <div className="ShoppingBagTableQuantity">
                               <button
@@ -139,7 +145,13 @@ const ShoppingCart = () => {
                             </div>
                           </td>
                           <td>
-                            <p>${item.quantity * item.productPrice}</p>
+                            <p
+                              style={{
+                                textAlign: "center",
+                              }}
+                            >
+                              ${item.quantity * item.productPrice}
+                            </p>
                           </td>
                           <td>
                             <MdOutlineClose
@@ -154,7 +166,7 @@ const ShoppingCart = () => {
                   </table>
                 </div>
                 <div className="shoppingBagTotal">
-                  <h3>Cart Total</h3>
+                  {/* <h3>Cart Total</h3>
                   <table className="shoppingBagTotalTable">
                     <tbody>
                       <tr>
@@ -163,7 +175,7 @@ const ShoppingCart = () => {
                       </tr>
                       <tr>
                         <td>Shipping</td>
-                        <td>$12</td>
+                        <td>Free</td>
                       </tr>
                       <tr>
                         <td>Total</td>
@@ -173,7 +185,7 @@ const ShoppingCart = () => {
                         </td>
                       </tr>
                     </tbody>
-                  </table>
+                  </table> */}
                 </div>
               </div>
             )}
