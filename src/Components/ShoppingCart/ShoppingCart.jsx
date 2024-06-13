@@ -104,25 +104,24 @@ const ShoppingCart = () => {
                       {cartItems.length > 0 ? (
                         cartItems.map((item) => (
                           <tr key={item.productID}>
-                            <td>
+                            <td data-label="Product">
                               <div className="shoppingBagTableImg">
                                 <img src={item.frontImg} alt="" />
                               </div>
                             </td>
-                            <td>
+                            <td data-label="">
                               <div className="shoppingBagTableProductDetail">
                                 <h4>{item.productName}</h4>
                                 <p>{item.productReviews}</p>
                               </div>
                             </td>
                             <td
-                              style={{
-                                textAlign: "center",
-                              }}
+                              data-label="Price"
+                              style={{ textAlign: "center" }}
                             >
                               ${item.productPrice}
                             </td>
-                            <td>
+                            <td data-label="Quantity">
                               <div className="ShoppingBagTableQuantity">
                                 <button
                                   onClick={() =>
@@ -158,7 +157,7 @@ const ShoppingCart = () => {
                                 </button>
                               </div>
                             </td>
-                            <td>
+                            <td data-label="Subtotal">
                               <p
                                 style={{
                                   textAlign: "center",
@@ -168,7 +167,7 @@ const ShoppingCart = () => {
                                 ${item.quantity * item.productPrice}
                               </p>
                             </td>
-                            <td>
+                            <td data-label="">
                               <MdOutlineClose
                                 onClick={() =>
                                   dispatch(removeFromCart(item.productID))
