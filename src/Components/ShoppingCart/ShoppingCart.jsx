@@ -192,7 +192,7 @@ const ShoppingCart = () => {
                   </table>
                 </div>
                 <div className="shoppingBagTotal">
-                  <h3>Cart Total</h3>
+                  <h3>Cart Totals</h3>
                   <table className="shoppingBagTotalTable">
                     <tbody>
                       <tr>

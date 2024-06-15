@@ -207,6 +207,7 @@
 
 .shoppingBagTotal {
   width: 30%;
+  height: 30%;
   padding: 40px;
   border: 1px solid #000000;
   display: flex;
