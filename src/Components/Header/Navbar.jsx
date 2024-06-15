@@ -107,7 +107,7 @@ const Navbar = () => {
                 horizontal: "right",
               }}
             >
-              <RiShoppingBagLine size={22} />
+              <RiShoppingBagLine size={22} color="black" />
             </Badge>
           </Link>
         </div>

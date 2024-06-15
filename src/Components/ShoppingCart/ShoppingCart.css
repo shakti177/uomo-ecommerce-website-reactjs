@@ -30,6 +30,7 @@
   padding-bottom: 20px;
   outline: none;
   flex-grow: 1;
+  cursor: pointer;
 }
 
 .shoppingCartTabs button.active {
