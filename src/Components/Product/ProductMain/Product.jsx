@@ -88,7 +88,7 @@ const Product = () => {
   const handleAddToCart = () => {
     const productDetails = {
       productID: 14,
-      productName: "Lightweight Puffer Jacket With a Hood",
+      productName: "Lightweight Puffer Jacket",
       productPrice: 90,
       frontImg: productImg[0],
       productReviews: "8k+ reviews",
