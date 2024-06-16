@@ -190,6 +190,68 @@ const ShoppingCart = () => {
                       )}
                     </tbody>
                   </table>
+                  <div className="shoppingBagTableMobile">
+                    {cartItems.length > 0 ? (
+                      cartItems.map((item) => (
+                        <div className="shoppingBagTableMobileItems">
+                          <div className="shoppingBagTableMobileItemsImg">
+                            <img src={item.frontImg} alt="" />
+                          </div>
+                          <div className="shoppingBagTableMobileItemsDetail">
+                            <div className="shoppingBagTableMobileItemsDetailMain">
+                              <h4>{item.productName}</h4>
+                              <p>{item.productReviews}</p>
+                              <div className="shoppingBagTableMobileQuantity">
+                                <button
+                                  onClick={() =>
+                                    handleQuantityChange(
+                                      item.productID,
+                                      item.quantity - 1
+                                    )
+                                  }
+                                >
+                                  -
+                                </button>
+                                <input
+                                  type="text"
+                                  min="1"
+                                  max="20"
+                                  value={item.quantity}
+                                  onChange={(e) =>
+                                    handleQuantityChange(
+                                      item.productID,
+                                      parseInt(e.target.value)
+                                    )
+                                  }
+                                />
+                                <button
+                                  onClick={() =>
+                                    handleQuantityChange(
+                                      item.productID,
+                                      item.quantity + 1
+                                    )
+                                  }
+                                >
+                                  +
+                                </button>
+                              </div>
+                              <span>${item.productPrice}</span>
+                            </div>
+                            <div className="shoppingBagTableMobileItemsDetailTotal">
+                              <MdOutlineClose
+                                onClick={() =>
+                                  dispatch(removeFromCart(item.productID))
+                                }
+                              />
+                              <p>${item.quantity * item.productPrice}</p>
+                            </div>
+                          </div>
+                        </div>
+                      ))
+                    ) : (
+                      <div></div>
+                    )}
+                  </div>
                 </div>
                 <div className="shoppingBagTotal">
                   <h3>Cart Totals</h3>

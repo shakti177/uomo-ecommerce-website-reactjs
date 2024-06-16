@@ -269,6 +269,10 @@
   opacity: 0.5;
 }
 
+.shoppingBagTableMobile {
+  display: none;
+}
+
 /* Responsive */
 
 @media screen and (max-width: 1210px) {
@@ -347,30 +351,94 @@
     font-size: 25px;
   }
 
-  .shoppingBagTableImg {
+  .shoppingBagTable {
+    display: none;
+  }
+
+  .shoppingBagTableMobile {
+    display: block;
+  }
+
+  .shoppingBagTableMobileItems {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 0.5px solid #e4e4e4;
+    padding: 20px 0;
+  }
+
+  .shoppingBagTableMobileItemsImg {
     width: 100px;
     height: 100px;
   }
 
-  .shoppingBagTableProductDetail h4 {
-    font-size: 14px;
+  .shoppingBagTableMobileItemsImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
   }
 
-  .shoppingBagTableProductDetail p {
-    font-size: 12px;
-  }
-
-  .ShoppingBagTableQuantity {
-    width: 40px;
+  .shoppingBagTableMobileItemsDetail {
     display: flex;
+    width: 70%;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    margin-left: 20px;
   }
 
-  .ShoppingBagTableQuantity input {
-    width: 10px;
-    height: 10px;
-    padding: 10px 0;
+  .shoppingBagTableMobileItemsDetailMain {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .shoppingBagTableMobileItemsDetailMain h4 {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .shoppingBagTableMobileItemsDetailMain p {
+    font-size: 14px;
+    color: #767676;
+  }
+
+  .shoppingBagTableMobileItemsDetailMain span {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .shoppingBagTableMobileQuantity {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 70px;
+  }
+
+  .shoppingBagTableMobileQuantity button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .shoppingBagTableMobileQuantity input {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border: none;
+    outline: none;
+  }
+
+  .shoppingBagTableMobileItemsDetailTotal {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 65px;
+  }
+
+  .shoppingBagTableMobileItemsDetailTotal svg {
+    cursor: pointer;
   }
 }
