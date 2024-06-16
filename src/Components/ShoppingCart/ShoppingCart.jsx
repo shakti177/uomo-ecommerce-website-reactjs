@@ -106,12 +106,16 @@ const ShoppingCart = () => {
                           <tr key={item.productID}>
                             <td data-label="Product">
                               <div className="shoppingBagTableImg">
-                                <img src={item.frontImg} alt="" />
+                                <Link to="/product" onClick={scrollToTop}>
+                                  <img src={item.frontImg} alt="" />
+                                </Link>
                               </div>
                             </td>
                             <td data-label="">
                               <div className="shoppingBagTableProductDetail">
-                                <h4>{item.productName}</h4>
+                                <Link to="/product" onClick={scrollToTop}>
+                                  <h4>{item.productName}</h4>
+                                </Link>
                                 <p>{item.productReviews}</p>
                               </div>
                             </td>
@@ -195,11 +199,15 @@ const ShoppingCart = () => {
                       cartItems.map((item) => (
                         <div className="shoppingBagTableMobileItems">
                           <div className="shoppingBagTableMobileItemsImg">
-                            <img src={item.frontImg} alt="" />
+                            <Link to="/product" onClick={scrollToTop}>
+                              <img src={item.frontImg} alt="" />
+                            </Link>
                           </div>
                           <div className="shoppingBagTableMobileItemsDetail">
                             <div className="shoppingBagTableMobileItemsDetailMain">
-                              <h4>{item.productName}</h4>
+                              <Link to="/product" onClick={scrollToTop}>
+                                <h4>{item.productName}</h4>
+                              </Link>
                               <p>{item.productReviews}</p>
                               <div className="shoppingBagTableMobileQuantity">
                                 <button
@@ -250,7 +258,12 @@ const ShoppingCart = () => {
                         </div>
                       ))
                     ) : (
-                      <div></div>
+                      <div className="shoppingCartEmpty">
+                        <span>Your cart is empty!</span>
+                        <Link to="/shop" onClick={scrollToTop}>
+                          <button>Shop Now</button>
+                        </Link>
+                      </div>
                     )}
                   </div>
                 </div>

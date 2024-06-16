@@ -148,6 +148,11 @@
   font-weight: 400;
 }
 
+.shoppingBagTableProductDetail a {
+  color: #000;
+  text-decoration: none;
+}
+
 .shoppingBagTableProductDetail p {
   font-size: 14px;
   color: #767676;
@@ -396,6 +401,11 @@
   .shoppingBagTableMobileItemsDetailMain h4 {
     font-size: 16px;
     font-weight: 400;
+  }
+
+  .shoppingBagTableMobileItemsDetailMain a {
+    color: #000;
+    text-decoration: none;
   }
 
   .shoppingBagTableMobileItemsDetailMain p {
