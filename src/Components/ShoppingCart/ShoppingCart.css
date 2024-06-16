@@ -274,6 +274,52 @@
   opacity: 0.5;
 }
 
+/* shopCartFooter */
+
+.shopCartFooter {
+  margin-top: 20px;
+}
+
+.shopCartFooterContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.shopCartFooterContainer form {
+  display: flex;
+  gap: 10px;
+  border: 2px solid #e4e4e4;
+}
+
+.shopCartFooterContainer form input {
+  height: 50px;
+  padding: 0 20px;
+  border: none;
+  outline: none;
+}
+
+.shopCartFooterContainer form button {
+  background-color: white;
+  padding: 0 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.shopCartFooterbutton {
+  background-color: #000;
+  color: #fff;
+  padding: 0 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
 .shoppingBagTableMobile {
   display: none;
 }
@@ -296,7 +342,6 @@
   }
 }
 
-/* Responsive */
 @media screen and (max-width: 768px) {
   .shoppingCartSection h2 {
     font-size: 30px;
@@ -451,10 +496,41 @@
     font-size: 16px;
     font-weight: 500;
   }
+
+  /* shop cart footer responsive */
+
+  .shopCartFooterContainer {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .shopCartFooterContainer form {
+    justify-content: space-between;
+  }
+
+  .shopCartFooterContainer form input {
+    padding: 0 20px;
+  }
+
+  .shopCartFooterContainer form button {
+    padding: 0 20px;
+  }
+
+  .shopCartFooterbutton {
+    padding: 15px 20px;
+    width: 50%;
+  }
 }
 
 @media screen and (max-width: 320px) {
   .shoppingBagTableMobileItemsDetailMain h4 {
     font-size: 14px;
+  }
+  .shopCartFooterContainer form {
+    gap: 0px;
+  }
+  .shopCartFooterContainer form button {
+    padding: 0 5px;
+    font-size: 12px;
   }
 }

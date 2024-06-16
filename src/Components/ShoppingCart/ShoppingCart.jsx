@@ -89,6 +89,7 @@ const ShoppingCart = () => {
             {activeTab === "cartTab1" && (
               <div className="shoppingBagSection">
                 <div className="shoppingBagTableSection">
+                  {/* For Desktop Devices */}
                   <table className="shoppingBagTable">
                     <thead>
                       <tr>
@@ -193,67 +194,134 @@ const ShoppingCart = () => {
                         </tr>
                       )}
                     </tbody>
+                    <tfoot>
+                      <th
+                        colSpan="6"
+                        className="shopCartFooter"
+                        style={{
+                          borderBottom: "none",
+                        }}
+                      >
+                        {cartItems.length > 0 && (
+                          <div className="shopCartFooterContainer">
+                            <form>
+                              <input
+                                type="text"
+                                placeholder="Coupon Code"
+                              ></input>
+                              <button
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                }}
+                              >
+                                Apply Coupon
+                              </button>
+                            </form>
+                            <button
+                              onClick={(e) => {
+                                e.preventDefault();
+                              }}
+                              className="shopCartFooterbutton"
+                            >
+                              Update Cart
+                            </button>
+                          </div>
+                        )}
+                      </th>
+                    </tfoot>
                   </table>
+
+                  {/* For Mobile devices */}
+
                   <div className="shoppingBagTableMobile">
                     {cartItems.length > 0 ? (
                       cartItems.map((item) => (
-                        <div className="shoppingBagTableMobileItems">
-                          <div className="shoppingBagTableMobileItemsImg">
-                            <Link to="/product" onClick={scrollToTop}>
-                              <img src={item.frontImg} alt="" />
-                            </Link>
-                          </div>
-                          <div className="shoppingBagTableMobileItemsDetail">
-                            <div className="shoppingBagTableMobileItemsDetailMain">
+                        <div>
+                          <div className="shoppingBagTableMobileItems">
+                            <div className="shoppingBagTableMobileItemsImg">
                               <Link to="/product" onClick={scrollToTop}>
-                                <h4>{item.productName}</h4>
+                                <img src={item.frontImg} alt="" />
                               </Link>
-                              <p>{item.productReviews}</p>
-                              <div className="shoppingBagTableMobileQuantity">
-                                <button
+                            </div>
+                            <div className="shoppingBagTableMobileItemsDetail">
+                              <div className="shoppingBagTableMobileItemsDetailMain">
+                                <Link to="/product" onClick={scrollToTop}>
+                                  <h4>{item.productName}</h4>
+                                </Link>
+                                <p>{item.productReviews}</p>
+                                <div className="shoppingBagTableMobileQuantity">
+                                  <button
+                                    onClick={() =>
+                                      handleQuantityChange(
+                                        item.productID,
+                                        item.quantity - 1
+                                      )
+                                    }
+                                  >
+                                    -
+                                  </button>
+                                  <input
+                                    type="text"
+                                    min="1"
+                                    max="20"
+                                    value={item.quantity}
+                                    onChange={(e) =>
+                                      handleQuantityChange(
+                                        item.productID,
+                                        parseInt(e.target.value)
+                                      )
+                                    }
+                                  />
+                                  <button
+                                    onClick={() =>
+                                      handleQuantityChange(
+                                        item.productID,
+                                        item.quantity + 1
+                                      )
+                                    }
+                                  >
+                                    +
+                                  </button>
+                                </div>
+                                <span>${item.productPrice}</span>
+                              </div>
+                              <div className="shoppingBagTableMobileItemsDetailTotal">
+                                <MdOutlineClose
+                                  size={20}
                                   onClick={() =>
-                                    handleQuantityChange(
-                                      item.productID,
-                                      item.quantity - 1
-                                    )
-                                  }
-                                >
-                                  -
-                                </button>
-                                <input
-                                  type="text"
-                                  min="1"
-                                  max="20"
-                                  value={item.quantity}
-                                  onChange={(e) =>
-                                    handleQuantityChange(
-                                      item.productID,
-                                      parseInt(e.target.value)
-                                    )
+                                    dispatch(removeFromCart(item.productID))
                                   }
                                 />
+                                <p>${item.quantity * item.productPrice}</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="shopCartFooter">
+                            {cartItems.length > 0 && (
+                              <div className="shopCartFooterContainer">
+                                <form>
+                                  <input
+                                    type="text"
+                                    placeholder="Coupon Code"
+                                  ></input>
+                                  <button
+                                    onClick={(e) => {
+                                      e.preventDefault();
+                                    }}
+                                  >
+                                    Apply Coupon
+                                  </button>
+                                </form>
                                 <button
-                                  onClick={() =>
-                                    handleQuantityChange(
-                                      item.productID,
-                                      item.quantity + 1
-                                    )
-                                  }
+                                  onClick={(e) => {
+                                    e.preventDefault();
+                                  }}
+                                  className="shopCartFooterbutton"
                                 >
-                                  +
+                                  Update Cart
                                 </button>
                               </div>
-                              <span>${item.productPrice}</span>
-                            </div>
-                            <div className="shoppingBagTableMobileItemsDetailTotal">
-                              <MdOutlineClose
-                                size={20}
-                                onClick={() =>
-                                  dispatch(removeFromCart(item.productID))
-                                }
-                              />
-                              <p>${item.quantity * item.productPrice}</p>
-                            </div>
+                            )}
                           </div>
                         </div>
                       ))
