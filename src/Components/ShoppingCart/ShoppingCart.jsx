@@ -200,6 +200,7 @@ const ShoppingCart = () => {
                         className="shopCartFooter"
                         style={{
                           borderBottom: "none",
+                          padding: "20px 0px",
                         }}
                       >
                         {cartItems.length > 0 && (
