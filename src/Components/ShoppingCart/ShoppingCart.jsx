@@ -239,6 +239,7 @@ const ShoppingCart = () => {
                             </div>
                             <div className="shoppingBagTableMobileItemsDetailTotal">
                               <MdOutlineClose
+                                size={20}
                                 onClick={() =>
                                   dispatch(removeFromCart(item.productID))
                                 }

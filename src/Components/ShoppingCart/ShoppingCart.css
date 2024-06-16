@@ -434,11 +434,17 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    justify-content: flex-start;
     gap: 65px;
   }
 
-  .shoppingBagTableMobileItemsDetailTotal svg {
-    cursor: pointer;
+  .shoppingBagTableMobileItemsDetailTotal p {
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .shoppingBagTableMobileItemsDetailMain h4 {
+    font-size: 14px;
   }
 }
