@@ -350,7 +350,14 @@ const ShoppingCart = () => {
                           <div className="shoppingBagTotalTableCheck">
                             <p>${(totalPrice === 0 ? 0 : 5).toFixed(2)}</p>
                             <p>Shipping to Al..</p>
-                            <p onClick={scrollToTop}>CHANGE ADDRESS</p>
+                            <p
+                              onClick={scrollToTop}
+                              style={{
+                                cursor: "pointer",
+                              }}
+                            >
+                              CHANGE ADDRESS
+                            </p>
                           </div>
                         </td>
                       </tr>
