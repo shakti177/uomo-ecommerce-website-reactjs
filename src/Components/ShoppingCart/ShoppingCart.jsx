@@ -435,7 +435,59 @@ const ShoppingCart = () => {
                     </form>
                   </div>
                 </div>
-                <div className="checkoutPaymentSection"></div>
+                <div className="checkoutPaymentSection">
+                  <div className="checkoutTotalContainer">
+                    <h3>Your Order</h3>
+                    <div className="checkoutItems">
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>PRODUCTS</th>
+                            <th>SUBTOTALS</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {cartItems.map((items) => (
+                            <tr>
+                              <td>
+                                {items.productName} x {items.quantity}
+                              </td>
+                              <td>${items.productPrice * items.quantity}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                    <div className="checkoutTotal">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <th>Subtotal</th>
+                            <td>${totalPrice.toFixed(2)}</td>
+                          </tr>
+                          <tr>
+                            <th>Shipping</th>
+                            <td>$5</td>
+                          </tr>
+                          <tr>
+                            <th>VAT</th>
+                            <td>$11</td>
+                          </tr>
+                          <tr>
+                            <th>Total</th>
+                            <td>
+                              $
+                              {(totalPrice === 0 ? 0 : totalPrice + 16).toFixed(
+                                2
+                              )}
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div className="checkoutPaymentContainer"></div>
+                </div>
               </div>
             )}
 

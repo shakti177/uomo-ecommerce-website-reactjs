@@ -390,10 +390,6 @@
   width: 50%;
 }
 
-.checkoutPaymentSection {
-  width: 30%;
-}
-
 .checkoutDetailsFormCheck {
   display: flex;
   flex-direction: column;
@@ -442,6 +438,74 @@
 
 .checkoutDetailsFormCheck input:checked::after {
   transform: translate(-50%, -50%) scale(1);
+}
+
+/* Tab 2 Payment Section */
+
+.checkoutPaymentSection {
+  width: 38%;
+}
+
+.checkoutTotalContainer {
+  border: 1px solid #000000;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.checkoutTotalContainer h3 {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.checkoutItems table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.checkoutItems table th {
+  text-align: left;
+  font-size: 14px;
+  font-weight: 500;
+  border-bottom: 1px solid #e4e4e4;
+  text-transform: uppercase;
+  padding: 10px 0;
+}
+
+.checkoutItems table td {
+  padding: 12px 0;
+  font-size: 14px;
+  color: #595858;
+}
+
+.checkoutItems table tbody {
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.checkoutTotal table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.checkoutTotal table th {
+  text-align: left;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 10px 0;
+}
+
+.checkoutTotal table td {
+  padding: 15px 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.checkoutTotal table tr {
+  border-bottom: 1px solid #e4e4e4;
 }
 
 /* Responsive */
