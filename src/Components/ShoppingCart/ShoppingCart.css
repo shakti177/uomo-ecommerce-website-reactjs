@@ -349,21 +349,29 @@
 .checkoutDetailsForm form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
 }
 
 .checkoutDetailsForm input {
-  height: 50px;
-  padding: 0 20px;
+  height: 52px;
+  padding: 0px 20px;
   border: 2px solid #e4e4e4;
   outline: none;
 }
 
 .checkoutDetailsForm select {
-  height: 50px;
-  padding: 0 20px;
+  height: 52px;
+  padding: 0px 20px;
   border: 2px solid #e4e4e4;
   outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 20 20"><path fill="%23000000" stroke-width="0" d="M14.17 6.17l-4.17 4.17-4.17-4.17-1.83 1.83 6 6 6-6z"/></svg>');
+  background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  background-position: right 8px top 50%;
+  background-size: 20px 20px;
 }
 
 .checkoutDetailsForm textarea {
