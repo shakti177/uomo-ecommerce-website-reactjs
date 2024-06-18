@@ -444,6 +444,9 @@
 
 .checkoutPaymentSection {
   width: 38%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 
 .checkoutTotalContainer {
@@ -506,6 +509,89 @@
 
 .checkoutTotal table tr {
   border-bottom: 1px solid #e4e4e4;
+}
+
+/* Checkout Payment */
+
+.checkoutPaymentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px solid #e4e4e4;
+  padding: 40px;
+}
+
+.checkoutPaymentContainer label {
+  display: flex;
+  align-items: first baseline;
+  gap: 10px;
+}
+
+.checkoutPaymentContainer input {
+  appearance: none;
+  padding: 5px;
+  border: 2px solid #e4e4e4;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+}
+
+.checkoutPaymentContainer input:checked {
+  border: 2px solid #000000;
+}
+
+.checkoutPaymentContainer input::after {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+.checkoutPaymentContainer input:checked::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.checkoutPaymentMethod {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.checkoutPaymentMethod span {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.checkoutPaymentMethod p {
+  font-size: 14px;
+}
+
+.policyText {
+  font-size: 12px;
+  line-height: 24px;
+}
+
+.policyText a {
+  text-decoration: none;
+  color: #c32929;
+}
+
+.checkoutPaymentSection button {
+  background-color: #000;
+  color: #fff;
+  padding: 20px 10px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 /* Responsive */

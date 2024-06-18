@@ -486,7 +486,70 @@ const ShoppingCart = () => {
                       </table>
                     </div>
                   </div>
-                  <div className="checkoutPaymentContainer"></div>
+                  <div className="checkoutPaymentContainer">
+                    <label>
+                      <input type="radio" name="payment" defaultChecked />
+                      <div className="checkoutPaymentMethod">
+                        <span>Direct Bank Transfer</span>
+                        <p>
+                          Make your payment directly into our bank account.
+                          Please use your Order ID as the payment reference.Your
+                          order will not be shipped until the funds have cleared
+                          in our account.
+                        </p>
+                      </div>
+                    </label>
+                    <label>
+                      <input type="radio" name="payment" />
+                      <div className="checkoutPaymentMethod">
+                        <span>Check Payments</span>
+                        <p>
+                          Phasellus sed volutpat orci. Fusce eget lore mauris
+                          vehicula elementum gravida nec dui. Aenean aliquam
+                          varius ipsum, non ultricies tellus sodales eu. Donec
+                          dignissim viverra nunc, ut aliquet magna posuere eget.
+                        </p>
+                      </div>
+                    </label>
+                    <label>
+                      <input type="radio" name="payment" />
+                      <div className="checkoutPaymentMethod">
+                        <span>Cash on delivery</span>
+                        <p>
+                          Phasellus sed volutpat orci. Fusce eget lore mauris
+                          vehicula elementum gravida nec dui. Aenean aliquam
+                          varius ipsum, non ultricies tellus sodales eu. Donec
+                          dignissim viverra nunc, ut aliquet magna posuere eget.
+                        </p>
+                      </div>
+                    </label>
+                    <label>
+                      <input type="radio" name="payment" />
+                      <div className="checkoutPaymentMethod">
+                        <span>Direct Bank Transfer</span>
+                        <p>
+                          Phasellus sed volutpat orci. Fusce eget lore mauris
+                          vehicula elementum gravida nec dui. Aenean aliquam
+                          varius ipsum, non ultricies tellus sodales eu. Donec
+                          dignissim viverra nunc, ut aliquet magna posuere eget.
+                        </p>
+                      </div>
+                    </label>
+                    <div className="policyText">
+                      Your personal data will be used to process your order,
+                      support your experience throughout this website, and for
+                      other purposes described in our{" "}
+                      <Link to="/terms">Privacy Policy</Link>.
+                    </div>
+                  </div>
+                  <button
+                    onClick={() => {
+                      handleTabClick("cartTab3");
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                  >
+                    Place Order
+                  </button>
                 </div>
               </div>
             )}
