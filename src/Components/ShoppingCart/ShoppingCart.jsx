@@ -417,7 +417,7 @@ const ShoppingCart = () => {
                       <input type="text" placeholder="Postcode / ZIP *" />
                       <input type="text" placeholder="Phone *" />
                       <input type="mail" placeholder="Your Mail *" />
-                      <div className="checkoutDetailsFormRadio">
+                      <div className="checkoutDetailsFormCheck">
                         <label>
                           <input type="checkbox" />
                           <p>Create An Account?</p>
@@ -427,7 +427,11 @@ const ShoppingCart = () => {
                           <p>Ship to a different Address</p>
                         </label>
                       </div>
-                      <textarea cols={30} rows={8} />
+                      <textarea
+                        cols={30}
+                        rows={8}
+                        placeholder="Order Notes (Optional)"
+                      />
                     </form>
                   </div>
                 </div>
