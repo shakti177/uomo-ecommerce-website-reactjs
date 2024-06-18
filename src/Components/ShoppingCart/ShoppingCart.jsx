@@ -387,7 +387,53 @@ const ShoppingCart = () => {
             )}
 
             {/* tab2 */}
-            {activeTab === "cartTab2" && <div>2</div>}
+            {activeTab === "cartTab2" && (
+              <div className="checkoutSection">
+                <div className="checkoutDetailsSection">
+                  <h4>Billing Details</h4>
+                  <div className="checkoutDetailsForm">
+                    <form>
+                      <div className="checkoutDetailsFormRow">
+                        <input type="text" placeholder="First Name" />
+                        <input type="text" placeholder="Last Name" />
+                      </div>
+                      <input
+                        type="text"
+                        placeholder="Company Name (optional)"
+                      />
+                      <select name="country" id="country">
+                        <option value="Country / Region" selected disabled>
+                          Country / Region
+                        </option>
+                        <option value="India">India</option>
+                        <option value="Canada">Canada</option>
+                        <option value="United Kingdom">United Kingdom</option>
+                        <option value="United States">United States</option>
+                        <option value="Turkey">Turkey</option>
+                      </select>
+                      <input type="text" placeholder="Street Address*" />
+                      <input type="text" placeholder="" />
+                      <input type="text" placeholder="Town / City *" />
+                      <input type="text" placeholder="Postcode / ZIP *" />
+                      <input type="text" placeholder="Phone *" />
+                      <input type="mail" placeholder="Your Mail *" />
+                      <div className="checkoutDetailsFormRadio">
+                        <label>
+                          <input type="checkbox" />
+                          <p>Create An Account?</p>
+                        </label>
+                        <label>
+                          <input type="checkbox" />
+                          <p>Ship to a different Address</p>
+                        </label>
+                      </div>
+                      <textarea cols={30} rows={8} />
+                    </form>
+                  </div>
+                </div>
+                <div className="checkoutPaymentSection"></div>
+              </div>
+            )}
 
             {/* tab3 */}
             {activeTab === "cartTab3" && <div>3</div>}
