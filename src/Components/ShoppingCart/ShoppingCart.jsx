@@ -16,6 +16,7 @@ const ShoppingCart = () => {
   const dispatch = useDispatch();
 
   const [activeTab, setActiveTab] = useState("cartTab1");
+  const [payments, setPayments] = useState(false);
 
   const handleTabClick = (tab) => {
     if (tab === "cartTab1" || cartItems.length > 0) {
@@ -47,7 +48,10 @@ const ShoppingCart = () => {
           <div className={`shoppingCartTabs ${activeTab}`}>
             <button
               className={activeTab === "cartTab1" ? "active" : ""}
-              onClick={() => handleTabClick("cartTab1")}
+              onClick={() => {
+                handleTabClick("cartTab1");
+                setPayments(false);
+              }}
             >
               <div className="shoppingCartTabsNumber">
                 <h3>01</h3>
@@ -59,7 +63,10 @@ const ShoppingCart = () => {
             </button>
             <button
               className={activeTab === "cartTab2" ? "active" : ""}
-              onClick={() => handleTabClick("cartTab2")}
+              onClick={() => {
+                handleTabClick("cartTab2");
+                setPayments(false);
+              }}
               disabled={cartItems.length === 0}
             >
               <div className="shoppingCartTabsNumber">
@@ -72,8 +79,10 @@ const ShoppingCart = () => {
             </button>
             <button
               className={activeTab === "cartTab3" ? "active" : ""}
-              onClick={() => handleTabClick("cartTab3")}
-              disabled={cartItems.length === 0}
+              onClick={() => {
+                handleTabClick("cartTab3");
+              }}
+              disabled={cartItems.length === 0 || payments === false}
             >
               <div className="shoppingCartTabsNumber">
                 <h3>03</h3>
@@ -549,6 +558,7 @@ const ShoppingCart = () => {
                     onClick={() => {
                       handleTabClick("cartTab3");
                       window.scrollTo({ top: 0, behavior: "smooth" });
+                      setPayments(true);
                     }}
                   >
                     Place Order
