@@ -56,6 +56,16 @@ const ShoppingCart = () => {
 
   const orderNumber = Math.floor(Math.random() * 100000);
 
+  // Radio Button Data
+
+  const [selectedPayment, setSelectedPayment] = useState(
+    "Direct Bank Transfer"
+  );
+
+  const handlePaymentChange = (e) => {
+    setSelectedPayment(e.target.value);
+  };
+
   return (
     <div>
       <div className="shoppingCartSection">
@@ -514,7 +524,13 @@ const ShoppingCart = () => {
                   </div>
                   <div className="checkoutPaymentContainer">
                     <label>
-                      <input type="radio" name="payment" defaultChecked />
+                      <input
+                        type="radio"
+                        name="payment"
+                        value="Direct Bank Transfer"
+                        defaultChecked
+                        onChange={handlePaymentChange}
+                      />
                       <div className="checkoutPaymentMethod">
                         <span>Direct Bank Transfer</span>
                         <p>
@@ -526,7 +542,12 @@ const ShoppingCart = () => {
                       </div>
                     </label>
                     <label>
-                      <input type="radio" name="payment" />
+                      <input
+                        type="radio"
+                        name="payment"
+                        value="Check Payments"
+                        onChange={handlePaymentChange}
+                      />
                       <div className="checkoutPaymentMethod">
                         <span>Check Payments</span>
                         <p>
@@ -538,7 +559,12 @@ const ShoppingCart = () => {
                       </div>
                     </label>
                     <label>
-                      <input type="radio" name="payment" />
+                      <input
+                        type="radio"
+                        name="payment"
+                        value="Cash on delivery"
+                        onChange={handlePaymentChange}
+                      />
                       <div className="checkoutPaymentMethod">
                         <span>Cash on delivery</span>
                         <p>
@@ -550,9 +576,14 @@ const ShoppingCart = () => {
                       </div>
                     </label>
                     <label>
-                      <input type="radio" name="payment" />
+                      <input
+                        type="radio"
+                        name="payment"
+                        value="Paypal"
+                        onChange={handlePaymentChange}
+                      />
                       <div className="checkoutPaymentMethod">
-                        <span>Direct Bank Transfer</span>
+                        <span>Paypal</span>
                         <p>
                           Phasellus sed volutpat orci. Fusce eget lore mauris
                           vehicula elementum gravida nec dui. Aenean aliquam
@@ -610,7 +641,7 @@ const ShoppingCart = () => {
                     </div>
                     <div className="orderInfoItem">
                       <p>Payment Method</p>
-                      <h4>Direct Bank Transfer</h4>
+                      <h4>{selectedPayment}</h4>
                     </div>
                   </div>
                   <div className="orderTotalContainer">
