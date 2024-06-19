@@ -11,6 +11,8 @@ import { MdOutlineClose } from "react-icons/md";
 
 import { Link } from "react-router-dom";
 
+import success from "../../Assets/success.png";
+
 const ShoppingCart = () => {
   const cartItems = useSelector((state) => state.cart.items);
   const dispatch = useDispatch();
@@ -38,6 +40,21 @@ const ShoppingCart = () => {
       behavior: "smooth",
     });
   };
+
+  // current Date
+
+  const currentDate = new Date();
+
+  const formatDate = (date) => {
+    const day = String(date.getDate()).padStart(2, "0");
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const year = date.getFullYear();
+    return `${day}/${month}/${year}`;
+  };
+
+  // Random number
+
+  const orderNumber = Math.floor(Math.random() * 100000);
 
   return (
     <div>
@@ -568,7 +585,87 @@ const ShoppingCart = () => {
             )}
 
             {/* tab3 */}
-            {activeTab === "cartTab3" && <div>3</div>}
+            {activeTab === "cartTab3" && (
+              <div className="orderCompleteSection">
+                <div className="orderComplete">
+                  <div className="orderCompleteMessage">
+                    <div className="orderCompleteMessageImg">
+                      <img src={success} alt="" />
+                    </div>
+                    <h3>Your order is completed!</h3>
+                    <p>Thank you. Your order has been received.</p>
+                  </div>
+                  <div className="orderInfo">
+                    <div className="orderInfoItem">
+                      <p>Order Number</p>
+                      <h4>{orderNumber}</h4>
+                    </div>
+                    <div className="orderInfoItem">
+                      <p>Date</p>
+                      <h4>{formatDate(currentDate)}</h4>
+                    </div>
+                    <div className="orderInfoItem">
+                      <p>Total</p>
+                      <h4>${totalPrice.toFixed(2)}</h4>
+                    </div>
+                    <div className="orderInfoItem">
+                      <p>Payment Method</p>
+                      <h4>Direct Bank Transfer</h4>
+                    </div>
+                  </div>
+                  <div className="orderTotalContainer">
+                    <h3>Order Details</h3>
+                    <div className="orderItems">
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>PRODUCTS</th>
+                            <th>SUBTOTALS</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {cartItems.map((items) => (
+                            <tr>
+                              <td>
+                                {items.productName} x {items.quantity}
+                              </td>
+                              <td>${items.productPrice * items.quantity}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                    <div className="orderTotal">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <th>Subtotal</th>
+                            <td>${totalPrice.toFixed(2)}</td>
+                          </tr>
+                          <tr>
+                            <th>Shipping</th>
+                            <td>$5</td>
+                          </tr>
+                          <tr>
+                            <th>VAT</th>
+                            <td>$11</td>
+                          </tr>
+                          <tr>
+                            <th>Total</th>
+                            <td>
+                              $
+                              {(totalPrice === 0 ? 0 : totalPrice + 16).toFixed(
+                                2
+                              )}
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
