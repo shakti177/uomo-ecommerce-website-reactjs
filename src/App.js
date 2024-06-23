@@ -21,10 +21,12 @@ import ResetPass from "./Components/Authentication/Reset/ResetPass";
 import BlogDetails from "./Components/Blog/BlogDetails/BlogDetails";
 import TermsConditions from "./Pages/TermsConditions";
 import ShoppingCart from "./Components/ShoppingCart/ShoppingCart";
+import Popup from "./Components/PopupBanner/Popup";
 
 const App = () => {
   return (
     <div>
+      <Popup />
       <ScrollToTop />
       <BrowserRouter>
         <Header />
