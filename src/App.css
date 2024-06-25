@@ -6,6 +6,10 @@
   font-family: "Jost", sans-serif;
 }
 
+img {
+  background-color: #eff0f1;
+}
+
 @media only screen and (max-width: 1025px) {
   a {
     -webkit-tap-highlight-color: transparent; /* For iOS */
