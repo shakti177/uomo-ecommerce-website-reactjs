@@ -107,6 +107,7 @@
   width: auto;
   height: auto;
   object-fit: contain;
+  background: none !important;
 }
 
 @media screen and (max-width: 1210px) {
