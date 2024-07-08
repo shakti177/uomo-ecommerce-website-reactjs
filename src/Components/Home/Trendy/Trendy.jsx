@@ -97,11 +97,13 @@ const Trendy = () => {
                             src={product.frontImg}
                             alt=""
                             className="trendyProduct_front"
+                            loading="lazy"
                           />
                           <img
                             src={product.backImg}
                             alt=""
                             className="trendyProduct_back"
+                            loading="lazy"
                           />
                         </Link>
                         <h4 onClick={() => dispatch(addToCart(product))}>
