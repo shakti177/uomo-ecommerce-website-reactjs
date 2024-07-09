@@ -179,6 +179,12 @@ const Trendy = () => {
                           </Link>
                           <h4>Add to Cart</h4>
                         </div>
+                        <div
+                          className="trendyProductImagesCart"
+                          onClick={() => dispatch(addToCart(product))}
+                        >
+                          <FaCartPlus />
+                        </div>
                         <div className="trendyProductInfo">
                           <div className="trendyProductCategoryWishlist">
                             <p>Dresses</p>
@@ -242,6 +248,12 @@ const Trendy = () => {
                           </Link>
                           <h4>Add to Cart</h4>
                         </div>
+                        <div
+                          className="trendyProductImagesCart"
+                          onClick={() => dispatch(addToCart(product))}
+                        >
+                          <FaCartPlus />
+                        </div>
                         <div className="trendyProductInfo">
                           <div className="trendyProductCategoryWishlist">
                             <p>Dresses</p>
@@ -304,6 +316,12 @@ const Trendy = () => {
                             />
                           </Link>
                           <h4>Add to Cart</h4>
+                        </div>
+                        <div
+                          className="trendyProductImagesCart"
+                          onClick={() => dispatch(addToCart(product))}
+                        >
+                          <FaCartPlus />
                         </div>
                         <div className="trendyProductInfo">
                           <div className="trendyProductCategoryWishlist">
