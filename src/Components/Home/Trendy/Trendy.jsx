@@ -10,6 +10,7 @@ import StoreData from "../../../Data/StoreData";
 
 import { FiHeart } from "react-icons/fi";
 import { FaStar } from "react-icons/fa";
+import { FaCartPlus } from "react-icons/fa";
 
 const Trendy = () => {
   const dispatch = useDispatch();
@@ -108,6 +109,13 @@ const Trendy = () => {
                           Add to Cart
                         </h4>
                       </div>
+                      <div
+                        className="trendyProductImagesCart"
+                        onClick={() => dispatch(addToCart)}
+                      >
+                        <FaCartPlus />
+                      </div>
+
                       <div className="trendyProductInfo">
                         <div className="trendyProductCategoryWishlist">
                           <p>Dresses</p>
