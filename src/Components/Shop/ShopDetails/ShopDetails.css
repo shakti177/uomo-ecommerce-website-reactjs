@@ -331,6 +331,10 @@
   gap: 30px;
 }
 
+.sdProductImagesCart {
+  display: none;
+}
+
 /* responsive */
 
 @media screen and (max-width: 1210px) {
@@ -343,8 +347,21 @@
     height: 250px;
   }
 
-  .sdProductContainer:hover h4 {
-    top: 200px;
+  .sdProductContainer h4 {
+    display: none;
+  }
+
+  .sdProductImagesCart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 50%;
+    padding: 5px;
+    z-index: 5000;
+    color: gray;
   }
 }
 
@@ -366,17 +383,9 @@
     grid-gap: 20px;
   }
 
-  .sdProductContainer h4 {
-    top: 520px;
-  }
-
   .sdProductImages {
     width: 100%;
     height: 490px;
-  }
-
-  .sdProductContainer:hover h4 {
-    top: 440px;
   }
 
   .filterDrawer {
@@ -389,10 +398,6 @@
   .sdProductImages {
     width: 100%;
     height: 370px;
-  }
-
-  .sdProductContainer:hover h4 {
-    top: 320px;
   }
 
   .shopDetailsBreadcrumbLink {
@@ -427,10 +432,6 @@
     height: 235px;
   }
 
-  .sdProductContainer:hover h4 {
-    top: 185px;
-  }
-
   .filterDrawer {
     right: -440px;
     width: 100%;
@@ -441,14 +442,6 @@
   .sdProductImages {
     width: 100%;
     height: 170px;
-  }
-
-  .sdProductContainer h4 {
-    font-size: 12px;
-  }
-
-  .sdProductContainer:hover h4 {
-    top: 125px;
   }
 
   .sdProductNameInfo h5 {

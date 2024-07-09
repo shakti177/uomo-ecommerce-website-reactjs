@@ -11,6 +11,7 @@ import { FiHeart } from "react-icons/fi";
 import { FaStar } from "react-icons/fa";
 import { IoFilterSharp, IoClose } from "react-icons/io5";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa6";
+import { FaCartPlus } from "react-icons/fa";
 
 const ShopDetails = () => {
   const dispatch = useDispatch();
@@ -99,6 +100,12 @@ const ShopDetails = () => {
                       <h4 onClick={() => dispatch(addToCart(product))}>
                         Add to Cart
                       </h4>
+                    </div>
+                    <div
+                      className="sdProductImagesCart"
+                      onClick={() => dispatch(addToCart(product))}
+                    >
+                      <FaCartPlus />
                     </div>
                     <div className="sdProductInfo">
                       <div className="sdProductCategoryWishlist">

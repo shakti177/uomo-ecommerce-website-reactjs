@@ -18,6 +18,7 @@ import StoreData from "../../../Data/StoreData";
 import { FiHeart } from "react-icons/fi";
 import { FaStar } from "react-icons/fa";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { FaCartPlus } from "react-icons/fa";
 
 const LimitedEdition = () => {
   const dispatch = useDispatch();
@@ -100,7 +101,12 @@ const LimitedEdition = () => {
                         Add to Cart
                       </h4>
                     </div>
-
+                    <div
+                      className="lpProductImagesCart"
+                      onClick={() => dispatch(addToCart(product))}
+                    >
+                      <FaCartPlus />
+                    </div>
                     <div className="limitedProductInfo">
                       <div className="lpCategoryWishlist">
                         <p>Dresses</p>
