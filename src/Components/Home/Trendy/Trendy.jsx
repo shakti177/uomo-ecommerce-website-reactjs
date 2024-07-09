@@ -111,7 +111,7 @@ const Trendy = () => {
                       </div>
                       <div
                         className="trendyProductImagesCart"
-                        onClick={() => dispatch(addToCart)}
+                        onClick={() => dispatch(addToCart(product))}
                       >
                         <FaCartPlus />
                       </div>
