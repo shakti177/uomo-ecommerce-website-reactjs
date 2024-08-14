@@ -12,6 +12,7 @@ import { Navigation } from "swiper/modules";
 import { Autoplay } from "swiper/modules";
 
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import StoreData from "../../../Data/StoreData";
 
@@ -20,8 +21,12 @@ import { FaStar } from "react-icons/fa";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { FaCartPlus } from "react-icons/fa";
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const LimitedEdition = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const [wishList, setWishList] = useState({});
 
@@ -36,6 +41,24 @@ const LimitedEdition = () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
+    });
+  };
+
+  const handleAddToCart = (product) => {
+    dispatch(addToCart(product));
+    toast.success(`Added to cart!`, {
+      position: "bottom-left",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+      onClick: () => {
+        scrollToTop();
+        navigate("/cart");
+      },
     });
   };
 
@@ -97,13 +120,13 @@ const LimitedEdition = () => {
                           className="lpImage"
                         />
                       </Link>
-                      <h4 onClick={() => dispatch(addToCart(product))}>
+                      <h4 onClick={() => handleAddToCart(product)}>
                         Add to Cart
                       </h4>
                     </div>
                     <div
                       className="lpProductImagesCart"
-                      onClick={() => dispatch(addToCart(product))}
+                      onClick={() => handleAddToCart(product)}
                     >
                       <FaCartPlus />
                     </div>
@@ -145,6 +168,7 @@ const LimitedEdition = () => {
           </Swiper>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };
