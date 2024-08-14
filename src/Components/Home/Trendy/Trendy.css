@@ -260,7 +260,7 @@
     right: 10px;
     border-radius: 50%;
     padding: 5px;
-    z-index: 5000;
+    z-index: 8;
     color: gray;
   }
 }
