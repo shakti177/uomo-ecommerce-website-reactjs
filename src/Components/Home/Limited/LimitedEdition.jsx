@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./LimitedEdition.css";
 
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../../Features/Cart/cartSlice";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -27,8 +27,8 @@ import "react-toastify/dist/ReactToastify.css";
 const LimitedEdition = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
   const [wishList, setWishList] = useState({});
+  const cartItems = useSelector((state) => state.cart.items);
 
   const handleWishlistClick = (productID) => {
     setWishList((prevWishlist) => ({
@@ -45,21 +45,38 @@ const LimitedEdition = () => {
   };
 
   const handleAddToCart = (product) => {
-    dispatch(addToCart(product));
-    toast.success(`Added to cart!`, {
-      position: "bottom-left",
-      autoClose: 3000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: false,
-      draggable: true,
-      progress: undefined,
-      theme: "colored",
-      onClick: () => {
-        scrollToTop();
-        navigate("/cart");
-      },
-    });
+    const productInCart = cartItems.find(
+      (item) => item.productID === product.productID
+    );
+
+    if (productInCart && productInCart.quantity >= 20) {
+      toast.error(`Max Product Quantity Reacted`, {
+        position: "bottom-left",
+        autoClose: 1500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+    } else {
+      dispatch(addToCart(product));
+      toast.success(`Added to Cart!`, {
+        position: "bottom-left",
+        autoClose: 1500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        onClick: () => {
+          scrollToTop();
+          navigate("/cart");
+        },
+      });
+    }
   };
 
   return (
