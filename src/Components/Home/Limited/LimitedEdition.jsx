@@ -11,8 +11,7 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import { Autoplay } from "swiper/modules";
 
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import StoreData from "../../../Data/StoreData";
 
@@ -27,6 +26,7 @@ import "react-toastify/dist/ReactToastify.css";
 const LimitedEdition = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
   const [wishList, setWishList] = useState({});
   const cartItems = useSelector((state) => state.cart.items);
 
