@@ -11,7 +11,7 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import { Autoplay } from "swiper/modules";
 
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import StoreData from "../../../Data/StoreData";
 
@@ -20,12 +20,10 @@ import { FaStar } from "react-icons/fa";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { FaCartPlus } from "react-icons/fa";
 
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import toast, { Toaster } from "react-hot-toast";
 
 const LimitedEdition = () => {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
 
   const [wishList, setWishList] = useState({});
   const cartItems = useSelector((state) => state.cart.items);
@@ -50,30 +48,28 @@ const LimitedEdition = () => {
     );
 
     if (productInCart && productInCart.quantity >= 20) {
-      toast.error(`Max Product Quantity Reacted`, {
-        position: "bottom-left",
-        autoClose: 1500,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: false,
-        draggable: true,
-        progress: undefined,
-        theme: "colored",
+      toast.error("Product limit reached", {
+        duration: 2000,
+        style: {
+          backgroundColor: "#ff4b4b",
+          color: "white",
+        },
+        iconTheme: {
+          primary: "#fff",
+          secondary: "#ff4b4b",
+        },
       });
     } else {
       dispatch(addToCart(product));
-      toast.success(`Added to Cart!`, {
-        position: "bottom-left",
-        autoClose: 1500,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: false,
-        draggable: true,
-        progress: undefined,
-        theme: "colored",
-        onClick: () => {
-          scrollToTop();
-          navigate("/cart");
+      toast.success(`Added to cart!`, {
+        duration: 2000,
+        style: {
+          backgroundColor: "#07bc0c",
+          color: "white",
+        },
+        iconTheme: {
+          primary: "#fff",
+          secondary: "#07bc0c",
         },
       });
     }
@@ -185,7 +181,7 @@ const LimitedEdition = () => {
           </Swiper>
         </div>
       </div>
-      <ToastContainer />
+      <Toaster />
     </div>
   );
 };
