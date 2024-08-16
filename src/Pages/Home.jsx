@@ -9,7 +9,7 @@ import DealTimer from "../Components/Home/Deal/DealTimer";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <CollectionBox />
       <Trendy />
       <DealTimer />
@@ -17,7 +17,7 @@ const Home = () => {
       <LimitedEdition />
       <Instagram />
       <Services />
-    </div>
+    </>
   );
 };
 

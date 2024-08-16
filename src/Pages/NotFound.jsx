@@ -3,9 +3,9 @@ import Error from "../Components/Error/Error";
 
 const NotFound = () => {
   return (
-    <div>
+    <>
       <Error />
-    </div>
+    </>
   );
 };
 

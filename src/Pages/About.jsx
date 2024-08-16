@@ -3,9 +3,9 @@ import AboutPage from "../Components/About/AboutPage";
 
 const About = () => {
   return (
-    <div>
+    <>
       <AboutPage />
-    </div>
+    </>
   );
 };
 

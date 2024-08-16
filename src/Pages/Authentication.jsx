@@ -3,9 +3,9 @@ import LoginSignUp from "../Components/Authentication/LoginSign/LoginSignUp";
 
 const Authentication = () => {
   return (
-    <div>
+    <>
       <LoginSignUp />
-    </div>
+    </>
   );
 };
 
