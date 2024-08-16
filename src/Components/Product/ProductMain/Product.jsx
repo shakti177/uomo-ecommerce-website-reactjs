@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Tooltip from "@mui/material/Tooltip";
 import Zoom from "@mui/material/Zoom";
 
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../../Features/Cart/cartSlice";
 
 import product1 from "../../../Assets/ProductDetail/productdetail-1.jpg";
@@ -17,6 +17,8 @@ import { FiHeart } from "react-icons/fi";
 import { PiShareNetworkLight } from "react-icons/pi";
 
 import { Link } from "react-router-dom";
+
+import toast from "react-hot-toast";
 
 import "./Product.css";
 
@@ -85,6 +87,8 @@ const Product = () => {
 
   const dispatch = useDispatch();
 
+  const cartItems = useSelector((state) => state.cart.items);
+
   const handleAddToCart = () => {
     const productDetails = {
       productID: 14,
@@ -93,7 +97,37 @@ const Product = () => {
       frontImg: productImg[0],
       productReviews: "8k+ reviews",
     };
-    dispatch(addToCart(productDetails));
+
+    const productInCart = cartItems.find(
+      (item) => item.productID === productDetails.productID
+    );
+
+    if (productInCart && productInCart.quantity >= 20) {
+      toast.error("Product limit reached", {
+        duration: 2000,
+        style: {
+          backgroundColor: "#ff4b4b",
+          color: "white",
+        },
+        iconTheme: {
+          primary: "#fff",
+          secondary: "#ff4b4b",
+        },
+      });
+    } else {
+      dispatch(addToCart(productDetails));
+      toast.success(`Added to cart!`, {
+        duration: 2000,
+        style: {
+          backgroundColor: "#07bc0c",
+          color: "white",
+        },
+        iconTheme: {
+          primary: "#fff",
+          secondary: "#07bc0c",
+        },
+      });
+    }
   };
 
   return (

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import StoreData from "../../../Data/StoreData";
 import { FiHeart } from "react-icons/fi";
 import { FaStar, FaCartPlus } from "react-icons/fa";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 
 const Trendy = () => {
   const dispatch = useDispatch();
@@ -387,7 +387,6 @@ const Trendy = () => {
           </Link>
         </div>
       </div>
-      <Toaster />
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./ShopDetails.css";
 
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../../Features/Cart/cartSlice";
 
 import Filter from "../Filters/Filter";
@@ -12,6 +12,7 @@ import { FaStar } from "react-icons/fa";
 import { IoFilterSharp, IoClose } from "react-icons/io5";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa6";
 import { FaCartPlus } from "react-icons/fa";
+import toast from "react-hot-toast";
 
 const ShopDetails = () => {
   const dispatch = useDispatch();
@@ -39,6 +40,41 @@ const ShopDetails = () => {
 
   const closeDrawer = () => {
     setIsDrawerOpen(false);
+  };
+
+  const cartItems = useSelector((state) => state.cart.items);
+
+  const handleAddToCart = (product) => {
+    const productInCart = cartItems.find(
+      (item) => item.productID === product.productID
+    );
+
+    if (productInCart && productInCart.quantity >= 20) {
+      toast.error("Product limit reached", {
+        duration: 2000,
+        style: {
+          backgroundColor: "#ff4b4b",
+          color: "white",
+        },
+        iconTheme: {
+          primary: "#fff",
+          secondary: "#ff4b4b",
+        },
+      });
+    } else {
+      dispatch(addToCart(product));
+      toast.success(`Added to cart!`, {
+        duration: 2000,
+        style: {
+          backgroundColor: "#07bc0c",
+          color: "white",
+        },
+        iconTheme: {
+          primary: "#fff",
+          secondary: "#07bc0c",
+        },
+      });
+    }
   };
 
   return (
@@ -97,13 +133,13 @@ const ShopDetails = () => {
                           className="sdProduct_back"
                         />
                       </Link>
-                      <h4 onClick={() => dispatch(addToCart(product))}>
+                      <h4 onClick={() => handleAddToCart(product)}>
                         Add to Cart
                       </h4>
                     </div>
                     <div
                       className="sdProductImagesCart"
-                      onClick={() => dispatch(addToCart(product))}
+                      onClick={() => handleAddToCart(product)}
                     >
                       <FaCartPlus />
                     </div>

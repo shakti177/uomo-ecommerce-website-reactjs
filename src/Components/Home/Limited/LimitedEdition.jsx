@@ -20,13 +20,12 @@ import { FaStar } from "react-icons/fa";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { FaCartPlus } from "react-icons/fa";
 
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 
 const LimitedEdition = () => {
   const dispatch = useDispatch();
 
   const [wishList, setWishList] = useState({});
-  const cartItems = useSelector((state) => state.cart.items);
 
   const handleWishlistClick = (productID) => {
     setWishList((prevWishlist) => ({
@@ -41,6 +40,8 @@ const LimitedEdition = () => {
       behavior: "smooth",
     });
   };
+
+  const cartItems = useSelector((state) => state.cart.items);
 
   const handleAddToCart = (product) => {
     const productInCart = cartItems.find(
@@ -181,7 +182,6 @@ const LimitedEdition = () => {
           </Swiper>
         </div>
       </div>
-      <Toaster />
     </div>
   );
 };
