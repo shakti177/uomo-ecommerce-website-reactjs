@@ -81,7 +81,7 @@ const Navbar = () => {
             </Badge>
           </Link>
           <FiHeart size={22} />
-          <RiMenu2Line size={22} />
+          {/* <RiMenu2Line size={22} /> */}
         </div>
       </nav>
 
