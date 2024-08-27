@@ -6,6 +6,10 @@
   font-family: "Jost", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 img {
   background-color: #eff0f1;
 }
