@@ -11,7 +11,7 @@ import HeroSection from "../Components/Home/Hero/HeroSection";
 const Home = () => {
   return (
     <>
-      <HeroSection />
+      {/* <HeroSection /> */}
       <CollectionBox />
       <Trendy />
       <DealTimer />
