@@ -12,7 +12,7 @@ const CollectionBox = () => {
   };
 
   return (
-    <div>
+    <>
       <div className="collection">
         <div className="collectionLeft">
           <p className="col-p">Hot List</p>
@@ -65,7 +65,7 @@ const CollectionBox = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

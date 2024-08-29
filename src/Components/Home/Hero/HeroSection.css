@@ -1,0 +1,126 @@
+.heroMain {
+  height: 90vh;
+  background-color: #f4e5e0;
+  background-image: url("../../../Assets/slideshow-pattern.png");
+  background-size: cover;
+  padding: 0 160px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sectionleft {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+}
+
+.sectionleft p {
+  position: relative;
+  padding-left: 50px;
+  color: #c22928;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.sectionleft p::before {
+  content: "";
+  display: block;
+  width: 35px;
+  height: 2px;
+  background-color: #c32929;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.sectionleft h1 {
+  font-size: 70px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.heroLink {
+  display: flex;
+}
+
+.sectionleft a {
+  text-decoration: none;
+  color: black;
+}
+
+.sectionleft a {
+  position: relative;
+}
+
+.sectionleft a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 75%;
+  border-bottom: 2px solid black;
+  transition: width 0.2s ease;
+}
+
+.sectionleft a:hover::after {
+  width: 100%;
+}
+
+.sectionleft h5 {
+  display: flex;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.sectionright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.canvasModel {
+  height: 700px !important;
+}
+
+@media screen and (max-width: 768px) {
+  .heroMain {
+    padding: 0 60px;
+    height: 85vh;
+  }
+
+  .sectionleft h1 {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .heroMain {
+    padding: 45px 15px;
+    flex-direction: column;
+  }
+
+  .sectionleft {
+    width: 100%;
+  }
+
+  .sectionleft h1 {
+    font-size: 40px;
+  }
+
+  .sectionleft p {
+    font-size: 14px;
+  }
+
+  .sectionright {
+    width: 100%;
+  }
+
+  .canvasModel {
+    height: 500px !important;
+  }
+}
