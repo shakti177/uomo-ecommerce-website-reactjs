@@ -1,7 +1,6 @@
 import React from "react";
 import "./MainSlider.css";
 import characterimg1 from "../../Assets/slideshow-character1.png";
-import { motion } from "framer-motion";
 
 const MainSlider = () => {
   return (
