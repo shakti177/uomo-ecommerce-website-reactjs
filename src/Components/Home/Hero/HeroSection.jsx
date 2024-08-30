@@ -69,6 +69,10 @@ const HeroSection = () => {
               onClick={() => changeColor("#726DE7")}
               style={{ backgroundColor: "#726DE7" }}
             ></button>
+            <button
+              onClick={() => changeColor("red")}
+              style={{ backgroundColor: "red" }}
+            ></button>
           </div>
         </div>
       </div>
