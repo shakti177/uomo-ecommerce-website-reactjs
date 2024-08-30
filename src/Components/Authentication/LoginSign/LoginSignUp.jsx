@@ -10,7 +10,7 @@ const LoginSignUp = () => {
   };
 
   return (
-    <div>
+    <>
       <div className="loginSignUpSection">
         <div className="loginSignUpContainer">
           <div className="loginSignUpTabs">
@@ -85,7 +85,7 @@ const LoginSignUp = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -15,7 +15,7 @@ import insta12 from "../../../Assets/Instagram/insta12.jpg";
 
 const Instagram = () => {
   return (
-    <div>
+    <>
       <div className="instagram">
         <h2>@UOMO</h2>
         <div className="instagramTiles">
@@ -57,7 +57,7 @@ const Instagram = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

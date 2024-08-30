@@ -79,7 +79,7 @@ const Trendy = () => {
   };
 
   return (
-    <div>
+    <>
       <div className="trendyProducts">
         <h2>
           Our Trendy <span>Products</span>
@@ -387,7 +387,7 @@ const Trendy = () => {
           </Link>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -12,7 +12,7 @@ const Banner = () => {
   };
 
   return (
-    <div>
+    <>
       <div className="banner">
         <div className="bannerLeft">
           <h6 className="bannerh6">Starting At $19</h6>
@@ -37,7 +37,7 @@ const Banner = () => {
           </h5>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

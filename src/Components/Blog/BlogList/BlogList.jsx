@@ -14,7 +14,7 @@ const BlogList = () => {
   };
 
   return (
-    <div>
+    <>
       <div className="blogListSection">
         <div className="blogListHeaderContainer">
           <div className="blogListHeader">
@@ -65,7 +65,7 @@ const BlogList = () => {
           Show More
         </p>
       </div>
-    </div>
+    </>
   );
 };
 

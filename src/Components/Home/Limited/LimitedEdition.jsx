@@ -77,7 +77,7 @@ const LimitedEdition = () => {
   };
 
   return (
-    <div>
+    <>
       <div className="limitedProductSection">
         <h2>
           Limited <span>Edition</span>
@@ -182,7 +182,7 @@ const LimitedEdition = () => {
           </Swiper>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

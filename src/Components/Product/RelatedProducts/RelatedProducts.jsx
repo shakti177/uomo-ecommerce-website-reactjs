@@ -31,7 +31,7 @@ const RelatedProducts = () => {
   };
 
   return (
-    <div>
+    <>
       <div className="relatedProductSection">
         <div className="relatedProducts">
           <h2>
@@ -127,7 +127,7 @@ const RelatedProducts = () => {
           </Swiper>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -23,7 +23,7 @@ import { Toaster } from "react-hot-toast";
 
 const App = () => {
   return (
-    <div>
+    <>
       <Popup />
       <ScrollToTop />
       <BrowserRouter>
@@ -45,7 +45,7 @@ const App = () => {
         <Footer />
         <Toaster />
       </BrowserRouter>
-    </div>
+    </>
   );
 };
 

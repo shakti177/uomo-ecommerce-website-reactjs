@@ -78,7 +78,7 @@ const ShopDetails = () => {
   };
 
   return (
-    <div>
+    <>
       <div className="shopDetails">
         <div className="shopDetailMain">
           <div className="shopDetails__left">
@@ -213,7 +213,7 @@ const ShopDetails = () => {
           <Filter />
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

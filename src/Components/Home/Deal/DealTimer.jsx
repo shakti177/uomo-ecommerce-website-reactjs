@@ -60,7 +60,7 @@ const DealTimer = () => {
   };
 
   return (
-    <div>
+    <>
       <div className="mainDeal">
         <div className="dealTimer">
           <div className="dealTimerMainContent">
@@ -100,7 +100,7 @@ const DealTimer = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 export default DealTimer;

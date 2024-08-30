@@ -4,7 +4,7 @@ import "./TermsandConditions.css";
 
 const TermsandConditions = () => {
   return (
-    <div>
+    <>
       <div className="termsContainer">
         <h2>TERMS & CONDITIONS</h2>
         <div className="termsContent">
@@ -70,7 +70,7 @@ const TermsandConditions = () => {
           </p>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

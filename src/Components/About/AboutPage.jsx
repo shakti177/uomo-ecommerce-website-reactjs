@@ -20,7 +20,7 @@ import brand7 from "../../Assets/Brands/brand7.png";
 
 const AboutPage = () => {
   return (
-    <div>
+    <>
       <div className="aboutSection">
         <h2>About Uomo</h2>
         <img src={about1} alt="" />
@@ -142,7 +142,7 @@ const AboutPage = () => {
           </SwiperSlide>
         </Swiper>
       </div>
-    </div>
+    </>
   );
 };
 

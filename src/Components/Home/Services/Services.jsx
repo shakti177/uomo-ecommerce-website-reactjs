@@ -7,7 +7,7 @@ import { RiShieldCheckLine } from "react-icons/ri";
 
 const Services = () => {
   return (
-    <div>
+    <>
       <div className="services">
         <div className="serviceBox">
           <FaCartFlatbedSuitcase size={50} style={{ marginBottom: "20px" }} />
@@ -25,7 +25,7 @@ const Services = () => {
           <p>We return money within 30 days</p>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

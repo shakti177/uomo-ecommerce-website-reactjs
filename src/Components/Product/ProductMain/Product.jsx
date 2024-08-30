@@ -131,7 +131,7 @@ const Product = () => {
   };
 
   return (
-    <div>
+    <>
       <div className="productSection">
         <div className="productShowCase">
           <div className="productGallery">
@@ -290,7 +290,7 @@ const Product = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

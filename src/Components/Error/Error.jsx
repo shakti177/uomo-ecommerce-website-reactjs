@@ -5,7 +5,7 @@ import "./Error.css";
 
 const Error = () => {
   return (
-    <div>
+    <>
       <div className="errorContainer">
         <h1>OOPS!</h1>
         <h3>Page not found</h3>
@@ -16,7 +16,7 @@ const Error = () => {
         </p>
         <Link to="/">Go Back</Link>
       </div>
-    </div>
+    </>
   );
 };
 
