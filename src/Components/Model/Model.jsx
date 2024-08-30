@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 
-export function Model(props) {
+export function Model({ color, ...props }) {
   const { nodes, materials } = useGLTF("/shirt_baked_2.glb");
   const modelRef = useRef();
 
@@ -35,9 +35,11 @@ export function Model(props) {
     }
   });
 
-  Object.values(materials).forEach((material) => {
-    material.color.set("red");
-  });
+  useEffect(() => {
+    Object.values(materials).forEach((material) => {
+      material.color.set(color);
+    });
+  }, [color, materials]);
 
   return (
     <group
@@ -48,7 +50,7 @@ export function Model(props) {
       scale={scale}
     >
       <mesh
-        castShadow
+        // castShadow
         geometry={nodes.T_Shirt_male.geometry}
         material={materials.lambert1}
         position={[0.419, -0.2, 0]}

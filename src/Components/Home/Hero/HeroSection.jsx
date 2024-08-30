@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 
@@ -7,6 +7,12 @@ import { Model } from "../../Model/Model";
 import { Link } from "react-router-dom";
 
 const HeroSection = () => {
+  const [tshirtColor, setTshirtColor] = useState("red");
+
+  const changeColor = (color) => {
+    setTshirtColor(color);
+  };
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -34,7 +40,11 @@ const HeroSection = () => {
           >
             {/* Lighting */}
             <ambientLight intensity={0.5} />
-            <directionalLight position={[10, 10, 5]} intensity={1.5} />
+            <directionalLight
+              position={[10, 10, 5]}
+              intensity={2.5}
+              color={"white"}
+            />
 
             {/* OrbitControls for rotation */}
             <OrbitControls
@@ -47,8 +57,22 @@ const HeroSection = () => {
             />
 
             {/* 3D Model */}
-            <Model />
+            <Model color={tshirtColor} />
           </Canvas>
+          <div className="heroColorBtn">
+            <button
+              onClick={() => changeColor("#353933")}
+              style={{ backgroundColor: "#353933" }}
+            ></button>
+            <button
+              onClick={() => changeColor("#EFBD4E")}
+              style={{ backgroundColor: "#EFBD4E" }}
+            ></button>
+            <button
+              onClick={() => changeColor("#726DE7")}
+              style={{ backgroundColor: "#726DE7" }}
+            ></button>
+          </div>
         </div>
       </div>
     </>

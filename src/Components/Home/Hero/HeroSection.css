@@ -77,13 +77,30 @@
 
 .sectionright {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 50%;
+  position: relative;
 }
 
 .canvasModel {
   height: 700px !important;
+}
+
+.heroColorBtn {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  justify-content: center;
+  position: absolute;
+  bottom: 130px;
+}
+
+.heroColorBtn button {
+  border-radius: 50%;
+  padding: 10px;
+  border: 1px solid white;
 }
 
 @media screen and (max-width: 768px) {
@@ -97,6 +114,10 @@
 
   .canvasModel {
     height: 400px !important;
+  }
+
+  .heroColorBtn {
+    bottom: 60px;
   }
 }
 
@@ -126,5 +147,9 @@
   .canvasModel {
     height: 300px !important;
     width: 250px !important;
+  }
+
+  .heroColorBtn {
+    bottom: 10px;
   }
 }
