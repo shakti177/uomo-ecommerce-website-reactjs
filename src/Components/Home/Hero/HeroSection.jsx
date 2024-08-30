@@ -38,7 +38,6 @@ const HeroSection = () => {
             className="canvasModel"
             camera={{ position: [0, 5, 15], fov: 50 }}
           >
-            {/* Lighting */}
             <ambientLight intensity={0.5} />
             <directionalLight
               position={[10, 10, 5]}
@@ -46,7 +45,6 @@ const HeroSection = () => {
               color={"white"}
             />
 
-            {/* OrbitControls for rotation */}
             <OrbitControls
               enableZoom={false}
               enablePan={false}
@@ -56,7 +54,6 @@ const HeroSection = () => {
               minPolarAngle={Math.PI / 2}
             />
 
-            {/* 3D Model */}
             <Model color={tshirtColor} />
           </Canvas>
           <div className="heroColorBtn">

@@ -50,7 +50,6 @@ export function Model({ color, ...props }) {
       scale={scale}
     >
       <mesh
-        // castShadow
         geometry={nodes.T_Shirt_male.geometry}
         material={materials.lambert1}
         position={[0.419, -0.2, 0]}
