@@ -6,12 +6,12 @@ import Instagram from "../Components/Home/Instagram/Instagram";
 import Trendy from "../Components/Home/Trendy/Trendy";
 import LimitedEdition from "../Components/Home/Limited/LimitedEdition";
 import DealTimer from "../Components/Home/Deal/DealTimer";
-// import HeroSection from "../Components/Home/Hero/HeroSection";
+import HeroSection from "../Components/Home/Hero/HeroSection";
 
 const Home = () => {
   return (
     <>
-      {/* <HeroSection /> */}
+      <HeroSection />
       <CollectionBox />
       <Trendy />
       <DealTimer />
