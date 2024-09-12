@@ -81,11 +81,11 @@ const Navbar = () => {
           </div>
         </div>
         <div className="iconContainer">
-          <FiSearch size={22} />
-          <Link to="/loginSignUp">
+          <FiSearch size={22} onClick={scrollToTop} />
+          <Link to="/loginSignUp" onClick={scrollToTop}>
             <FaRegUser size={22} />
           </Link>
-          <Link to="/cart">
+          <Link to="/cart" onClick={scrollToTop}>
             <Badge
               badgeContent={cart.items.length === 0 ? "0" : cart.items.length}
               color="primary"
@@ -97,7 +97,7 @@ const Navbar = () => {
               <RiShoppingBagLine size={22} />
             </Badge>
           </Link>
-          <FiHeart size={22} />
+          <FiHeart size={22} onClick={scrollToTop} />
           {/* <RiMenu2Line size={22} /> */}
         </div>
       </nav>
