@@ -33,32 +33,49 @@ const Navbar = () => {
     document.body.style.overflow = mobileMenuOpen ? "auto" : "hidden";
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <>
       {/* Desktop Menu */}
       <nav className="navBar">
         <div className="logoLinkContainer">
           <div className="logoContainer">
-            <Link to="/">
+            <Link to="/" onClick={scrollToTop}>
               <img src={logo} alt="Logo" />
             </Link>
           </div>
           <div className="linkContainer">
             <ul>
               <li>
-                <Link to="/">HOME</Link>
+                <Link to="/" onClick={scrollToTop}>
+                  HOME
+                </Link>
               </li>
               <li>
-                <Link to="/shop">SHOP</Link>
+                <Link to="/shop" onClick={scrollToTop}>
+                  SHOP
+                </Link>
               </li>
               <li>
-                <Link to="/blog">BLOG</Link>
+                <Link to="/blog" onClick={scrollToTop}>
+                  BLOG
+                </Link>
               </li>
               <li>
-                <Link to="/about">ABOUT</Link>
+                <Link to="/about" onClick={scrollToTop}>
+                  ABOUT
+                </Link>
               </li>
               <li>
-                <Link to="/contact">CONTACT</Link>
+                <Link to="/contact" onClick={scrollToTop}>
+                  CONTACT
+                </Link>
               </li>
             </ul>
           </div>
