@@ -6,6 +6,8 @@
   position: relative;
   z-index: 10;
   background-color: white;
+  position: sticky;
+  top: 0;
 }
 
 .logoLinkContainer {
