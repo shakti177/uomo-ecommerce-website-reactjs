@@ -1,5 +1,6 @@
 .shopDetails {
   padding: 0 160px;
+  margin-top: 30px;
 }
 
 .shopDetailMain {
@@ -340,6 +341,7 @@
 @media screen and (max-width: 1210px) {
   .shopDetails {
     padding: 0 60px;
+    margin-top: 0;
   }
 
   .sdProductImages {

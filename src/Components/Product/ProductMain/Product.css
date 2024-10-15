@@ -1,5 +1,6 @@
 .productSection {
   padding: 0 160px;
+  margin-top: 30px;
 }
 
 .productShowCase {
@@ -369,6 +370,7 @@
 @media screen and (max-width: 1210px) {
   .productSection {
     padding: 0 60px;
+    margin-top: 0;
   }
 
   .productShowCase {
