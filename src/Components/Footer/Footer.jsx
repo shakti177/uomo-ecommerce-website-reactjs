@@ -23,6 +23,8 @@ const Footer = () => {
     });
   };
 
+  const getCurrentYear = () => new Date().getFullYear();
+
   return (
     <>
       <footer className="footer">
@@ -137,7 +139,7 @@ const Footer = () => {
         </div>
         <div className="footer_bottom">
           <p>
-            © 2024 Uomo. All Rights Reserved | Made By{" "}
+            © {getCurrentYear()} Uomo. All Rights Reserved | Made By{" "}
             <a
               href="https://github.com/shakti177"
               target="_blank"
