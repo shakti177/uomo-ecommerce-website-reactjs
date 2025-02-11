@@ -26,7 +26,7 @@ https://uomo-ecommerce-website.netlify.app/
 - Three.js for immersive 3D models
 - Responsive web design principles for a mobile-friendly experience
 
-## How can you clone and tweak this project?
+## 🖥️ How can you clone and tweak this project?
 
 From your command line, first clone this repo:
 
