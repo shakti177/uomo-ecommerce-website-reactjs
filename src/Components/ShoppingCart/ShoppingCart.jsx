@@ -67,7 +67,7 @@ const ShoppingCart = () => {
   };
 
   return (
-    <div>
+    <>
       <div className="shoppingCartSection">
         <h2>Cart</h2>
 
@@ -700,7 +700,7 @@ const ShoppingCart = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
