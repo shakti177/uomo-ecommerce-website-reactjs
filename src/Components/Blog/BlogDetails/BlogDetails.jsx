@@ -21,7 +21,7 @@ const BlogDetails = () => {
     });
   };
   return (
-    <div>
+    <>
       <div className="blogDetailsSection">
         <div className="blogDetailsSectionContainer">
           <div className="blogDetailsHeading">
@@ -165,7 +165,7 @@ const BlogDetails = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const ResetPass = () => {
   return (
-    <div>
+    <>
       <div className="resetPasswordSection">
         <h2>Reset Your Password</h2>
         <div className="resetPasswordContainer">
@@ -22,7 +22,7 @@ const ResetPass = () => {
           </Link>
         </p>
       </div>
-    </div>
+    </>
   );
 };
 
