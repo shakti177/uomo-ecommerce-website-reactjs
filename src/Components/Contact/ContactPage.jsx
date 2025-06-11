@@ -28,7 +28,7 @@ const ContactPage = () => {
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
-            title="uomomap"
+            title="jewellmap"
           ></iframe>
         </div>
         <div className="contactInfo">
